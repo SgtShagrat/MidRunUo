@@ -10,18 +10,22 @@ Config/*
 
 # File di log
 Logs/
+DebugLogs/
 *.log
 debug.txt
 server.log
 
 # File di salvataggio
 Saves/
+Saves - Default/
 Backups/
+Daily Save Backups/
 *.save
 *.bak
 
 # File compilati e eseguibili
 *.exe
+*.bat
 *.dll
 *.pdb
 *.cache
@@ -51,6 +55,8 @@ Desktop.ini
 map*.mul
 staidx*.mul
 statics*.mul
+muls/
+MulEditor/
 
 # File temporanei del client
 client.exe
@@ -58,7 +64,12 @@ uo.exe
 razor.exe
 assistuo.exe
 
+#File di progetto Sublime Text
+*.sublime-project
+*.sublime-workspace
+
 # File di progetto Visual Studio
+_VSSolutions/
 *.csproj
 *.vcxproj
 *.sln
@@ -69,6 +80,9 @@ assistuo.exe
 publish/
 Release/
 Debug/
+
+#File Video
+PacketPlayerVideos/
 
 # File di dati specifici RunUO
 Data/Accounts/
@@ -101,6 +115,7 @@ Data/XMLSpawner/
 
 # File di documentazione generati
 docs/
+docs3c/
 *.chm
 *.pdf
 
