@@ -1,0 +1,120 @@
+# RunUO .gitignore
+
+# File di configurazione locale (possono contenere password)
+*.cfg
+*.config
+!Scripts/
+Data/*.cfg
+Data/*.xml
+Config/*
+
+# File di log
+Logs/
+*.log
+debug.txt
+server.log
+
+# File di salvataggio
+Saves/
+Backups/
+*.save
+*.bak
+
+# File compilati e eseguibili
+*.exe
+*.dll
+*.pdb
+*.cache
+bin/
+obj/
+*.suo
+*.user
+*.aps
+
+# File di sistema
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.temp
+
+# File di database
+*.mdf
+*.ldf
+*.sdf
+
+# File di cache UO
+*.idx
+*.mul
+*.uop
+*.tile
+map*.mul
+staidx*.mul
+statics*.mul
+
+# File temporanei del client
+client.exe
+uo.exe
+razor.exe
+assistuo.exe
+
+# File di progetto Visual Studio
+*.csproj
+*.vcxproj
+*.sln
+*.vcxproj.filters
+*.vcxproj.user
+
+# File di pubblicazione
+publish/
+Release/
+Debug/
+
+# File di dati specifici RunUO
+Data/Accounts/
+Data/AssemblyCache/
+Data/Badlands/
+Data/BinaryData/
+Data/Mail/
+Data/MultiData/
+Data/Persistence/
+Data/Profiles/
+Data/Regions/
+Data/Saves/
+Data/ShrinkTable/
+Data/ThirdParty/
+Data/XMLSpawner/
+
+# Eccezioni - mantieni le strutture delle cartelle vuote
+!Data/Accounts/.gitkeep
+!Data/Badlands/.gitkeep
+!Data/BinaryData/.gitkeep
+!Data/Mail/.gitkeep
+!Data/MultiData/.gitkeep
+!Data/Persistence/.gitkeep
+!Data/Profiles/.gitkeep
+!Data/Regions/.gitkeep
+!Data/Saves/.gitkeep
+!Data/ShrinkTable/.gitkeep
+!Data/ThirdParty/.gitkeep
+!Data/XMLSpawner/.gitkeep
+
+# File di documentazione generati
+docs/
+*.chm
+*.pdf
+
+# File di backup automatici
+auto-backup/
+*.zip
+*.rar
+*.7z
+
+# File di terze parti
+Ultima.dll
+OrbRemote.dll
+UOArchitect.dll
+
+# File di licenza e readme locali
+LICENSE.local
+README.local
