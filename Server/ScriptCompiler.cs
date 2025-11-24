@@ -767,7 +767,6 @@ namespace Server
                     op.WriteLine( string.Format( "{0} - {1} ms.", FormatDelegate( invoke[ i ] ), stopwatch.ElapsedMilliseconds ) );
                 }
             }
-
 		}
 
 		private static Dictionary<Assembly, TypeCache> m_TypeCaches = new Dictionary<Assembly, TypeCache>();

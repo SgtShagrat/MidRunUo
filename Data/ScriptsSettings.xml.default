@@ -2,9 +2,9 @@
     <Settings>
         <ServerName type="string">Midgard</ServerName>
 
-        <Address type="string">midgardshard.ddns.net</Address>
+        <Address type="string">89.97.211.236</Address>
 
-        <MidgardSocketPort type="int">5003</MidgardSocketPort>
+        <MidgardSocketPort type="int">2600</MidgardSocketPort>
 
         <TestCenterEnabled type="bool">false</TestCenterEnabled>
 

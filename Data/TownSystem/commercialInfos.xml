@@ -3,7 +3,7 @@
   <info type="AgilityPotion" name="pozione di agilita" id="0xF08" price="15" hue="0x0" />
   <info type="AgilityScroll" name="agilita" id="0x1F35" price="36" hue="0x0" />
   <info type="AlchemistBag" name="alchemist bag" id="0x113F" price="100" hue="0x0" />
-  <info type="AlchemyBook" name="alchemist's handbook" id="0xEFA" price="50" hue="0x4B1" />
+  <info type="AlchemyBook" name="alchemist's handbook" id="0xEFA" price="50" hue="0x5F8" />
   <info type="Almond" name="almond" id="0x1AA2" price="2" hue="0x482" />
   <info type="Amber" name="ambra" id="0xF25" price="50" hue="0x0" />
   <info type="Amethyst" name="ametista" id="0xF16" price="100" hue="0x0" />
@@ -13,6 +13,7 @@
   <info type="ApplePie" name="torta di mele al forno" id="0x1041" price="7" hue="0x0" />
   <info type="AppleTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
   <info type="Apricot" name="apricot" id="0x9D2" price="2" hue="0x31" />
+  <info type="ArmsAndWeaponsPrimer" name="libro" id="0xFEF" price="1506" hue="0x0" />
   <info type="Arrow" name="freccia" id="0xF3F" price="2" hue="0x0" />
   <info type="Axe" name="ascia" id="0xF49" price="40" hue="0x0" />
   <info type="Axle" name="asse" id="0x105B" price="2" hue="0x0" />
@@ -23,7 +24,7 @@
   <info type="Bacon" name="fetta di pancetta" id="0x979" price="7" hue="0x0" />
   <info type="Bag" name="borsa" id="0xE76" price="6" hue="0x0" />
   <info type="BakersBoard" name="baker's board" id="0x14EA" price="10" hue="0x0" />
-  <info type="BakingBook" name="cook's handbook (baking recipes)" id="0xEFA" price="50" hue="0x6C3" />
+  <info type="BakingBook" name="cook's handbook (baking recipes)" id="0xEFA" price="50" hue="0x4BE" />
   <info type="Banana" name="banana" id="0x171F" price="2" hue="0x0" />
   <info type="BananaTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
   <info type="Bandage" name="legno morto" id="0xE21" price="5" hue="0x0" />
@@ -40,10 +41,10 @@
   <info type="Belt" name="belt" id="0x3364" price="100" hue="0x0" />
   <info type="BeltWithBag" name="belt with bag" id="0x3363" price="100" hue="0x0" />
   <info type="BeverageBottle" name="beverage bottle" id="0x0" price="7" hue="0x0" />
-  <info type="BirdsOfBritannia" name="libro" id="0xFEF" price="2508" hue="0x0" />
+  <info type="BirdsOfBritannia" name="libro" id="0xFEF" price="2754" hue="0x0" />
   <info type="BlackMoor" name="black moor" id="0xF88" price="5" hue="0x0" />
   <info type="BlackPearl" name="perla nera" id="0xF7A" price="2" hue="0x0" />
-  <info type="BlacksmithyBook" name="blacksmith's handbook" id="0xEFA" price="50" hue="0x602" />
+  <info type="BlacksmithyBook" name="blacksmith's handbook" id="0xEFA" price="50" hue="0x58E" />
   <info type="BlackStaff" name="personale nero" id="0xDF0" price="22" hue="0x0" />
   <info type="BlankCandle" name="" id="0x1433" price="200" hue="0x47E" />
   <info type="BlankMap" name="blank map" id="0x14EC" price="5" hue="0x0" />
@@ -57,27 +58,28 @@
   <info type="BlueTentDeed" name="atto di una tenda blu" id="0x14F0" price="22800" hue="0x0" />
   <info type="Board" name="tavola" id="0x1BD7" price="3" hue="0x0" />
   <info type="BoatDecorator" name="boat decorator" id="0xFC1" price="500" hue="0x0" />
-  <info type="BoilingBook" name="cook's handbook (boiling recipes)" id="0xEFA" price="50" hue="0x53B" />
+  <info type="BoilingBook" name="cook's handbook (boiling recipes)" id="0xEFA" price="50" hue="0x6CC" />
+  <info type="BoldStranger" name="libro" id="0xFF0" price="3797" hue="0x0" />
   <info type="Bolt" name="bullone della balestra" id="0x1BFB" price="5" hue="0x0" />
   <info type="BoltOfCloth" name="rotolo di stoffa" id="0xF95" price="100" hue="0x0" />
   <info type="BookOfChivalry" name="compendium of faith" id="0x2252" price="140" hue="0x0" />
   <info type="Boots" name="stivali" id="0x170B" price="10" hue="0x0" />
   <info type="Bottle" name="bottiglia vuota" id="0xF0E" price="5" hue="0x0" />
   <info type="Bow" name="arco" id="0x13B2" price="35" hue="0x0" />
-  <info type="BowFletchingBook" name="fletcher's handbook" id="0xEFA" price="50" hue="0x6C1" />
+  <info type="BowFletchingBook" name="fletcher's handbook" id="0xEFA" price="50" hue="0x6D0" />
   <info type="BowlFlour" name="ciotola di farina" id="0xA1E" price="7" hue="0x0" />
   <info type="BreadLoaf" name="pagnotta di pane" id="0x103B" price="6" hue="0x0" />
   <info type="BrewersTools" name="brewer's tools" id="0xE7F" price="500" hue="0x3EF" />
   <info type="BreweryLabelMaker" name="brewery label maker" id="0xFC0" price="2000" hue="0x2E" />
-  <info type="BrewingBook" name="brewery handbook" id="0xEFA" price="50" hue="0x664" />
+  <info type="BrewingBook" name="brewery handbook" id="0xEFA" price="50" hue="0x668" />
   <info type="BrickHouseDeed" name="atto a una casa di mattoni" id="0x14F0" price="144500" hue="0x0" />
+  <info type="BritannianFlora" name="libro" id="0xFF0" price="3171" hue="0x0" />
   <info type="BroadcastCrystal" name="cristallo di comunicazione" id="0x1ED0" price="68" hue="0x0" />
   <info type="Broadsword" name="spadone" id="0xF5E" price="35" hue="0x0" />
   <info type="BronzeShield" name="scudo di bronzo" id="0x1B72" price="66" hue="0x0" />
   <info type="BrownBear" name="brown bear" id="0x2118" price="855" hue="0x0" />
   <info type="BrownBook" name="libro" id="0xFEF" price="15" hue="0x0" />
   <info type="Buckler" name="scudo" id="0x1B73" price="50" hue="0x0" />
-  <info type="BurningOfTrinsic" name="libro" id="0xFF0" price="1197" hue="0x0" />
   <info type="ButcherKnife" name="coltello da macellaio" id="0x13F6" price="13" hue="0x0" />
   <info type="Cabbage" name="testa di cavolo" id="0xC7B" price="5" hue="0x0" />
   <info type="CabbageSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
@@ -89,12 +91,12 @@
   <info type="Cantaloupe" name="canteloupe" id="0xC79" price="6" hue="0x0" />
   <info type="Cap" name="berretto" id="0x1715" price="10" hue="0x0" />
   <info type="CarlsbergensisYeast" name="carlsbergensis yeast" id="0x1AA2" price="150" hue="0x7E7" />
-  <info type="CarpentryBook" name="carpenter's handbook" id="0xEFA" price="50" hue="0x660" />
+  <info type="CarpentryBook" name="carpenter's handbook" id="0xEFA" price="50" hue="0x4C8" />
   <info type="Carrot" name="carota" id="0xC78" price="3" hue="0x0" />
   <info type="CarrotSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
-  <info type="CartographyBook" name="map maker's handbook" id="0xEFA" price="50" hue="0x65D" />
+  <info type="CartographyBook" name="map maker's handbook" id="0xEFA" price="50" hue="0x4B9" />
   <info type="CastleDeed" name="un atto di castello" id="0x14F0" price="2045600" hue="0x0" />
-  <info type="Cat" name="cat" id="0x211B" price="132" hue="0x900" />
+  <info type="Cat" name="cat" id="0x211B" price="132" hue="0x904" />
   <info type="CedarTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
   <info type="CereviasiaeYeast" name="cereviasiae yeast" id="0x1AA2" price="100" hue="0x7E8" />
   <info type="ChainChest" name="tunica cotta di maglia" id="0x13BF" price="143" hue="0x0" />
@@ -110,11 +112,12 @@
   <info type="CherryTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
   <info type="Chessboard" name="una scacchiera" id="0xFA6" price="2" hue="0x0" />
   <info type="ChickenLeg" name="coscia di pollo" id="0x1608" price="5" hue="0x0" />
-  <info type="ChristmasCandyCane" name="bastoncino di zucchero rosso" id="0x2BDE" price="100" hue="0x0" />
+  <info type="ChildrenTalesVol2" name="libro" id="0xFF0" price="2226" hue="0x0" />
+  <info type="ChristmasCandyCane" name="bastoncino di zucchero verde" id="0x2BDF" price="100" hue="0x0" />
   <info type="ChristmasDecorativeTopiary" name="arte topiaria decorativa" id="0x2378" price="100" hue="0x0" />
   <info type="ChristmasFestiveCactus" name="cactus festivo" id="0x2376" price="100" hue="0x0" />
   <info type="ChristmasGingerBreadCookie" name="biscotto di panpepato" id="0x2BE1" price="100" hue="0x0" />
-  <info type="ChristmasHolidayBell" name="midgard christmas bell" id="0x1C12" price="100" hue="0x69" />
+  <info type="ChristmasHolidayBell" name="midgard christmas bell" id="0x1C12" price="100" hue="0x1E" />
   <info type="ChristmasMistletoeDeed" name="mistletoe deed" id="0x14F0" price="100" hue="0x0" />
   <info type="ChristmasPileOfGlacialSnow" name="un mucchio di neve glaciale" id="0x913" price="100" hue="0x480" />
   <info type="ChristmasSnowyTree" name="albero innevato" id="0x2377" price="100" hue="0x0" />
@@ -137,7 +140,7 @@
   <info type="ContractOfEmployment" name="un contratto di lavoro" id="0x14F0" price="20000" hue="0x0" />
   <info type="CookedBird" name="uccello cotto" id="0x9B7" price="17" hue="0x0" />
   <info type="Cookies" name="padella di biscotti" id="0x160B" price="3" hue="0x0" />
-  <info type="CookingBook" name="cook's handbook" id="0xEFA" price="50" hue="0x60C" />
+  <info type="CookingBook" name="cook's handbook" id="0xEFA" price="50" hue="0x4CA" />
   <info type="CooksCauldron" name="cook's cauldron" id="0x9ED" price="10" hue="0x0" />
   <info type="Corn" name="an ear of corn" id="0xC81" price="2" hue="0x0" />
   <info type="CornSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
@@ -152,7 +155,7 @@
   <info type="CrystalBrazierRecipe" name="crystal brazier recipe" id="0x2831" price="1" hue="0x0" />
   <info type="CrystalBullEastAddonDeedRecipe" name="crystal bull east deed recipe" id="0x2831" price="1" hue="0x0" />
   <info type="CrystalBullSouthAddonDeedRecipe" name="crystal bull south deed recipe" id="0x2831" price="1" hue="0x0" />
-  <info type="CrystalCraftingBook" name="crystal forger's handbook" id="0xEFA" price="50" hue="0x589" />
+  <info type="CrystalCraftingBook" name="crystal forger's handbook" id="0xEFA" price="50" hue="0x58B" />
   <info type="CrystalPedestralLargeEmptyRecipe" name="crystal pedestral large empty recipe" id="0x2831" price="1" hue="0x0" />
   <info type="CrystalPedestralLargeRecipe" name="crystal pedestral large recipe" id="0x2831" price="1" hue="0x0" />
   <info type="CrystalPedestralMediumRecipe" name="crystal pedestral medium recipe" id="0x2831" price="1" hue="0x0" />
@@ -178,10 +181,10 @@
   <info type="DestroyingAngel" name="destroying angel" id="0xE1F" price="2" hue="0x290" />
   <info type="Diamond" name="diamante" id="0xF26" price="200" hue="0x0" />
   <info type="Dices" name="dadi e tazza" id="0xFA7" price="2" hue="0x0" />
+  <info type="DimensionalTravel" name="libro" id="0xFEF" price="2356" hue="0x0" />
   <info type="DisguiseCleaner" name="disguise cleaner" id="0x2FD6" price="500" hue="0x482" />
   <info type="DisguiseKit" name="un kit di travestimento" id="0xE05" price="700" hue="0x0" />
-  <info type="DiversityOfOurLand" name="libro" id="0xFF0" price="1688" hue="0x0" />
-  <info type="Dog" name="dog" id="0x2588" price="170" hue="0x90C" />
+  <info type="Dog" name="dog" id="0x2588" price="170" hue="0x90D" />
   <info type="DoubleAxe" name="doppia ascia" id="0xF4B" price="52" hue="0x0" />
   <info type="Doublet" name="doppione" id="0x1F7B" price="13" hue="0x0" />
   <info type="DovetailSaw" name="sega a coda di rondine" id="0x1028" price="12" hue="0x0" />
@@ -275,7 +278,7 @@
   <info type="FillableWoodHouseDeed" name="atto di una casa in legno" id="0x14F0" price="4380" hue="0x0" />
   <info type="FillableWoodPlasterHouseDeed" name="atto di una casa di legno e gesso" id="0x14F0" price="4380" hue="0x0" />
   <info type="FireballScroll" name="bolide" id="0x1F3E" price="39" hue="0x0" />
-  <info type="Fish" name="pesce" id="0x9CD" price="6" hue="0x0" />
+  <info type="Fish" name="pesce" id="0x9CF" price="6" hue="0x0" />
   <info type="FishingPole" name="canna da pesca" id="0xDC0" price="15" hue="0x0" />
   <info type="Flax" name="fascio di lino" id="0x1A9C" price="102" hue="0x0" />
   <info type="FlaxSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
@@ -291,11 +294,11 @@
   <info type="Garlic" name="aglio" id="0xF84" price="1" hue="0x0" />
   <info type="GarlicSeed" name="diamante" id="0xF27" price="200" hue="0x5E2" />
   <info type="Gears" name="ingranaggi" id="0x1053" price="2" hue="0x0" />
-  <info type="GiftBox" name="pacco regalo" id="0x232A" price="100" hue="0x46" />
+  <info type="GiftBox" name="pacco regalo" id="0x232A" price="100" hue="0x109" />
   <info type="Ginseng" name="ginseng" id="0xF85" price="1" hue="0x0" />
   <info type="GinsengSeed" name="diamante" id="0xF27" price="200" hue="0x5E2" />
   <info type="GlassblowingBook" name="crafting glass with glassblowing" id="0xFF4" price="1000" hue="0x0" />
-  <info type="GlassblowingCraftGump" name="glass blower's handbook" id="0xEFA" price="50" hue="0x4B7" />
+  <info type="GlassblowingCraftGump" name="glass blower's handbook" id="0xEFA" price="50" hue="0x5E9" />
   <info type="GlobeOfSosariaAddonRecipe" name="globe of sosaria recipe" id="0x2831" price="1" hue="0x0" />
   <info type="GnarledStaff" name="personale nodoso" id="0x13F8" price="16" hue="0x0" />
   <info type="GoldBeadNecklace" name="collana" id="0x1089" price="27" hue="0x0" />
@@ -304,6 +307,7 @@
   <info type="GoldEarrings" name="orecchini" id="0x1087" price="27" hue="0x0" />
   <info type="GoldNecklace" name="collana" id="0x1088" price="27" hue="0x0" />
   <info type="GoldRing" name="anello" id="0x108A" price="27" hue="0x0" />
+  <info type="GrammarOfOrcish" name="libro" id="0xFEF" price="3153" hue="0x0" />
   <info type="Grapes" name="grappolo d'uva" id="0x9D1" price="3" hue="0x0" />
   <info type="GrapeShot" name="grape shot" id="0xE74" price="250" hue="0x0" />
   <info type="GrapevinePlacementTool" name="grapevine placement tool" id="0xD1A" price="10000" hue="0x489" />
@@ -311,7 +315,7 @@
   <info type="GreenCrystalRecipe" name="scorrimento ricetta" id="0x2831" price="1" hue="0x0" />
   <info type="GreenGourd" name="zucca" id="0xC66" price="3" hue="0x0" />
   <info type="GreenTentDeed" name="atto di una tenda verde" id="0x14F0" price="22800" hue="0x0" />
-  <info type="GrillingBook" name="cook's handbook (grill recipes)" id="0xEFA" price="50" hue="0x58D" />
+  <info type="GrillingBook" name="cook's handbook (grill recipes)" id="0xEFA" price="50" hue="0x6B3" />
   <info type="GrizzlyBear" name="grizzly bear" id="0x211E" price="1767" hue="0x0" />
   <info type="HairDye" name="tinta per capelli" id="0xEFF" price="37" hue="0x0" />
   <info type="Halberd" name="alabarda" id="0x143E" price="42" hue="0x0" />
@@ -336,8 +340,8 @@
   <info type="HiveTool" name="" id="0x9F5" price="500" hue="0x0" />
   <info type="HolidayTreeDeed" name="un atto per un albero delle vacanze" id="0x14F0" price="2000" hue="0x488" />
   <info type="HoneydewMelon" name="melone di melata" id="0xC74" price="7" hue="0x0" />
-  <info type="Horse" name="horse" id="0x259A" price="550" hue="0x0" />
-  <info type="InscriptionBook" name="scribe's handbook" id="0xEFA" price="50" hue="0x611" />
+  <info type="Horse" name="horse" id="0x2599" price="550" hue="0x0" />
+  <info type="InscriptionBook" name="scribe's handbook" id="0xEFA" price="50" hue="0x597" />
   <info type="Inshave" name="inshave" id="0x10E6" price="10" hue="0x0" />
   <info type="InteriorDecorator" name="un decoratore d'interni" id="0xFC1" price="500" hue="0x0" />
   <info type="IronCannonball" name="iron cannonball" id="0xE74" price="100" hue="0x0" />
@@ -385,6 +389,7 @@
   <info type="LesserPoisonPotion" name="pozione lesser poison" id="0xF0A" price="15" hue="0x0" />
   <info type="Lettuce" name="testa di lattuga" id="0xC70" price="5" hue="0x0" />
   <info type="LettuceSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="LifeOfATravellingMinstrel" name="libro" id="0xFEF" price="1652" hue="0x0" />
   <info type="LightCannonball" name="light cannonball" id="0xE74" price="50" hue="0x0" />
   <info type="LightFertilizerPotion" name="" id="0xF0E" price="500" hue="0x748" />
   <info type="LightFungicidePotion" name="" id="0xF0E" price="500" hue="0x8C5" />
@@ -407,7 +412,6 @@
   <info type="MagicUnTrapScroll" name="magic untrap" id="0x1F3A" price="36" hue="0x0" />
   <info type="MagicWizardsHat" name="un magico cappello da mago" id="0x1718" price="11" hue="0x0" />
   <info type="MailScroll" name="mail scroll" id="0x227B" price="50" hue="0x0" />
-  <info type="MajorTradeAssociation" name="libro" id="0xFEF" price="2738" hue="0x0" />
   <info type="MalletAndChisel" name="maglio e scalpello" id="0x12B3" price="3" hue="0x0" />
   <info type="Malt" name="malt" id="0x1AA2" price="30" hue="0x7E9" />
   <info type="MandrakeRoot" name="radice di mandragola" id="0xF86" price="1" hue="0x0" />
@@ -416,7 +420,7 @@
   <info type="MapmakersPen" name="penna del cartografo" id="0xFBF" price="8" hue="0x0" />
   <info type="MarbleWorkshopDeed" name="dare ad un piccolo laboratorio di marmo" id="0x14F0" price="63000" hue="0x0" />
   <info type="MasonryBook" name="making valuables with stonecrafting" id="0xFBE" price="1000" hue="0x0" />
-  <info type="MasonryCraftBook" name="stone crafter's handbook" id="0xEFA" price="50" hue="0x6D3" />
+  <info type="MasonryCraftBook" name="stone crafter's handbook" id="0xEFA" price="50" hue="0x52B" />
   <info type="Maul" name="maglio" id="0x143B" price="21" hue="0x0" />
   <info type="MediumBoatDeed" name="atto di nave medio" id="0x14F2" price="11552" hue="0x0" />
   <info type="MediumDragonBoatDeed" name="atto di nave medio drago" id="0x14F2" price="11552" hue="0x0" />
@@ -432,6 +436,7 @@
   <info type="MortarPestle" name="mortaio e pestello" id="0xE9B" price="8" hue="0x0" />
   <info type="MouldingPlane" name="piani di stampaggio" id="0x102C" price="11" hue="0x0" />
   <info type="Muffins" name="muffin" id="0x9EB" price="3" hue="0x0" />
+  <info type="MyStory" name="libro" id="0xFF0" price="2170" hue="0x0" />
   <info type="Nails" name="unghie" id="0x102E" price="3" hue="0x0" />
   <info type="NarcoticBandage" name="legno morto" id="0xE21" price="500" hue="0x0" />
   <info type="Necklace" name="collana" id="0x1085" price="26" hue="0x0" />
@@ -498,9 +503,9 @@
   <info type="PumpkinSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
   <info type="PurpleCrystalRecipe" name="purple crystal recipe" id="0x2831" price="1" hue="0x0" />
   <info type="QuarterStaff" name="personale del quartiere" id="0xE89" price="19" hue="0x0" />
+  <info type="QuestOfVirtues" name="libro" id="0xFF0" price="3535" hue="0x0" />
   <info type="Quiver" name="quiver" id="0x3827" price="100" hue="0x0" />
-  <info type="Rabbit" name="rabbit" id="0x2125" price="106" hue="0x906" />
-  <info type="RankingsOfTrades" name="libro" id="0xFEF" price="2258" hue="0x0" />
+  <info type="Rabbit" name="rabbit" id="0x2125" price="106" hue="0x909" />
   <info type="Rat" name="rat" id="0x2123" price="107" hue="0x0" />
   <info type="RawBird" name="uccello crudo" id="0x9B9" price="9" hue="0x0" />
   <info type="RawChickenLeg" name="coscia di pollo crudo" id="0x1607" price="6" hue="0x0" />
@@ -519,11 +524,11 @@
   <info type="ReactiveArmorScroll" name="armatura reattiva" id="0x1F2D" price="32" hue="0x0" />
   <info type="RecallRune" name="richiama runa" id="0x1F14" price="15" hue="0x0" />
   <info type="ReceiverCrystal" name="cristallo di comunicazione" id="0x1ED0" price="6" hue="0x0" />
-  <info type="RecyclingTool" name="recycling toolkit" id="0x1EB8" price="50" hue="0x747" />
+  <info type="RecyclingTool" name="recycling toolkit" id="0x1EB8" price="50" hue="0x727" />
   <info type="RedBook" name="libro" id="0xFF1" price="15" hue="0x0" />
   <info type="RedMushroom" name="fungo" id="0xD16" price="50" hue="0x0" />
   <info type="RefreshPotion" name="aggiorna pozione" id="0xF0B" price="15" hue="0x0" />
-  <info type="RegardingLlamas" name="libro" id="0xFF0" price="1096" hue="0x0" />
+  <info type="RegardingLlamas" name="libro" id="0xFEF" price="4960" hue="0x0" />
   <info type="ReinforcedBoots" name="reinforced boots" id="0x3822" price="50" hue="0x0" />
   <info type="Ribs" name="taglio di costole" id="0x9F2" price="7" hue="0x0" />
   <info type="RiceSheath" name="rice sheath" id="0x1A9D" price="50" hue="0x2FE" />
@@ -553,9 +558,9 @@
   <info type="SandstoneVillaDeed" name="deed to a sandstone villa" id="0x14F0" price="155000" hue="0x0" />
   <info type="SandstoneWareHouseDeed" name="deed to a sandstone warehouse" id="0x14F0" price="62000" hue="0x0" />
   <info type="SangioveseGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x0" />
-  <info type="SantasReindeer1" name="prancer" id="0x3A55" price="100" hue="0x0" />
-  <info type="SantasReindeer2" name="vixen" id="0x3A67" price="100" hue="0x0" />
-  <info type="SantasReindeer3" name="comet" id="0x3A6F" price="100" hue="0x0" />
+  <info type="SantasReindeer1" name="donner" id="0x3A55" price="100" hue="0x0" />
+  <info type="SantasReindeer2" name="dasher" id="0x3A67" price="100" hue="0x0" />
+  <info type="SantasReindeer3" name="dancer" id="0x3A6F" price="100" hue="0x0" />
   <info type="SantasSleighDeed" name="a deed for santa's sleigh" id="0x14F0" price="100" hue="0x0" />
   <info type="Sapphire" name="zaffiro" id="0xF19" price="100" hue="0x0" />
   <info type="Sausage" name="salsiccia" id="0x9C0" price="18" hue="0x0" />
@@ -565,8 +570,8 @@
   <info type="Scissors" name="forbici" id="0xF9F" price="11" hue="0x0" />
   <info type="Scorp" name="scorp" id="0x10E7" price="10" hue="0x0" />
   <info type="ScribesPen" name="penna dello scriba" id="0xFBF" price="8" hue="0x0" />
-  <info type="SellableIDWandGreater" name="wand of identification" id="0xDF5" price="10000" hue="0x0" />
-  <info type="SellableIDWandLesser" name="wand of identification" id="0xDF5" price="3000" hue="0x0" />
+  <info type="SellableIDWandGreater" name="wand of identification" id="0xDF4" price="10000" hue="0x0" />
+  <info type="SellableIDWandLesser" name="wand of identification" id="0xDF3" price="3000" hue="0x0" />
   <info type="SellableIDWandNormal" name="wand of identification" id="0xDF3" price="5000" hue="0x0" />
   <info type="SerpentScale" name="serpent scale" id="0x26B6" price="5" hue="0x0" />
   <info type="SewingKit" name="kit da cucito" id="0xF9D" price="3" hue="0x0" />
@@ -628,9 +633,7 @@
   <info type="Sugarcane" name="sugarcane" id="0x1A9D" price="500" hue="0x23F" />
   <info type="SulfurousAsh" name="cenere sulfurea" id="0xF8C" price="1" hue="0x0" />
   <info type="SuperiorKilt" name="superior kilt" id="0x3823" price="15" hue="0x0" />
-  <info type="TailoringBook" name="tailor's handbook" id="0xEFA" price="50" hue="0x590" />
-  <info type="TaleOfThreeTribes" name="libro" id="0xFEF" price="3044" hue="0x0" />
-  <info type="TalesOfVesperVol1" name="libro" id="0xFEF" price="4830" hue="0x0" />
+  <info type="TailoringBook" name="tailor's handbook" id="0xEFA" price="50" hue="0x654" />
   <info type="TallStrawHat" name="alto cappello di paglia" id="0x1716" price="8" hue="0x0" />
   <info type="Tambourine" name="tamburello" id="0xE9D" price="21" hue="0x0" />
   <info type="TanBook" name="libro" id="0xFF0" price="15" hue="0x0" />
@@ -643,13 +646,12 @@
   <info type="ThighBoots" name="stivali della coscia" id="0x1711" price="15" hue="0x0" />
   <info type="ThinLongsword" name="lunga spada" id="0x13B8" price="27" hue="0x0" />
   <info type="TimberWolf" name="timber wolf" id="0x25D3" price="768" hue="0x0" />
-  <info type="TinkeringBook" name="tinker's handbook" id="0xEFA" price="50" hue="0x6A7" />
+  <info type="TinkeringBook" name="tinker's handbook" id="0xEFA" price="50" hue="0x6AE" />
   <info type="TinkerTools" name="kit di strumenti" id="0x1EB8" price="7" hue="0x0" />
   <info type="Tongs" name="pinza" id="0xFBB" price="13" hue="0x0" />
   <info type="Torch" name="torcia" id="0xF6B" price="8" hue="0x0" />
   <info type="Tourmaline" name="tormalina" id="0xF2D" price="75" hue="0x0" />
   <info type="TowerDeed" name="atto di una torre" id="0x14F0" price="649800" hue="0x0" />
-  <info type="TreatiseOnAlchemy" name="libro" id="0xFEF" price="1422" hue="0x0" />
   <info type="TreeFellerHouseDeed" name="deed to a tree feller house" id="0x14F0" price="72000" hue="0x0" />
   <info type="TreeFellerRefugeDeed" name="deed to a tree feller refuge" id="0x14F0" price="115000" hue="0x0" />
   <info type="TreeFellerStockHouseDeed" name="deed to a tree feller stockhouse" id="0x14F0" price="62000" hue="0x0" />
@@ -669,6 +671,7 @@
   <info type="VikingSword" name="spada vichinga" id="0x13B9" price="55" hue="0x0" />
   <info type="VillaDeed" name="dare ad una villa a due piani" id="0x14F0" price="136500" hue="0x0" />
   <info type="ViognierGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x16B" />
+  <info type="VirtueBook" name="libro" id="0xFEF" price="4150" hue="0x0" />
   <info type="VolcaninAsh" name="volcanin ash" id="0xF7F" price="5" hue="0x0" />
   <info type="WallOfStoneScroll" name="muro di pietra" id="0x1F44" price="39" hue="0x0" />
   <info type="WalnutTreeSeed" name="diamante" id="0xF27" price="1000" hue="0x5E2" />
@@ -679,7 +682,7 @@
   <info type="WateringCan" name="" id="0x2004" price="100" hue="0x0" />
   <info type="Watermelon" name="anguria" id="0xC5C" price="7" hue="0x0" />
   <info type="WaterPitcher" name="special water pitcher" id="0x1F9D" price="500" hue="0x0" />
-  <info type="WaxCraftingBook" name="wax crafter's handbook" id="0xEFA" price="50" hue="0x4DA" />
+  <info type="WaxCraftingBook" name="wax crafter's handbook" id="0xEFA" price="50" hue="0x58F" />
   <info type="WaxCraftingPot" name="" id="0x142A" price="1000" hue="0x0" />
   <info type="WeakenScroll" name="indebolire" id="0x1F34" price="32" hue="0x0" />
   <info type="Weistband" name="weistband" id="0x3365" price="100" hue="0x0" />
