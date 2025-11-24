@@ -4,7 +4,7 @@
 *.cfg
 *.config
 !Scripts/
-Data/*.xml
+Data/
 Config/*
 
 # File di log
@@ -27,6 +27,7 @@ Daily Save Backups/
 *.exe
 *.bat
 *.dll
+*.hash
 *.pdb
 *.cache
 *.bin
