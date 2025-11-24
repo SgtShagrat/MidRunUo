@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<craftDefinition>
+	<parent name="Inscription" title="What would you like to make?" selectresource="true">
+		<parent name="First Circle" itemID="0x1F2D" title="What do you want to make?">
+			<child name="reactive armor" typename="ReactiveArmorScroll" />
+			<child name="clumsy" typename="ClumsyScroll" />
+			<child name="create food" typename="CreateFoodScroll" />
+			<child name="feeblemind" typename="FeeblemindScroll" />
+			<child name="heal" typename="HealScroll" />
+			<child name="magic arrow" typename="MagicArrowScroll" />
+			<child name="night sight" typename="NightSightScroll" />
+			<child name="weaken" typename="WeakenScroll" />
+		</parent>
+		<parent name="Second Circle" itemID="0x1F35" title="What do you want to make?">
+			<child name="agility" typename="AgilityScroll" />
+			<child name="cunning" typename="CunningScroll" />
+			<child name="cure" typename="CureScroll" />
+			<child name="harm" typename="HarmScroll" />
+			<child name="magic trap" typename="MagicTrapScroll" />
+			<child name="magic untrap" typename="MagicUnTrapScroll" />
+			<child name="protection" typename="ProtectionScroll" />
+			<child name="strength" typename="StrengthScroll" />
+		</parent>
+		<parent name="Third Circle" itemID="0x1F3D" title="What do you want to make?">
+			<child name="bless" typename="BlessScroll" />
+			<child name="fireball" typename="FireballScroll" />
+			<child name="magic lock" typename="MagicLockScroll" />
+			<child name="poison" typename="PoisonScroll" />
+			<child name="telekinesis" typename="TelekinisisScroll" />
+			<child name="teleport" typename="TeleportScroll" />
+			<child name="unlock" typename="UnlockScroll" />
+			<child name="wall of stone" typename="WallOfStoneScroll" />
+		</parent>
+		<parent name="Fourth Circle" itemID="0x1F45" title="What do you want to make?">
+			<child name="arch cure" typename="ArchCureScroll" />
+			<child name="arch protection" typename="ArchProtectionScroll" />
+			<child name="curse" typename="CurseScroll" />
+			<child name="fire field" typename="FireFieldScroll" />
+			<child name="greater heal" typename="GreaterHealScroll" />
+			<child name="lightning" typename="LightningScroll" />
+			<child name="mana drain" typename="ManaDrainScroll" />
+			<child name="recall" typename="RecallScroll" />
+		</parent>
+		<parent name="Fifth Circle" itemID="0x1F4D" title="What do you want to make?">
+			<child name="blade spirits" typename="BladeSpiritsScroll" />
+			<child name="dispel field" typename="DispelFieldScroll" />
+			<child name="incognito" typename="IncognitoScroll" />
+			<child name="magic reflection" typename="MagicReflectScroll" />
+			<child name="mind blast" typename="MindBlastScroll" />
+			<child name="paralyze" typename="ParalyzeScroll" />
+			<child name="poison field" typename="PoisonFieldScroll" />
+			<child name="summon creature" typename="SummonCreatureScroll" />
+		</parent>
+		<parent name="Sixth Circle" itemID="0x1F55" title="What do you want to make?">
+			<child name="dispel" typename="DispelScroll" />
+			<child name="energy bolt" typename="EnergyBoltScroll" />
+			<child name="explosion" typename="ExplosionScroll" />
+			<child name="invisibility" typename="InvisibilityScroll" />
+			<child name="mark" typename="MarkScroll" />
+			<child name="mass curse" typename="MassCurseScroll" />
+			<child name="paralyze field" typename="ParalyzeFieldScroll" />
+			<child name="reveal" typename="RevealScroll" />
+		</parent>
+		<parent name="Seventh Circle" itemID="0x1F5D" title="What do you want to make?">
+			<child name="chain lightning" typename="ChainLightningScroll" />
+			<child name="energy field" typename="EnergyFieldScroll" />
+			<child name="flamestrike" typename="FlamestrikeScroll" />
+			<child name="gate travel" typename="GateTravelScroll" />
+			<child name="mana vampire" typename="ManaVampireScroll" />
+			<child name="mass dispel" typename="MassDispelScroll" />
+			<child name="meteor swarm" typename="MeteorSwarmScroll" />
+			<child name="polymorph" typename="PolymorphScroll" />
+		</parent>
+		<parent name="Eighth Circle" itemID="0x1F65" title="What do you want to make?">
+			<child name="earthquake" typename="EarthquakeScroll" />
+			<child name="energy vortex" typename="EnergyVortexScroll" />
+			<child name="resurrection" typename="ResurrectionScroll" />
+			<child name="summon air elemental" typename="SummonAirElementalScroll" />
+			<child name="summon daemon" typename="SummonDaemonScroll" />
+			<child name="summon earth elemental" typename="SummonEarthElementalScroll" />
+			<child name="summon fire elemental" typename="SummonFireElementalScroll" />
+			<child name="summon water elemental" typename="SummonWaterElementalScroll" />
+		</parent>
+		<parent name="Other" itemID="0xEFA" hue="0x461" title="What do you want to make?">
+			<child name="runebook" typename="Runebook" hue="0x461" />
+			<child name="map book" typename="MapBook" hue="0x723" />
+			<child name="net book" typename="NetBook" hue="0x732" />
+			<child name="blue book" typename="BlueBook" />
+			<child name="brown book" typename="BrownBook" />
+			<child name="red book" typename="RedBook" />
+			<child name="tan book" typename="TanBook" />
+			<child name="spellbook" typename="Spellbook" />
+			<child name="spellbook engraving tool" typename="SpellbookEngraver" hue="0x48D" />
+		</parent>
+	</parent>
+</craftDefinition>

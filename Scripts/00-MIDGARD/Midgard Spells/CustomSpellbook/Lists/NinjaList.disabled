@@ -1,0 +1,24 @@
+using System;
+using Server;
+using System.Collections;
+
+namespace Server.Spells.FSB
+{
+    public class NinjaList
+    {
+		public static void Initialize()
+		{
+			if( FSBSpellList.SpellList == null )
+            	FSBSpellList.SpellList = new ArrayList();
+
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Focus Attack", 1063279, 500, 0x5320, 20, 60.0, "No reagents.", SchoolFlag.Ninja));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Death Strike", 1063280, 501, 0x5321, 30, 85.0, "No reagents.", SchoolFlag.Ninja));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Animal Form", 1063281, 502, 0x5322, 10, 0.0, "No reagents.", SchoolFlag.Ninja));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Ki Attack", 1063282, 503, 0x5323, 25, 80.0, "No reagents.", SchoolFlag.Ninja));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Surprise Attack", 1063283, 504, 0x5324, 20, 30.0, "No reagents.", SchoolFlag.Ninja));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Backstab", 1063284, 505, 0x5325, 30, 20.0, "No reagents.", SchoolFlag.Ninja));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Shadowjump", 1063285, 506, 0x5326, 15, 50.0, "No reagents.", SchoolFlag.Ninja));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Mirror Image", 1063286, 507, 0x5327, 10, 40.0, "No reagents.", SchoolFlag.Ninja));
+		}
+	}
+}

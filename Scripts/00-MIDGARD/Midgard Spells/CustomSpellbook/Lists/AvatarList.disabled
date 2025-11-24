@@ -1,0 +1,19 @@
+using System;
+using Server;
+using System.Collections;
+
+namespace Server.Spells.FSB
+{
+    public class AvatarList
+    {
+		public static void Initialize()
+		{
+			if( FSBSpellList.SpellList == null )
+            	FSBSpellList.SpellList = new ArrayList();
+
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Heaven's Gate",  "Allows the Paladin to open a heavenly portal to another location.", 210, 2258, 40, 80, "T.30", SchoolFlag.Avatar ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Mark of Gods",   "Casts down a powerful bolt of lightning to mark a rune for the Paladin.", 211, 2269, 10, 20, "T.10", SchoolFlag.Avatar ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Heavenly Light", "Heaven lights the Paladin's way.", 212, 2245, 10, 20, "T.10", SchoolFlag.Avatar ) );
+		}
+	}
+}

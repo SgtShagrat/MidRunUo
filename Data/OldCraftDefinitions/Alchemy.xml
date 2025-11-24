@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<craftDefinition>
+	<parent name="Alchemy" title="What would you like to make?" selectresource="true">
+		<parent name="Resources" itemID="0xF84" title="What do you want to make?">
+			<child name="garlic" typename="Garlic" />
+			<child name="ginseng" typename="Ginseng" />
+			<child name="mandrake root" typename="MandrakeRoot" />
+			<child name="night shade" typename="Nightshade" />
+		</parent>
+		<parent name="Refresh" itemID="0xF0B" title="What do you want to make?">
+			<child name="refresh" typename="RefreshPotion" />
+			<child name="total refreshment" typename="TotalRefreshPotion" />
+		</parent>
+		<parent name="Agility" itemID="0xF08" title="What do you want to make?">
+			<child name="agility" typename="AgilityPotion" />
+			<child name="greater agility" typename="GreaterAgilityPotion" />
+		</parent>
+		<parent name="Night Sight" itemID="0xF06" title="What do you want to make?">
+			<child name="night sight" typename="NightSightPotion" />
+		</parent>
+		<parent name="Heal" itemID="0xF0C" title="What do you want to make?">
+			<child name="lesser heal" typename="LesserHealPotion" />
+			<child name="heal" typename="HealPotion" />
+			<child name="greater heal" typename="GreaterHealPotion" />
+		</parent>
+		<parent name="Strength" itemID="0xF09" title="What do you want to make?">
+			<child name="strength" typename="StrengthPotion" />
+			<child name="greater strength" typename="GreaterStrengthPotion" />
+		</parent>
+		<parent name="Poison" itemID="0xF0A" title="What do you want to make?">
+			<child name="lesser poison" typename="LesserPoisonPotion" />
+			<child name="poison" typename="PoisonPotion" />
+			<child name="greater poison" typename="GreaterPoisonPotion" />
+			<child name="deadly poison" typename="DeadlyPoisonPotion" />
+		</parent>
+		<parent name="Cure" itemID="0xF07" title="What do you want to make?">
+			<child name="lesser cure" typename="LesserCurePotion" />
+			<child name="cure" typename="CurePotion" />
+			<child name="greater cure" typename="GreaterCurePotion" />
+		</parent>
+		<parent name="Explosion" itemID="0xF0D" title="What do you want to make?">
+			<child name="lesser explosion" typename="LesserExplosionPotion" />
+			<child name="explosion" typename="ExplosionPotion" />
+			<child name="greater explosion" typename="GreaterExplosionPotion" />
+		</parent>
+		<parent name="Gran Mage" itemID="0xF0E" hue="0x813" title="What do you want to make?">
+			<child name="lesser grand mage refresh elixir" typename="GrandMageRefreshElixirLesser" hue="0x813" />
+			<child name="grand mage refresh elixir" typename="GrandMageRefreshElixir" hue="0x818" />
+			<child name="greater grand mage refresh elixir" typename="GrandMageRefreshElixirGreater" hue="0x98F" />
+		</parent>
+		<parent name="Homeric" itemID="0xF0E" hue="0x98E" title="What do you want to make?">
+			<child name="homeric might potion" typename="HomericMightPotion" hue="0x98E" />
+			<child name="greater homeric might potion" typename="HomericMightPotionGreater" hue="0x814" />
+		</parent>
+		<parent name="Invulnerability" itemID="0xF0E" hue="0xA23" title="What do you want to make?">
+			<child name="lesser mego invulnerability potion" typename="MegoInvulnerabilityPotionLesser" hue="0xA23" />
+			<child name="mego invulnerability potion" typename="MegoInvulnerabilityPotion" hue="0x995" />
+			<child name="greater mego invulnerability potion" typename="MegoInvulnerabilityPotionGreater" hue="0x810" />
+		</parent>
+		<parent name="Intellect" itemID="0xF0E" hue="0x99A" title="What do you want to make?">
+			<child name="phandel's fine intellect potion" typename="PhandelsFineIntellectPotion" hue="0x99A" />
+			<child name="phandel's fabulous intellect potion" typename="PhandelsFabulousIntellectPotion" hue="0x9C3" />
+			<child name="phandel's fantastic intellect potion" typename="PhandelsFantasticIntellectPotion" hue="0x9A4" />
+		</parent>
+		<parent name="Transmutation" itemID="0xF0E" hue="0x780" title="What do you want to make?">
+			<child name="taint's minor transmutaion potion" typename="TaintsMinorTransmutationPotion" hue="0x780" />
+			<child name="taint's major transmutaion potion" typename="TaintsMajorTransmutationPotion" hue="0xABC" />
+		</parent>
+		<parent name="Totem" itemID="0xF0E" hue="0xAF0" title="What do you want to make?">
+			<child name="totem" typename="Totem" hue="0xAF0" />
+			<child name="elixir" typename="Elixir" hue="0xA38" />
+		</parent>
+		<parent name="Misc" itemID="0xF0A" hue="0x48D" title="What do you want to make?">
+			<child name="invisibility potion" typename="InvisibilityPotion" hue="0x48D" />
+			<child name="tamla heal potion" typename="TamlaPotion" hue="0x9A2" />
+		</parent>
+		<parent name="Pet Health" itemID="0xF0E" hue="0x9B1" title="What do you want to make?">
+			<child name="cure potion" typename="PetCurePotion" hue="0x9B1" />
+			<child name="greater cure potion" typename="PetGreaterCurePotion" hue="0x9B2" />
+			<child name="heal potion" typename="PetHealPotion" hue="0x9A0" />
+			<child name="greater heal potion" typename="PetGreaterHealPotion" hue="0x9A2" />
+			<child name="resurrect potion" typename="PetResurrectionPotion" hue="0x797" />
+		</parent>
+		<parent name="Plant Health" itemID="0xF0E" hue="0x748" title="What do you want to make?">
+			<child name="light fertilizer potion" typename="LightFertilizerPotion" hue="0x748" />
+			<child name="medium fertilizer potion" typename="MediumFertilizerPotion" hue="0x74B" />
+			<child name="heavy fertilizer potion" typename="HeavyFertilizerPotion" hue="0x747" />
+			<child name="light fungicide potion" typename="LightFungicidePotion" hue="0x8C5" />
+			<child name="medium fungicide potion" typename="MediumFungicidePotion" hue="0x8C7" />
+			<child name="heavy fungicide potion" typename="HeavyFungicidePotion" hue="0x8CA" />
+			<child name="light pesticide potion" typename="LightPesticidePotion" hue="0x847" />
+			<child name="medium pesticide potion" typename="MediumPesticidePotion" hue="0x849" />
+			<child name="heavy pesticide potion" typename="HeavyPesticidePotion" hue="0x852" />
+		</parent>
+		<parent name="Narcotics" itemID="0xF0A" hue="0x7F2" title="What do you want to make?">
+			<child name="light narcotic potion" typename="LightNarcoticPotion" hue="0x7F2" />
+			<child name="medium narcotic potion" typename="MediumNarcoticPotion" hue="0x84C" />
+			<child name="regular narcotic potion" typename="RegularNarcoticPotion" hue="0x847" />
+			<child name="heavy narcotic potion" typename="HeavyNarcoticPotion" hue="0x985" />
+		</parent>
+	</parent>
+</craftDefinition>

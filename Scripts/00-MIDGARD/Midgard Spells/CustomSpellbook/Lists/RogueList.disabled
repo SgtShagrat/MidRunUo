@@ -1,0 +1,21 @@
+using System;
+using Server;
+using System.Collections;
+
+namespace Server.Spells.FSB
+{
+    public class RogueList
+    {
+		public static void Initialize()
+		{
+			if( FSBSpellList.SpellList == null )
+            	FSBSpellList.SpellList = new ArrayList();
+
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "False Coin", "The Rogue produces false gold with the trick of the hand.", 150, 20481, 0, 0, "SA,NS", SchoolFlag.Rogue ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Charm", "The Rogue mesmerizes a target with his evil eyes.", 151, 21282, 0, 0, "BP,NS,SS", SchoolFlag.Rogue ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Sly Fox", "The Rogue changes shape into a stealthly Sly Fox.", 152, 20491, 0, 0, "PW,NC,NS", SchoolFlag.Rogue ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Shadow", "The Rogue slips into the shadows.", 153, 21003, 0, 0, "SS,DB,BP", SchoolFlag.Rogue ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Intimidation", "The Rogue begins to look angry and mean at the loss of his skills.", 154, 20485, 0, 0, "", SchoolFlag.Rogue ) );
+		}
+	}
+}

@@ -1,0 +1,30 @@
+using System;
+using Server;
+using System.Collections;
+
+namespace Server.Spells.FSB
+{
+    public class RangerList
+    {
+		public static void Initialize()
+		{
+			if( FSBSpellList.SpellList == null )
+            	FSBSpellList.SpellList = new ArrayList();
+
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Hunter's Aim", "Increases the Rangers archery, and tactics for a short period of time.", 900, 2244, 25, 50, "NS,SW,BM", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Flight of the Pheonix", "Calls Forth a Phoenix who will carry you to the location of your choice.", 901, 20736, 30, 30, "SA,PW", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Animal Companion", "The Ranger summons an animal companion (baised on skill level) to aid him in his quests.", 902, 20491, 17, 30, "DA,SW,PW", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Fire Bow", "The Ranger uses his knowlage of archery and hunting, to craft a temparary fire elemental bow, that last for a short duration.", 903, 2257, 30, 85, "KI,SA", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Ice Bow", "The Ranger uses his knowlage of archery and hunting, to craft a temparary ice elemental bow, that last for a short duration.", 904, 21001, 30, 85, "KI,SW", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Lightning Bow", "The Ranger uses his knowlage of archery and hunting, to craft a temparary lightning elemental bow, that last for a short duration.", 905, 2281, 60, 75, "KI,BP", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Nox Bow", "The Ranger uses his knowlage of archery and hunting, to craft a temparary poison elemental bow, that last for a short duration.", 906, 20488, 70, 85, "KI,NS", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Call Mount", "The Ranger calls to the Wilds, summoning a speedy mount to his side.", 907, 20745, 15, 30, "SW,BP,SA", SchoolFlag.Ranger ) );
+			//Need to change icons.
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Natural Herb", "The Ranger searches the area around him looking for any herbs. These herbs can be anything from night sight to herbs of life which may bring one person back from the dead.", 908, 2257, 60, 15, "SW,GA,DA", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Landmark", "Studying the area, the ranger is able to mark a rune with his location, for later a later return.", 909, 21001, 50, 25, "BP,SA", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Tree Stride", "This will open a woodland gate of the rangers choosing, to another location.", 910, 2281, 60, 75, "KI,GI,DA", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Wall of Air", "The ranger creates a wall of electrical air that damages anyone who passes through it.", 911, 20488, 50, 25, "BP,NS,DA", SchoolFlag.Ranger ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Wood Carvings", "Using his blade, the Ranger carves an item from wood.", 912, 20745, 50, 10, "KI", SchoolFlag.Ranger ) );
+		}
+	}
+}

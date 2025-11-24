@@ -1,0 +1,28 @@
+using System;
+using Server;
+using System.Collections;
+
+namespace Server.Spells.FSB
+{
+    public class ClericList
+    {
+		public static void Initialize()
+		{
+			if( FSBSpellList.SpellList == null )
+            	FSBSpellList.SpellList = new ArrayList();
+
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Angelic Faith", "The caster calls upon the divine powers of the heavens to transform himself into a holy angel. The caster gains better regeneration rates and increased stats and skills.", 801, 2295, 50, 80, "T.100", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Banish Evil", "The caster calls forth a divine fire to banish his undead or demonic foe from the earth.", 802, 20739, 20, 60, "T.30", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Dampen Spirit", "The caster's enemy is slowly drained of his stamina, greatly hindering their ability to fight in combat or flee.", 803, 2270, 11, 30, "T.15", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Divine Focus", "The caster's mind focuses on his divine faith increasing the effect of his prayers. However, the caster becomes mentally fatigued much faster.", 804, 2276, 4, 35, "T.15", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Hammer of Faith", "Summons forth a divine hammer of pure energy blessed with the ability to vanquish undead foes with greater efficiency.", 805, 20741, 14, 60, "T.20", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Purge", "The target is cured of all poisons and has all negative stat curses removed.", 806, 20744, 6, 10, "T.5", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Restoration", "The caster's target is resurrected and fully healed and refreshed.", 807, 2298, 50, 50, "T.60", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Sacred Boon", "The caster's target is surrounded by a divine wind that heals small amounts of lost life over time.", 808, 20742, 11, 25, "T.15", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Sacrifice", "The caster sacrifices himself for his allies. Whenever damaged, all party members are healed a small percent of the damage dealt. The caster still takes damage.", 809, 20743, 4, 5, "T.5", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Smite", "The caster calls to the heavens to send a deadly bolt of lightning to strike down his opponent.", 810, 2269, 50, 80, "T.60", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Touch of Life", "The caster's target is healed by the heavens for a significant amount.", 811, 2243, 9, 30, "T.10", SchoolFlag.Cleric ) );
+            FSBSpellList.SpellList.Add( new FSBSpellInfo( "Trial by Fire", "The caster is surrounded by a divine flame that damages the caster's enemy when hit by a weapon.", 812, 20736, 9, 40, "", SchoolFlag.Cleric ) );
+		}
+	}
+}

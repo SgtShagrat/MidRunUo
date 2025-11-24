@@ -4,7 +4,6 @@
 *.cfg
 *.config
 !Scripts/
-Data/*.cfg
 Data/*.xml
 Config/*
 
@@ -20,6 +19,7 @@ Saves/
 Saves - Default/
 Backups/
 Daily Save Backups/
+*.backup
 *.save
 *.bak
 
@@ -29,6 +29,7 @@ Daily Save Backups/
 *.dll
 *.pdb
 *.cache
+*.bin
 bin/
 obj/
 *.suo
@@ -83,6 +84,15 @@ Debug/
 
 #File Video
 PacketPlayerVideos/
+
+#File immagine
+*.png
+*.jpg
+*.gif
+*.bmp
+
+#File web
+*.html
 
 # File di dati specifici RunUO
 Data/Accounts/

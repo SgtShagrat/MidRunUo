@@ -1,0 +1,50 @@
+using System;
+using Server;
+using System.Collections;
+
+namespace Server.Spells.FSB
+{
+    public class AncientList
+    {
+		public static void Initialize()
+		{
+			if( FSBSpellList.SpellList == null )
+            	FSBSpellList.SpellList = new ArrayList();
+
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Fireworks", "This spell creates an impressive display of multi-colored moving lights.", 851, 20741, 1, 0, "", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Glimmer", "This spell creates a small light source that lasts for a short period of time.", 852, 2245, 3, 0, "", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Awaken", "This spell awakens one sleeping or unconscious creature.", 853, 2242, 5, 0, "", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Thunder", "This spell causes a single thunderclap to be heard, as if a terrible storm is imminent.", 854, 2281, 2, 0, "", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Weather", "This spell can create a storm or cause an existing storm to stop.", 855, 2291, 8, 0, "", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Ignite", "This spell generates a tiny missile of sparks that can ignite flammable material.", 856, 2290, 6, 0, "", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Douse", "This spell extinguishes any small, non-magical fire.", 857, 20488, 6, 0, "", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Locate", "This spell reveals the sextant position of the mage, even when underground.", 859, 20741, 4, .1, "NS", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Awaken All", "This spell awakens all unconscious members of the mage's party.", 860, 2249, 4, .1, "GA,GI", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Detect Trap", "This spell allows the mage to see any nearby traps.", 861, 2258, 4, .1, "SS,NS", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Great Douse", "This spell is a more potent version of the Linear spell Douse.", 862, 2303, 4, .1, "SS", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Great Ignite", "This spell is a more potent version of the Linear spell Ignite.", 863, 2302, 4, .1, "SS,SA", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Enchant", "This spell causes a ranged weapon to become enchanted and glow blue. Enchanted weapons will always hit their target.", 864, 2270, 6, .1, "BP,MR", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "False Coin", "When cast upon any coin, this spell creates five duplicate coins.", 865, 20481, 6, .1, "NS,SA", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Great Light", "This spell is a more potent version of the First Circle spell Nightsight, and has a substantially longer duration.", 866, 2245, 6, .1, "MR,SA", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Destroy Trap", "This spell destroys any one specific trap upon which it is cast.", 867, 2253, 6, .1, "BM,SA", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Sleep", "This spell causes the enchanted person to fall asleep.", 868, 2292, 9, 10.1, "NS,SS,BP", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Swarm", "This spell summons swarms of insects to attack the enemies of the mage from all directions.", 869, 2285, 9, 10.1, "NS,MR,BM", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Peer", "This spell enables the mage's vision to leave his body and scout the area.", 870, 2295, 9, 10.1, "NS,MR", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Seance", "This spell enables the mage to move as a ghost.", 871, 20493, 11, 24.1, "NS,MR,BM,SS,SA", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Charm", "This spell can be used either to control an enemy or creature, or to free a charmed one.", 872, 21282, 14, 38.1, "NS,BP,SS", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Dance", "This spell makes everyone in sight (except the mage and his party) start to dance.", 873, 21011, 14, 38.1, "MR,GA,BM", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Mass Sleep", "This spell is a more potent version of the Third Circle spell Sleep. It puts to sleep a group of targets.", 874, 21006, 14, 38.1, "GI,NS,SS", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Clone", "This spell creates an exact duplicate of any mortal creature, who will then fight for the mage.", 875, 2261, 20, 52.1, "GI,NS,SS,BM,SA", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Cause Fear", "No description.", 876, 2261, 20, 52.1, "GI,NS,SS,BM,SA", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Fire Ring", "This spell create a ring of fire that will encircle the mage's target.", 877, 2289, 20, 52.1, "BP,SA,MR", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Tremor", "This spell creates violent tremors in the earth that will cause the mage's enemies to tremble frantically.", 878, 2296, 20, 52.1, "BM,SA,MR", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Sleep Field", "This spell creates a thick wall of energy field where the mage desires. All who enter this energy field will fall asleep.", 879, 2263, 20, 52.1, "GI,SS,BP", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Mass Might", "This spell works the same way as the Bless spell, but for everyone in the mage’s party.", 880, 2256, 40, 66.1, "GI,MR,BP", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Mass Charm", "This spell is similar to the Fifth Circle spell Charm, but it affects more powerful monsters, based on the mage's intellect.", 881, 2276, 40, 66.1, "NS,MR,BP,SS", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Invisiblity All", "This spell is the equivalent of casting the Fifth Circle spell Invisibility upon the mage and everyone in his party.", 882, 20494, 50, 80.1, "NS,MR,BP,BM", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Death Vortex", "This spell creates a swirling black vortex at the point the mage designates, which will thereafter move at random.", 883, 2297, 50, 80.1, "NS,MR,SA", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Mass Death", "No description.", 884, 20494, 50, 80.1, "NS,MR,BP,BM", SchoolFlag.Ancient ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Arrageddon", "No description.", 850, 2297, 50, 80.1, "NS,MR,SA", SchoolFlag.Ancient ) );
+		}
+	}
+}

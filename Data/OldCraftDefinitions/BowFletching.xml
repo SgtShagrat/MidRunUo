@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<craftDefinition>
+	<parent name="BowFletching" title="What would you like to make?" selectresource="true">
+		<parent name="Materials" itemID="0xDE1" title="What do you want to make?">
+			<child name="kindling" typename="Kindling" />
+			<child name="shaft" typename="Shaft" />
+		</parent>
+		<parent name="Ammunition" itemID="0xF3F" title="What do you want to make?">
+			<child name="arrow" typename="Arrow" />
+			<child name="incendiary arrow" typename="IncendiaryArrow" hue="0x676" />
+			<child name="acid arrow" typename="AcidArrow" hue="0x852" />
+			<child name="disarming arrow" typename="DisarmingArrow" hue="0x897" />
+			<child name="dismounting arrow" typename="DismountingArrow" hue="0x6F8" />
+			<child name="stuning arrow" typename="StuningArrow" hue="0x774" />
+			<child name="crossbow bolt" typename="Bolt" />
+		</parent>
+		<parent name="Weapons" itemID="0x13B2" title="What do you want to make?">
+			<child name="bow" typename="Bow" />
+			<child name="crossbow" typename="Crossbow" />
+			<child name="heavy crossbow" typename="HeavyCrossbow" />
+			<child name="elven composite longbow" typename="ElvenCompositeLongbow" />
+			<child name="magical shortbow" typename="MagicalShortbow" />
+		</parent>
+	</parent>
+</craftDefinition>

@@ -1,0 +1,144 @@
+<html> 
+    <head> 
+        <title>{$Pkg.Name}</title> 
+        <style type="text/css">
+            Body
+            {
+                font-family:Verdana;
+                font-size:12px;
+            }            
+            .width100
+            {
+                width:100%;
+            }
+            .titleleft
+            {
+                font-weight:bold;
+                display:inline;
+                float:left;
+            }
+            .titleright
+            {
+                display:inline;
+                float:right;
+            }
+            .details
+            {
+                vertical-align:top;
+            }
+            .details_value
+            {
+                font-weight:bold;
+            }
+            .details_list
+            {
+            }
+            .details_element
+            {
+            }
+            .details_label
+            {
+            }
+            .image_preview_col
+            {
+                background-color:#000000;
+                text-align:center;
+            }
+            .cellRenderHead
+            {
+                background-color:#CCCCCC;
+                font-weight:bold;                
+            }
+            .mainTable
+            {                
+                border:1px solid black;
+                border-collapse:collapse;
+                font-size:12px;
+            }
+            .mainTableCell
+            {
+                border:1px solid black;
+                padding:2px;
+            }
+            .CellTitle
+            {
+                text-indent:10px;
+            }
+            .formQuery
+            {
+                padding-left:20px;
+            }
+            .rightalign
+            {
+                float:right;
+                display:inline;
+                white-space:nowrap;
+            }
+            .width50px
+            {
+                width:50px;
+            }
+            .error
+            {
+                color: Red;
+            }
+            .warning
+            {
+                color: Maroon;
+            }
+        </style>
+        <script language ="javascript">
+            function doRenderQuery() {
+                document.location.href = "queryMapRender?{$QueryStringCredential}&map=" + document.getElementById("query_map").value + "&start=" + document.getElementById("query_start").value + "&end=" + document.getElementById("query_end").value + "&effects=" + document.getElementById("query_effects").value + "&globallight=" + document.getElementById("query_globallight").value + "&lightsource=" + document.getElementById("uselightsources").value + "&zoom=" + document.getElementById("query_zoom").value;
+            }
+            function fillFromPresets() {
+                
+                var presets = document.getElementById("presets").value;
+                var args = presets.split(";");
+                document.getElementById("query_map").value = args[0];
+                document.getElementById("query_start").value = args[1];
+                document.getElementById("query_end").value = args[2];
+            }
+        </script>
+    </head> 
+    <body> 
+        <h1>{$Pkg.Name} {$Pkg.Version} by {$Pkg.AuthorName}</h1>
+        <a href="infoMapRender?{$QueryStringCredential}">Refresh</a>
+        | <a href="#newRender">New Query</a>
+        <br /><br />
+        <table cellspacing="0" cellpadding="0" border="0px;" class="width100 mainTable"> 
+            <tr><td colspan="2" class="mainTableCell cellRenderHead">Active Renderization: [{$ActiveRenderizationsCount}]</td></tr>       
+            {$ActiveRenderizationDetails}
+            <tr><td colspan="2" class="mainTableCell cellRenderHead">Errors: [{$ErrorsRenderizationsCount}]</td></tr>       
+            {$ErrorsRenderizationsDetails}
+            <tr><td colspan="2" class="mainTableCell cellRenderHead">Queued Renderizations [{$QueuedRenderizationsCount}]</td></tr>               
+            {$QueuedRenderizationsDetails}
+            <tr><td colspan="2" class="mainTableCell cellRenderHead">Stored Renderizations [{$StoredRenderizationsCount}]</td></tr>                       
+            {$StoredRenderizationsDetails}
+            <tr>
+                <td class="mainTableCell CellTitle cellRenderHead" colspan="2">
+                    <div class="titleleft">
+                        <a name="newRender"></a>
+                        Query new Render:
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="mainTableCell details"> 
+                    <div class="formQuery"> 
+                        <span class="details_label">Predefined Locations:</span> <span class="details_value"><select id="presets">{$OptionsRegions}</select> <input type="button" onclick="fillFromPresets();" value="Fill form from selected location."/></span><br/>                          
+                        <hr class="width100"/>
+                        <span class="details_label">Map Name:</span> <span class="details_value"><input id="query_map" type="text" value="Felucca" /></span><br/> 
+                        <span class="details_label">Start:</span> <span class="details_value"><input id="query_start" type="text" value="(0,0,-127)" /></span><br/> 
+                        <span class="details_label">End:</span> <span class="details_value"><input id="query_end" type="text" value="(0,0,127)" /></span><br/> 
+                        <span class="details_label">Zoom (5%-100%): %</span> <span class="details_value"><input id="query_zoom" type="text" value="100" /></span><br/> 
+                        <span class="warning">(Alpha State: do not change) &raquo; </span><span class="details_label">Use Image Extra-Effects:</span> <span class="details_value"><select id="query_effects"><option selected="selected" value="false">False</option><option value="true">True</option></select></span><br/> 
+                        <span class="warning">(Alpha State: do not change) &raquo; </span><span class="details_label">Global Light (0-255):</span> <span class="details_value"><input id="query_globallight" type="text" value="255" /></span><br/> 
+                        <span class="warning">(Alpha State: do not change) &raquo; </span><span class="details_label">Render Light Sources:</span> <span class="details_value"><select id="uselightsources"><option selected="selected" value="false">False</option><option value="true">True</option></select></span><br/>                         
+                    </div> 
+                    <input type="button" onclick="doRenderQuery();" value="Execute Query" />
+                </td>
+            </tr> 
+        </table>
+    </body> 
+</html> 

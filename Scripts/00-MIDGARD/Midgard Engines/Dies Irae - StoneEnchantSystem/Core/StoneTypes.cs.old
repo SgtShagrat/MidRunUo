@@ -1,0 +1,30 @@
+/***************************************************************************
+ *                                  StoneTypes.cs
+ *                            		-------------
+ *  begin                	: Ottobre, 2007
+ *  version					: 2.0 **VERSIONE PER RUNUO 2.0**
+ *  copyright            	: Midgard Uo Shard - Matteo Visintin
+ *  email                	: tocasia@alice.it
+ *
+ ***************************************************************************/
+
+namespace Midgard.Engines.StoneEnchantSystem
+{
+	public enum StoneTypes
+	{
+		None,
+		Phoenix,
+		Flamming,
+		Electrical,
+		Cloud,
+		Explosion,
+		Lockmind,
+		Spectral,
+		Serpent,
+		Perforate,
+		Antimagical,
+		Vampirical,
+		Mammoth,
+		Sonical
+	}
+}

@@ -1,0 +1,30 @@
+using System;
+using Server;
+using System.Collections;
+
+namespace Server.Spells.FSB
+{
+    public class UndeadList
+    {
+		public static void Initialize()
+		{
+			if( FSBSpellList.SpellList == null )
+            	FSBSpellList.SpellList = new ArrayList();
+
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Poison Mark", "Necromancer uses this spell to mark runes of travel.", 117, 2284, 30, 59.9, "DB,PI", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Travel By Poison", "Necromancer uses this spell to travel with the use of a marked rune.", 118, 2271, 11, 39.9, "BW,NC", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Cure Poison", "Cures most poisons on anyone targeted by this spell.", 119, 2250, 20, 15.0, "NC,PI", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Poison Field", "Produces a wall of poison that causes damage and poisons anyone who walks on it. Careful!", 120, 2267, 32, 36.0, "BW,GD", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Graveyard Gateway", "Produces a moongate from the use of a marked rune used for travel.", 121, 2291, 45, 69.9, "DB,BW", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Revival By Seance", "Resurrects person of choice by the use of a Ouija board.", 122, 2298, 50, 79.9, "NC,DB,GD", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Horde Minion's Eyes", "Gives Necromancer horde minion's superior vision to see at night.", 123, 2245, 5, 15.0, "BW,NC", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Wall of Spikes", "Summons a wall of stone spikes as a shield.", 124, 2280, 10, 24, "DB,PI", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Poison Ivy Patch", "Forms a circle of poison ivy that causes damage & the ability to poison when walked on. Careful!", 125, 2251, 28, 68.0, "GD,NC,PI", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Blood Pact", "Heals a person of choice draining health & blood from the necromancer.", 126, 2243, 15, 33.0, "BW,PI", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Poison", "Poisons the selected target.", 127, 2259, 20, 30.0, "NC,BD", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Mass Curse", "Lowers the nearby enemeies abilities in combat.", 128, 2285, 25, 65.0, "BW,GD,DB,NC", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Misfits of Mondain", "Summons four creatures that Mondain couldn't even get along with. To help in combat.", 129, 2300, 30, 37.0, "NC,GD,BW", SchoolFlag.Undead ) );
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Create Undead Minion", "Creates a lasting undead ally.", 130, 2300, 50, 10.0, "BW,DB,GD,NC,PI", SchoolFlag.Undead));
+		}
+	}
+}

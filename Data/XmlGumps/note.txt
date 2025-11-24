@@ -1,0 +1,2 @@
+All filenames and dirnames must be in lowercase.
+Beware: linux is CASE SENSITIVE

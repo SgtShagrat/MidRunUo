@@ -1,0 +1,32 @@
+using System;
+using Server;
+using System.Collections;
+
+namespace Server.Spells.FSB
+{
+    public class BardList
+    {
+		public static void Initialize()
+		{
+			if( FSBSpellList.SpellList == null )
+            	FSBSpellList.SpellList = new ArrayList();
+
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Army's Paeon", "Regenerates your partys health slowly. [Area Effect]", 651, 2243, 12, 70, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Enchanting Etude", "Raises the intelligence of your party.  [Area Effect]", 652, 2242, 15, 60, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Energy Carol", "Raises the energy resistance of your party. [Area Effect]", 653, 2289, 7, 35, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Energy Threnody", "Lowers the energy resistance of your target.", 654, 2281, 12, 30, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Fire Carol", "Raises the fire resistance of your party. [Area Effect]", 655, 2267, 12, 70, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Fire Threnody", "Lowers the fire resistance of your target.", 656, 2257, 12, 70, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Foe Requiem", "Damages your target with a burst of sonic energy.", 657, 2270, 12, 30, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Ice Carol", "Raises the cold resistance of your party. [Area Effect]", 658, 2286, 18, 55, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Ice Threnody", "Lowers the ice resistance of your target.", 659, 2269, 12, 45, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Knight's Minne", "Raises the physical resist of your party. [Area Effect]", 660, 2273, 7, 35, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Mage's Ballad", "Regenerates your party's mana slowly. [Area Effect]", 661, 2292, 15, 80, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Magic Finale", "Dispels all summoned creatures around you. [Area Effect]", 662, 2280, 15, 65, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Poison Carol", "Raises the poison resistance of your party.  [Area Effect]", 663, 2285, 7, 35, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Poison Threnody", "Lowers the poison resistance of your target.", 664, 20488, 12, 30, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Sheepfoe Mambo", "Raises the dexterity of your party. [Area Effect]", 665, 2248, 12, 70, "", SchoolFlag.Bard ) );
+			FSBSpellList.SpellList.Add( new FSBSpellInfo( "Sinewy Etude", "Raises the strength of your party. [Area Effect]", 666, 20741, 12, 70, "", SchoolFlag.Bard ) );
+		}
+	}
+}

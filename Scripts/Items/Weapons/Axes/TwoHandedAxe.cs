@@ -1,0 +1,64 @@
+using System;
+
+using Midgard.Engines.Races;
+
+using Server.Items;
+using Server.Network;
+
+namespace Server.Items
+{
+	[FlipableAttribute( 0x1443, 0x1442 )]
+    [RaceAllowanceAttribute( typeof( MountainDwarf ) )]
+	public class TwoHandedAxe : BaseAxe
+	{
+		public override WeaponAbility PrimaryAbility{ get{ return WeaponAbility.DoubleStrike; } }
+		public override WeaponAbility SecondaryAbility{ get{ return WeaponAbility.ShadowStrike; } }
+
+		public override int AosStrengthReq{ get{ return 40; } }
+		public override int AosMinDamage{ get{ return 16; } }
+		public override int AosMaxDamage{ get{ return 17; } }
+		public override int AosSpeed{ get{ return 31; } }
+		public override float MlSpeed{ get{ return 3.50f; } }
+
+		public override int OldStrengthReq{ get{ return 40; } }
+		public override int OldMinDamage{ get{ return 5; } }
+		public override int OldMaxDamage{ get{ return 39; } }
+		public override int OldSpeed{ get{ return 30; } }
+
+		public override int InitMinHits{ get{ return 31; } }
+		public override int InitMaxHits{ get{ return 90; } }
+
+        #region mod by Dies Irae
+        public override int NumDice { get { return 2; } }
+        public override int NumSides { get { return 18; } }
+        public override int DiceBonus { get { return 3; } }
+
+        public override int OldHitSound { get { return 571; } }
+        public override int OldMissSound { get { return 569; } }
+        #endregion
+
+		[Constructable]
+		public TwoHandedAxe() : base( 0x1443 )
+		{
+			Weight = 8.0;
+		}
+
+		public TwoHandedAxe( Serial serial ) : base( serial )
+		{
+		}
+
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			writer.Write( (int) 0 ); // version
+		}
+
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+		}
+	}
+}

@@ -1,0 +1,36 @@
+namespace Server.Items
+{
+    [Flipable( 0x194B, 0x194C )]
+    public class SurveyorsScope : HousePlacementTool
+    {
+        public override int LabelNumber
+        {
+            get { return 1026475; }
+        } // surveyor's scope
+
+        [Constructable]
+        public SurveyorsScope()
+        {
+            ItemID = 0x194B;
+        }
+
+        public SurveyorsScope( Serial serial )
+            : base( serial )
+        {
+        }
+
+        public override void Serialize( GenericWriter writer )
+        {
+            base.Serialize( writer );
+
+            writer.Write( 0 ); // version
+        }
+
+        public override void Deserialize( GenericReader reader )
+        {
+            base.Deserialize( reader );
+
+            int version = reader.ReadInt();
+        }
+    }
+}

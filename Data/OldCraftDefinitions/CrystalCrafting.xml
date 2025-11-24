@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<craftDefinition>
+	<parent name="CrystalCrafting" title="What would you like to make?" selectresource="true">
+		<parent name="Miscellaneous" itemID="0x3678" title="What do you want to make?">
+			<child name="raw crystal" typename="RawCrystal" />
+			<child name="unshaped crystal ( little )" typename="LittleUnshapedCrystal" />
+			<child name="unshaped crystal ( large )" typename="LargeUnshapedCrystal" />
+			<child name="unshaped crystal ( tall )" typename="TallUnshapedCrystal" />
+			<child name="crystal pillar" typename="CrystalPillar" />
+		</parent>
+		<parent name="Decorations" itemID="0x35EF" title="What do you want to make?">
+			<child name="crystal brazier" typename="CrystalBrazier" />
+			<child name="crystal throne ( east )" typename="CrystalThroneEast" />
+			<child name="crystal throne ( south )" typename="CrystalThroneSouth" />
+			<child name="crystal table ( east )" typename="CrystalTableEastAddonDeed" />
+			<child name="crystal table ( south )" typename="CrystalTableSouthAddonDeed" />
+			<child name="crystal altar" typename="CrystalAltarAddonDeed" />
+		</parent>
+		<parent name="Pedestrals" itemID="0x3CF4" title="What do you want to make?">
+			<child name="crystal pedestral ( small )" typename="CrystalPedestralSmall" />
+			<child name="crystal pedestral ( medium )" typename="CrystalPedestralMedium" />
+			<child name="crystal pedestral ( emtpy )" typename="CrystalPedestralLargeEmpty" />
+			<child name="crystal pedestral ( large )" typename="CrystalPedestralLarge" />
+		</parent>
+		<parent name="Statues" itemID="0x14F0" title="What do you want to make?">
+			<child name="crystal bull ( south )" typename="CrystalBullSouthAddonDeed" />
+			<child name="crystal bull ( east )" typename="CrystalBullEastAddonDeed" />
+			<child name="crystal beggar ( south )" typename="CrystalBeggarStatueSouth" />
+			<child name="crystal beggar ( east )" typename="CrystalBeggarStatueEast" />
+			<child name="crystal supplicant ( south )" typename="CrystalSupplicantStatueSouth" />
+			<child name="crystal supplicant ( east )" typename="CrystalSupplicantStatueEast" />
+			<child name="crystal runner ( south )" typename="CrystalRunnerStatueSouth" />
+			<child name="crystal runner ( east )" typename="CrystalRunnerStatueEast" />
+		</parent>
+		<parent name="Specials" itemID="0x1F1C" title="What do you want to make?">
+			<child name="purple crystal" typename="PurpleCrystal" />
+			<child name="green crystal" typename="GreenCrystal" />
+			<child name="magic crystal ball" typename="MagicCrystalBall" />
+			<child name="globe of Sosaria" typename="GlobeOfSosariaAddonDeed" />
+		</parent>
+	</parent>
+</craftDefinition>

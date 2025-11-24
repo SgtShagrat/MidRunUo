@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infos>
+  <info type="AgilityPotion" name="pozione di agilita" id="0xF08" price="15" hue="0x0" />
+  <info type="AgilityScroll" name="agilita" id="0x1F35" price="36" hue="0x0" />
+  <info type="AlchemistBag" name="alchemist bag" id="0x113F" price="100" hue="0x0" />
+  <info type="AlchemyBook" name="alchemist's handbook" id="0xEFA" price="50" hue="0x4B1" />
+  <info type="Almond" name="almond" id="0x1AA2" price="2" hue="0x482" />
+  <info type="Amber" name="ambra" id="0xF25" price="50" hue="0x0" />
+  <info type="Amethyst" name="ametista" id="0xF16" price="100" hue="0x0" />
+  <info type="ApiBeeHiveDeed" name="" id="0x14F0" price="10000" hue="0x0" />
+  <info type="ApiWaxProcessingPot" name="" id="0x9E4" price="1000" hue="0x0" />
+  <info type="Apple" name="mela" id="0x9D0" price="3" hue="0x0" />
+  <info type="ApplePie" name="torta di mele al forno" id="0x1041" price="7" hue="0x0" />
+  <info type="AppleTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="Apricot" name="apricot" id="0x9D2" price="2" hue="0x31" />
+  <info type="Arrow" name="freccia" id="0xF3F" price="2" hue="0x0" />
+  <info type="Axe" name="ascia" id="0xF49" price="40" hue="0x0" />
+  <info type="Axle" name="asse" id="0x105B" price="2" hue="0x0" />
+  <info type="AxleGears" name="asse con ingranaggi" id="0x1051" price="3" hue="0x0" />
+  <info type="Backgammon" name="smeraldo" id="0xE1C" price="2" hue="0x0" />
+  <info type="Backpack" name="zaino" id="0xE75" price="15" hue="0x0" />
+  <info type="BackstabbingKnife" name="pugnale" id="0xF52" price="750" hue="0x0" />
+  <info type="Bacon" name="fetta di pancetta" id="0x979" price="7" hue="0x0" />
+  <info type="Bag" name="borsa" id="0xE76" price="6" hue="0x0" />
+  <info type="BakersBoard" name="baker's board" id="0x14EA" price="10" hue="0x0" />
+  <info type="BakingBook" name="cook's handbook (baking recipes)" id="0xEFA" price="50" hue="0x6C3" />
+  <info type="Banana" name="banana" id="0x171F" price="2" hue="0x0" />
+  <info type="BananaTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="Bandage" name="legno morto" id="0xE21" price="5" hue="0x0" />
+  <info type="Bandana" name="bandana" id="0x1540" price="6" hue="0x0" />
+  <info type="Bardiche" name="bardiche" id="0xF4D" price="60" hue="0x0" />
+  <info type="BarkeepContract" name="barkeep contract" id="0x14F0" price="1252" hue="0x0" />
+  <info type="Barley" name="barley" id="0x1AA2" price="30" hue="0x7E9" />
+  <info type="Bascinet" name="bacinetto" id="0x140C" price="87" hue="0x0" />
+  <info type="BattleAxe" name="ascia da battaglia" id="0xF47" price="68" hue="0x0" />
+  <info type="BatWing" name="batwing" id="0xF78" price="1" hue="0x0" />
+  <info type="Beads" name="perline" id="0x108B" price="27" hue="0x0" />
+  <info type="Bedroll" name="bedroll" id="0xA57" price="5" hue="0x0" />
+  <info type="Beeswax" name="cera d'api" id="0x1422" price="1" hue="0x0" />
+  <info type="Belt" name="belt" id="0x3364" price="100" hue="0x0" />
+  <info type="BeltWithBag" name="belt with bag" id="0x3363" price="100" hue="0x0" />
+  <info type="BeverageBottle" name="beverage bottle" id="0x0" price="7" hue="0x0" />
+  <info type="BirdsOfBritannia" name="libro" id="0xFEF" price="2508" hue="0x0" />
+  <info type="BlackMoor" name="black moor" id="0xF88" price="5" hue="0x0" />
+  <info type="BlackPearl" name="perla nera" id="0xF7A" price="2" hue="0x0" />
+  <info type="BlacksmithyBook" name="blacksmith's handbook" id="0xEFA" price="50" hue="0x602" />
+  <info type="BlackStaff" name="personale nero" id="0xDF0" price="22" hue="0x0" />
+  <info type="BlankCandle" name="" id="0x1433" price="200" hue="0x47E" />
+  <info type="BlankMap" name="blank map" id="0x14EC" price="5" hue="0x0" />
+  <info type="BlankScroll" name="scorrimento vuoto" id="0xEF3" price="5" hue="0x0" />
+  <info type="BlessedDrop" name="crystal bottle" id="0xF0E" price="10" hue="0x0" />
+  <info type="BlessScroll" name="benedire" id="0x1F3D" price="39" hue="0x0" />
+  <info type="Bloodmoss" name="blood moss" id="0xF7B" price="2" hue="0x0" />
+  <info type="BloodSpawn" name="blood spawn" id="0xF7C" price="5" hue="0x0" />
+  <info type="Blowpipe" name="blow pipe" id="0xE8A" price="21" hue="0x3B9" />
+  <info type="BlueBook" name="libro" id="0xFF2" price="15" hue="0x0" />
+  <info type="BlueTentDeed" name="atto di una tenda blu" id="0x14F0" price="22800" hue="0x0" />
+  <info type="Board" name="tavola" id="0x1BD7" price="3" hue="0x0" />
+  <info type="BoatDecorator" name="boat decorator" id="0xFC1" price="500" hue="0x0" />
+  <info type="BoilingBook" name="cook's handbook (boiling recipes)" id="0xEFA" price="50" hue="0x53B" />
+  <info type="Bolt" name="bullone della balestra" id="0x1BFB" price="5" hue="0x0" />
+  <info type="BoltOfCloth" name="rotolo di stoffa" id="0xF95" price="100" hue="0x0" />
+  <info type="BookOfChivalry" name="compendium of faith" id="0x2252" price="140" hue="0x0" />
+  <info type="Boots" name="stivali" id="0x170B" price="10" hue="0x0" />
+  <info type="Bottle" name="bottiglia vuota" id="0xF0E" price="5" hue="0x0" />
+  <info type="Bow" name="arco" id="0x13B2" price="35" hue="0x0" />
+  <info type="BowFletchingBook" name="fletcher's handbook" id="0xEFA" price="50" hue="0x6C1" />
+  <info type="BowlFlour" name="ciotola di farina" id="0xA1E" price="7" hue="0x0" />
+  <info type="BreadLoaf" name="pagnotta di pane" id="0x103B" price="6" hue="0x0" />
+  <info type="BrewersTools" name="brewer's tools" id="0xE7F" price="500" hue="0x3EF" />
+  <info type="BreweryLabelMaker" name="brewery label maker" id="0xFC0" price="2000" hue="0x2E" />
+  <info type="BrewingBook" name="brewery handbook" id="0xEFA" price="50" hue="0x664" />
+  <info type="BrickHouseDeed" name="atto a una casa di mattoni" id="0x14F0" price="144500" hue="0x0" />
+  <info type="BroadcastCrystal" name="cristallo di comunicazione" id="0x1ED0" price="68" hue="0x0" />
+  <info type="Broadsword" name="spadone" id="0xF5E" price="35" hue="0x0" />
+  <info type="BronzeShield" name="scudo di bronzo" id="0x1B72" price="66" hue="0x0" />
+  <info type="BrownBear" name="brown bear" id="0x2118" price="855" hue="0x0" />
+  <info type="BrownBook" name="libro" id="0xFEF" price="15" hue="0x0" />
+  <info type="Buckler" name="scudo" id="0x1B73" price="50" hue="0x0" />
+  <info type="BurningOfTrinsic" name="libro" id="0xFF0" price="1197" hue="0x0" />
+  <info type="ButcherKnife" name="coltello da macellaio" id="0x13F6" price="13" hue="0x0" />
+  <info type="Cabbage" name="testa di cavolo" id="0xC7B" price="5" hue="0x0" />
+  <info type="CabbageSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="CabernetSauvignonGrapes" name="cabernet sauvignon grapes" id="0x9D1" price="2" hue="0x0" />
+  <info type="Cake" name="torta" id="0x9E9" price="13" hue="0x0" />
+  <info type="Candle" name="candela" id="0xA28" price="6" hue="0x0" />
+  <info type="CandleFitSkull" name="" id="0x1AE3" price="100" hue="0x0" />
+  <info type="CandleWick" name="" id="0x979" price="100" hue="0x41C" />
+  <info type="Cantaloupe" name="canteloupe" id="0xC79" price="6" hue="0x0" />
+  <info type="Cap" name="berretto" id="0x1715" price="10" hue="0x0" />
+  <info type="CarlsbergensisYeast" name="carlsbergensis yeast" id="0x1AA2" price="150" hue="0x7E7" />
+  <info type="CarpentryBook" name="carpenter's handbook" id="0xEFA" price="50" hue="0x660" />
+  <info type="Carrot" name="carota" id="0xC78" price="3" hue="0x0" />
+  <info type="CarrotSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="CartographyBook" name="map maker's handbook" id="0xEFA" price="50" hue="0x65D" />
+  <info type="CastleDeed" name="un atto di castello" id="0x14F0" price="2045600" hue="0x0" />
+  <info type="Cat" name="cat" id="0x211B" price="132" hue="0x900" />
+  <info type="CedarTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="CereviasiaeYeast" name="cereviasiae yeast" id="0x1AA2" price="100" hue="0x7E8" />
+  <info type="ChainChest" name="tunica cotta di maglia" id="0x13BF" price="143" hue="0x0" />
+  <info type="ChainCoif" name="cuffia chainmail" id="0x13BB" price="123" hue="0x0" />
+  <info type="ChainLegs" name="leggings a maglia larga" id="0x13BE" price="149" hue="0x0" />
+  <info type="ChardonnayGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x1CC" />
+  <info type="CheckerBoard" name="una scacchiera" id="0xFA6" price="2" hue="0x0" />
+  <info type="CheeseForm" name="cheese form" id="0xE78" price="500" hue="0x481" />
+  <info type="CheesePizza" name="pizza al formaggio" id="0x1040" price="8" hue="0x0" />
+  <info type="CheeseWheel" name="ruota di formaggio" id="0x97E" price="21" hue="0x0" />
+  <info type="CheninBlancGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x16B" />
+  <info type="Cherry" name="cherry" id="0x9D1" price="2" hue="0x85" />
+  <info type="CherryTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="Chessboard" name="una scacchiera" id="0xFA6" price="2" hue="0x0" />
+  <info type="ChickenLeg" name="coscia di pollo" id="0x1608" price="5" hue="0x0" />
+  <info type="ChristmasCandyCane" name="bastoncino di zucchero rosso" id="0x2BDE" price="100" hue="0x0" />
+  <info type="ChristmasDecorativeTopiary" name="arte topiaria decorativa" id="0x2378" price="100" hue="0x0" />
+  <info type="ChristmasFestiveCactus" name="cactus festivo" id="0x2376" price="100" hue="0x0" />
+  <info type="ChristmasGingerBreadCookie" name="biscotto di panpepato" id="0x2BE1" price="100" hue="0x0" />
+  <info type="ChristmasHolidayBell" name="midgard christmas bell" id="0x1C12" price="100" hue="0x69" />
+  <info type="ChristmasMistletoeDeed" name="mistletoe deed" id="0x14F0" price="100" hue="0x0" />
+  <info type="ChristmasPileOfGlacialSnow" name="un mucchio di neve glaciale" id="0x913" price="100" hue="0x480" />
+  <info type="ChristmasSnowyTree" name="albero innevato" id="0x2377" price="100" hue="0x0" />
+  <info type="Citrine" name="citrino" id="0xF15" price="50" hue="0x0" />
+  <info type="Cleaver" name="mannaia" id="0xEC3" price="15" hue="0x0" />
+  <info type="Cloak" name="mantello" id="0x1515" price="8" hue="0x0" />
+  <info type="Clock" name="orologio" id="0x104B" price="22" hue="0x0" />
+  <info type="ClockParts" name="parti di orologio" id="0x104F" price="3" hue="0x0" />
+  <info type="CloseHelm" name="casco vicino" id="0x1408" price="136" hue="0x0" />
+  <info type="Cloth" name="tagliare un panno" id="0x1766" price="2" hue="0x0" />
+  <info type="Club" name="club" id="0x13B4" price="16" hue="0x0" />
+  <info type="ClumsyScroll" name="maldestro" id="0x1F2E" price="32" hue="0x0" />
+  <info type="CocoaNut" name="cocoa nut" id="0x1726" price="2" hue="0x422" />
+  <info type="CoconutPalmSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="CoffeeBean" name="coffee bean" id="0xC64" price="500" hue="0x46A" />
+  <info type="CoilOre" name="coil" id="0x19B9" price="5" hue="0x497" />
+  <info type="CommodityDeed" name="atto di merci" id="0x14F0" price="5" hue="0x47" />
+  <info type="CommonTreeSeed" name="diamante" id="0xF27" price="1000" hue="0x5E2" />
+  <info type="CommonYeast" name="yeast" id="0x1AA2" price="30" hue="0x7E4" />
+  <info type="ContractOfEmployment" name="un contratto di lavoro" id="0x14F0" price="20000" hue="0x0" />
+  <info type="CookedBird" name="uccello cotto" id="0x9B7" price="17" hue="0x0" />
+  <info type="Cookies" name="padella di biscotti" id="0x160B" price="3" hue="0x0" />
+  <info type="CookingBook" name="cook's handbook" id="0xEFA" price="50" hue="0x60C" />
+  <info type="CooksCauldron" name="cook's cauldron" id="0x9ED" price="10" hue="0x0" />
+  <info type="Corn" name="an ear of corn" id="0xC81" price="2" hue="0x0" />
+  <info type="CornSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="Cotton" name="balla di cotone" id="0xDF9" price="102" hue="0x0" />
+  <info type="CottonSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="CowMilkBottle" name="bottle of cow milk" id="0xF09" price="20" hue="0x0" />
+  <info type="CreateFoodScroll" name="crea cibo" id="0x1F2F" price="32" hue="0x0" />
+  <info type="Crossbow" name="balestra" id="0xF50" price="46" hue="0x0" />
+  <info type="CrystalAltarAddonDeedRecipe" name="crystal altar recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalBeggarStatueEastRecipe" name="crystal beggar statue east recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalBeggarStatueSouthRecipe" name="crystal beggar statue south recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalBrazierRecipe" name="crystal brazier recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalBullEastAddonDeedRecipe" name="crystal bull east deed recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalBullSouthAddonDeedRecipe" name="crystal bull south deed recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalCraftingBook" name="crystal forger's handbook" id="0xEFA" price="50" hue="0x589" />
+  <info type="CrystalPedestralLargeEmptyRecipe" name="crystal pedestral large empty recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalPedestralLargeRecipe" name="crystal pedestral large recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalPedestralMediumRecipe" name="crystal pedestral medium recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalPedestralSmallRecipe" name="crystal pedestral small recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalRunnerStatueEastRecipe" name="crystal runner statue east recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalRunnerStatueSouthRecipe" name="crystal runner statue south recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalSupplicantStatueEastRecipe" name="crystal supplicant statue east recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalSupplicantStatueSouthRecipe" name="crystal supplicant statue south recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalTableEastAddonDeedRecipe" name="crystal table east recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalTableSouthAddonDeedRecipe" name="crystal table south recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalThroneEastRecipe" name="crystal throne east recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CrystalThroneSouthRecipe" name="crystal throne south recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="CunningScroll" name="abile" id="0x1F36" price="36" hue="0x0" />
+  <info type="CureScroll" name="cura" id="0x1F37" price="36" hue="0x0" />
+  <info type="Cutlass" name="arma da taglio" id="0x1441" price="51" hue="0x0" />
+  <info type="CypressTreeSeed" name="diamante" id="0xF27" price="1000" hue="0x5E2" />
+  <info type="DaemonBlood" name="daemon blood" id="0xF7D" price="2" hue="0x0" />
+  <info type="DaemonBone" name="daemon bone" id="0xF80" price="5" hue="0x0" />
+  <info type="Dagger" name="pugnale" id="0xF52" price="21" hue="0x0" />
+  <info type="DarkYarn" name="pala" id="0xE1D" price="18" hue="0x0" />
+  <info type="DatePalmSeed" name="diamante" id="0xF27" price="3000" hue="0x5E2" />
+  <info type="DeadWood" name="legno morto" id="0xF90" price="5" hue="0x0" />
+  <info type="DestroyingAngel" name="destroying angel" id="0xE1F" price="2" hue="0x290" />
+  <info type="Diamond" name="diamante" id="0xF26" price="200" hue="0x0" />
+  <info type="Dices" name="dadi e tazza" id="0xFA7" price="2" hue="0x0" />
+  <info type="DisguiseCleaner" name="disguise cleaner" id="0x2FD6" price="500" hue="0x482" />
+  <info type="DisguiseKit" name="un kit di travestimento" id="0xE05" price="700" hue="0x0" />
+  <info type="DiversityOfOurLand" name="libro" id="0xFF0" price="1688" hue="0x0" />
+  <info type="Dog" name="dog" id="0x2588" price="170" hue="0x90C" />
+  <info type="DoubleAxe" name="doppia ascia" id="0xF4B" price="52" hue="0x0" />
+  <info type="Doublet" name="doppione" id="0x1F7B" price="13" hue="0x0" />
+  <info type="DovetailSaw" name="sega a coda di rondine" id="0x1028" price="12" hue="0x0" />
+  <info type="DragonBlood" name="dragon blood" id="0xF82" price="5" hue="0x0" />
+  <info type="DrawKnife" name="disegna il coltello" id="0x10E4" price="10" hue="0x0" />
+  <info type="Drums" name="tamburo" id="0xE9C" price="21" hue="0x0" />
+  <info type="Dyes" name="coloranti" id="0xFA9" price="8" hue="0x0" />
+  <info type="DyeTub" name="vasca da tintura" id="0xFAB" price="8" hue="0x0" />
+  <info type="Eagle" name="eagle" id="0x211D" price="402" hue="0x0" />
+  <info type="EdibleSun" name="sunflower seeds" id="0xF27" price="2" hue="0xF7E" />
+  <info type="Eggs" name="uova" id="0x9B5" price="3" hue="0x0" />
+  <info type="Emerald" name="smeraldo" id="0xF10" price="100" hue="0x0" />
+  <info type="EmptyAleBottle" name="empty ale bottle" id="0x99F" price="50" hue="0x0" />
+  <info type="EmptyPewterBowl" name="ciotola in peltro" id="0x15FD" price="2" hue="0x0" />
+  <info type="EmptyWhiskeyBottle" name="empty whiskey bottle" id="0x99B" price="50" hue="0x0" />
+  <info type="EmptyWineBottle" name="empty wine bottle" id="0x9C7" price="50" hue="0x0" />
+  <info type="EssenceOfLove" name="" id="0x1C18" price="10000" hue="0x485" />
+  <info type="ExecutionerCap" name="executioner cap" id="0xF83" price="5" hue="0x0" />
+  <info type="ExecutionersAxe" name="ascia del boia" id="0xF45" price="62" hue="0x0" />
+  <info type="ExplodingCannonball" name="exploding cannonball" id="0xE74" price="150" hue="0x2E" />
+  <info type="EyeOfNewt" name="eye of newt" id="0xF87" price="5" hue="0x0" />
+  <info type="FancyDress" name="costume" id="0x1F00" price="26" hue="0x0" />
+  <info type="FancyShirt" name="camicia fantasia" id="0x1EFD" price="21" hue="0x0" />
+  <info type="Feather" name="piuma" id="0x1BD1" price="2" hue="0x0" />
+  <info type="FeatheredHat" name="cappello piumato" id="0x171A" price="10" hue="0x0" />
+  <info type="FeeblemindScroll" name="feeblemind" id="0x1F30" price="32" hue="0x0" />
+  <info type="FemaleLeatherChest" name="armatura di cuoio femminile" id="0x1C06" price="116" hue="0x0" />
+  <info type="FemalePlateChest" name="piatto femminile" id="0x1C04" price="207" hue="0x0" />
+  <info type="FemaleStuddedChest" name="armatura borchiata" id="0x1C02" price="142" hue="0x0" />
+  <info type="FertileDirt" name="fertile sporco" id="0xF81" price="2" hue="0x0" />
+  <info type="FieldCorn" name="field corn" id="0xC81" price="50" hue="0x1C5" />
+  <info type="FieldStoneHouseDeed" name="atto a una casa di pietra sul campo" id="0x14F0" price="43800" hue="0x0" />
+  <info type="FieryCannonball" name="fiery cannonball" id="0xE74" price="200" hue="0x21" />
+  <info type="FillableBrickHouseDeed" name="atto a una casa di mattoni" id="0x14F0" price="14450" hue="0x0" />
+  <info type="FillableCastleDeed" name="un atto di castello" id="0x14F0" price="306840" hue="0x0" />
+  <info type="FillableFieldStoneHouseDeed" name="atto a una casa di pietra sul campo" id="0x14F0" price="4380" hue="0x0" />
+  <info type="FillableKeepDeed" name="una piccola pietra mantenere atto" id="0x14F0" price="199560" hue="0x0" />
+  <info type="FillableLargeMarbleDeed" name="dare a una casa in marmo con patio" id="0x14F0" price="19200" hue="0x0" />
+  <info type="FillableLargePatioDeed" name="atto di una grande casa con patio" id="0x14F0" price="15280" hue="0x0" />
+  <info type="FillableLargePlasterCivilianHouseDeed" name="deed to a large plaster civilian house" id="0x14F0" price="11500" hue="0x0" />
+  <info type="FillableLargeSandstoneWorkshopDeed" name="deed to a large sandstone workshop" id="0x14F0" price="7200" hue="0x0" />
+  <info type="FillableLargeTreeFellerHouseDeed" name="deed to a large tree feller house" id="0x14F0" price="6800" hue="0x0" />
+  <info type="FillableLogCabinDeed" name="atto di una cabina di registro a due piani" id="0x14F0" price="9780" hue="0x0" />
+  <info type="FillableMarbleWorkshopDeed" name="dare ad un piccolo laboratorio di marmo" id="0x14F0" price="6300" hue="0x0" />
+  <info type="FillablePlasterBourgeoisVillaDeed" name="deed to a plaster bourgeois villa" id="0x14F0" price="15500" hue="0x0" />
+  <info type="FillablePlasterCareHomeDeed" name="deed to a plaster care home" id="0x14F0" price="7900" hue="0x0" />
+  <info type="FillablePlasterCivilianHouseDeed" name="deed to a plaster civilian house" id="0x14F0" price="8650" hue="0x0" />
+  <info type="FillablePlasterGateHouseDeed" name="deed to a plaster gate house" id="0x14F0" price="7200" hue="0x0" />
+  <info type="FillablePlasterHallDeed" name="deed to a plaster hall" id="0x14F0" price="10500" hue="0x0" />
+  <info type="FillablePlasterHousewithBalconyDeed" name="deed to a plaster house with balcony" id="0x14F0" price="6800" hue="0x0" />
+  <info type="FillablePlasterMerchantHouseDeed" name="deed to a plaster merchant's house" id="0x14F0" price="11550" hue="0x0" />
+  <info type="FillablePlasterParsonageDeed" name="deed to a plaster parsonage" id="0x14F0" price="6800" hue="0x0" />
+  <info type="FillablePlasterShopDeed" name="deed to a plaster shop" id="0x14F0" price="6250" hue="0x0" />
+  <info type="FillablePlasterSmallLabDeed" name="deed to a plaster small lab" id="0x14F0" price="5050" hue="0x0" />
+  <info type="FillablePlasterWarehouseDeed" name="deed to a plaster warehouse" id="0x14F0" price="6200" hue="0x0" />
+  <info type="FillablePlasterWorkshopDeed" name="deed to a plaster workshop" id="0x14F0" price="7200" hue="0x0" />
+  <info type="FillableSandstoneCareHomeDeed" name="deed to a sandstone care home" id="0x14F0" price="10500" hue="0x0" />
+  <info type="FillableSandstoneCivilianHouseDeed" name="deed to a sandstone civilian house" id="0x14F0" price="11500" hue="0x0" />
+  <info type="FillableSandstoneGateHouseDeed" name="deed to a sandstone gate house" id="0x14F0" price="6800" hue="0x0" />
+  <info type="FillableSandstoneHousewithBalconyDeed" name="deed to a sandstone house with balcony" id="0x14F0" price="6800" hue="0x0" />
+  <info type="FillableSandstoneLabDeed" name="deed to a sandstone lab" id="0x14F0" price="8650" hue="0x0" />
+  <info type="FillableSandstoneMerchantHouseDeed" name="deed to a sandstone merchant's house" id="0x14F0" price="11550" hue="0x0" />
+  <info type="FillableSandstonePatioDeed" name="dare a una casa in pietra arenaria con patio" id="0x14F0" price="9090" hue="0x0" />
+  <info type="FillableSandstoneRefugeDeed" name="deed to a sandstone refuge" id="0x14F0" price="7200" hue="0x0" />
+  <info type="FillableSandstoneResidenceDeed" name="deed to a sandstone residence" id="0x14F0" price="6250" hue="0x0" />
+  <info type="FillableSandstoneTwoStoryHouseDeed" name="deed to a sandstone two story house" id="0x14F0" price="7900" hue="0x0" />
+  <info type="FillableSandstoneVillaDeed" name="deed to a sandstone villa" id="0x14F0" price="15500" hue="0x0" />
+  <info type="FillableSandstoneWareHouseDeed" name="deed to a sandstone warehouse" id="0x14F0" price="6200" hue="0x0" />
+  <info type="FillableSmallBrickHouseDeed" name="atto di una piccola casa di mattoni" id="0x14F0" price="4380" hue="0x0" />
+  <info type="FillableSmallSandstoneWorkshopDeed" name="deed to a small sandstone workshop" id="0x14F0" price="5050" hue="0x0" />
+  <info type="FillableSmallTowerDeed" name="dare ad una piccola torre di pietra" id="0x14F0" price="8850" hue="0x0" />
+  <info type="FillableSmallTreeFellerHouseDeed" name="deed to a small tree feller house" id="0x14F0" price="3800" hue="0x0" />
+  <info type="FillableSmallWoodenWorkshopDeed" name="a deed for a house. (id: 0x3f)" id="0x14F0" price="5050" hue="0x0" />
+  <info type="FillableStonePlasterHouseDeed" name="atto a una casa di pietra e intonaco" id="0x14F0" price="4380" hue="0x0" />
+  <info type="FillableStoneWorkshopDeed" name="dare ad un piccolo laboratorio di pietra" id="0x14F0" price="6060" hue="0x0" />
+  <info type="FillableThatchedRoofCottageDeed" name="atto di un cottage dal tetto di paglia" id="0x14F0" price="4380" hue="0x0" />
+  <info type="FillableTowerDeed" name="atto di una torre" id="0x14F0" price="86640" hue="0x0" />
+  <info type="FillableTreeFellerHouseDeed" name="deed to a tree feller house" id="0x14F0" price="7200" hue="0x0" />
+  <info type="FillableTreeFellerRefugeDeed" name="deed to a tree feller refuge" id="0x14F0" price="11500" hue="0x0" />
+  <info type="FillableTreeFellerStockHouseDeed" name="deed to a tree feller stockhouse" id="0x14F0" price="6200" hue="0x0" />
+  <info type="FillableTreeFellerVillaDeed" name="deed to a tree feller villa" id="0x14F0" price="15500" hue="0x0" />
+  <info type="FillableTreeFellerVillaModelTwoDeed" name="deed to a tree feller villa (two)" id="0x14F0" price="10500" hue="0x0" />
+  <info type="FillableTreeFellerWorkshopDeed" name="deed to a tree feller workshop" id="0x14F0" price="7200" hue="0x0" />
+  <info type="FillableTwoStoryTreeFellerHouseDeed" name="deed to a two story tree feller house" id="0x14F0" price="7900" hue="0x0" />
+  <info type="FillableTwoStoryWoodPlasterHouseDeed" name="atto di una casa in legno e intonaco a due piani" id="0x14F0" price="19240" hue="0x0" />
+  <info type="FillableVillaDeed" name="dare ad una villa a due piani" id="0x14F0" price="13650" hue="0x0" />
+  <info type="FillableWoodenHousewithBalconyDeed" name="deed to a wooden house with balcony" id="0x14F0" price="6800" hue="0x0" />
+  <info type="FillableWoodenLabDeed" name="a deed for a house. (id: 0x46)" id="0x14F0" price="8650" hue="0x0" />
+  <info type="FillableWoodenStockHouseDeed" name="deed to a wooden stockhouse" id="0x14F0" price="11550" hue="0x0" />
+  <info type="FillableWoodenWareHouseDeed" name="deed to a wooden warehouse" id="0x14F0" price="6250" hue="0x0" />
+  <info type="FillableWoodHouseDeed" name="atto di una casa in legno" id="0x14F0" price="4380" hue="0x0" />
+  <info type="FillableWoodPlasterHouseDeed" name="atto di una casa di legno e gesso" id="0x14F0" price="4380" hue="0x0" />
+  <info type="FireballScroll" name="bolide" id="0x1F3E" price="39" hue="0x0" />
+  <info type="Fish" name="pesce" id="0x9CD" price="6" hue="0x0" />
+  <info type="FishingPole" name="canna da pesca" id="0xDC0" price="15" hue="0x0" />
+  <info type="Flax" name="fascio di lino" id="0x1A9C" price="102" hue="0x0" />
+  <info type="FlaxSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="FletcherTools" name="freccia impennata" id="0x1022" price="2" hue="0x0" />
+  <info type="FloppyHat" name="cappello floscio" id="0x1713" price="7" hue="0x0" />
+  <info type="FlourSifter" name="setaccio" id="0x103E" price="2" hue="0x0" />
+  <info type="FoodPlate" name="piatto" id="0x9D7" price="5" hue="0x0" />
+  <info type="FrenchBread" name="pane francese" id="0x98C" price="5" hue="0x0" />
+  <info type="Froe" name="froe" id="0x10E5" price="10" hue="0x0" />
+  <info type="FryingPan" name="frying pan" id="0x9E2" price="10" hue="0x0" />
+  <info type="GalleonDeed" name="galleon deed" id="0x14F2" price="500000" hue="0x0" />
+  <info type="GardeningShovel" name="gardening shovel" id="0xF39" price="100" hue="0x0" />
+  <info type="Garlic" name="aglio" id="0xF84" price="1" hue="0x0" />
+  <info type="GarlicSeed" name="diamante" id="0xF27" price="200" hue="0x5E2" />
+  <info type="Gears" name="ingranaggi" id="0x1053" price="2" hue="0x0" />
+  <info type="GiftBox" name="pacco regalo" id="0x232A" price="100" hue="0x46" />
+  <info type="Ginseng" name="ginseng" id="0xF85" price="1" hue="0x0" />
+  <info type="GinsengSeed" name="diamante" id="0xF27" price="200" hue="0x5E2" />
+  <info type="GlassblowingBook" name="crafting glass with glassblowing" id="0xFF4" price="1000" hue="0x0" />
+  <info type="GlassblowingCraftGump" name="glass blower's handbook" id="0xEFA" price="50" hue="0x4B7" />
+  <info type="GlobeOfSosariaAddonRecipe" name="globe of sosaria recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="GnarledStaff" name="personale nodoso" id="0x13F8" price="16" hue="0x0" />
+  <info type="GoldBeadNecklace" name="collana" id="0x1089" price="27" hue="0x0" />
+  <info type="GoldBracelet" name="braccialetto" id="0x1086" price="27" hue="0x0" />
+  <info type="GoldDonationBoxAddonDeed" name="gold donation box addon deed" id="0x14F0" price="500" hue="0x0" />
+  <info type="GoldEarrings" name="orecchini" id="0x1087" price="27" hue="0x0" />
+  <info type="GoldNecklace" name="collana" id="0x1088" price="27" hue="0x0" />
+  <info type="GoldRing" name="anello" id="0x108A" price="27" hue="0x0" />
+  <info type="Grapes" name="grappolo d'uva" id="0x9D1" price="3" hue="0x0" />
+  <info type="GrapeShot" name="grape shot" id="0xE74" price="250" hue="0x0" />
+  <info type="GrapevinePlacementTool" name="grapevine placement tool" id="0xD1A" price="10000" hue="0x489" />
+  <info type="GraveDust" name="polvere grave" id="0xF8F" price="1" hue="0x0" />
+  <info type="GreenCrystalRecipe" name="scorrimento ricetta" id="0x2831" price="1" hue="0x0" />
+  <info type="GreenGourd" name="zucca" id="0xC66" price="3" hue="0x0" />
+  <info type="GreenTentDeed" name="atto di una tenda verde" id="0x14F0" price="22800" hue="0x0" />
+  <info type="GrillingBook" name="cook's handbook (grill recipes)" id="0xEFA" price="50" hue="0x58D" />
+  <info type="GrizzlyBear" name="grizzly bear" id="0x211E" price="1767" hue="0x0" />
+  <info type="HairDye" name="tinta per capelli" id="0xEFF" price="37" hue="0x0" />
+  <info type="Halberd" name="alabarda" id="0x143E" price="42" hue="0x0" />
+  <info type="HalfApron" name="mezzo grembiule" id="0x153B" price="10" hue="0x0" />
+  <info type="Ham" name="prosciutto" id="0x9C9" price="26" hue="0x0" />
+  <info type="Hammer" name="martello" id="0x102A" price="17" hue="0x0" />
+  <info type="HammerPick" name="plettro martello" id="0x143D" price="26" hue="0x0" />
+  <info type="HarmScroll" name="danno" id="0x1F38" price="36" hue="0x0" />
+  <info type="Hatchet" name="accetta" id="0xF43" price="27" hue="0x0" />
+  <info type="HealScroll" name="guarire" id="0x1F31" price="32" hue="0x0" />
+  <info type="HeaterShield" name="scudo del riscaldatore" id="0x1B76" price="231" hue="0x0" />
+  <info type="HeatingStand" name="supporto per il riscaldamento" id="0x1849" price="2" hue="0x0" />
+  <info type="HeavyCrossbow" name="balestra pesante" id="0x13FD" price="55" hue="0x0" />
+  <info type="HeavyFertilizerPotion" name="" id="0xF0E" price="5000" hue="0x747" />
+  <info type="HeavyFungicidePotion" name="" id="0xF0E" price="2000" hue="0x8CA" />
+  <info type="HeavyPesticidePotion" name="" id="0xF0E" price="2000" hue="0x852" />
+  <info type="HeavySiegeLog" name="heavy siege log" id="0x1BDE" price="100" hue="0x0" />
+  <info type="HedgeSeed" name="diamante" id="0xF27" price="500" hue="0x5E2" />
+  <info type="Helmet" name="casco" id="0x140A" price="110" hue="0x0" />
+  <info type="Hides" name="mucchi di pelli" id="0x1079" price="3" hue="0x0" />
+  <info type="Hinge" name="cerniera" id="0x1055" price="2" hue="0x0" />
+  <info type="HiveTool" name="" id="0x9F5" price="500" hue="0x0" />
+  <info type="HolidayTreeDeed" name="un atto per un albero delle vacanze" id="0x14F0" price="2000" hue="0x488" />
+  <info type="HoneydewMelon" name="melone di melata" id="0xC74" price="7" hue="0x0" />
+  <info type="Horse" name="horse" id="0x259A" price="550" hue="0x0" />
+  <info type="InscriptionBook" name="scribe's handbook" id="0xEFA" price="50" hue="0x611" />
+  <info type="Inshave" name="inshave" id="0x10E6" price="10" hue="0x0" />
+  <info type="InteriorDecorator" name="un decoratore d'interni" id="0xFC1" price="500" hue="0x0" />
+  <info type="IronCannonball" name="iron cannonball" id="0xE74" price="100" hue="0x0" />
+  <info type="IronIngot" name="lingotti di ferro" id="0x1BF2" price="5" hue="0x0" />
+  <info type="IronSiegeLog" name="iron siege log" id="0x1BDE" price="150" hue="0x0" />
+  <info type="JarHoney" name="barattolo di miele" id="0x9EC" price="3" hue="0x0" />
+  <info type="JesterHat" name="cappello da giullare" id="0x171C" price="12" hue="0x0" />
+  <info type="JesterSuit" name="vestito da giullare" id="0x1F9F" price="26" hue="0x0" />
+  <info type="JointingPlane" name="piano di giunzione" id="0x1030" price="10" hue="0x0" />
+  <info type="Jug" name="jug" id="0x0" price="13" hue="0x0" />
+  <info type="Katana" name="katana" id="0x13FF" price="33" hue="0x0" />
+  <info type="KeepDeed" name="una piccola pietra mantenere atto" id="0x14F0" price="1330400" hue="0x0" />
+  <info type="Keg" name="bariletto" id="0xE7F" price="300" hue="0x0" />
+  <info type="Key" name="chiave di ferro" id="0x1010" price="8" hue="0x0" />
+  <info type="KeyRing" name="portachiavi" id="0x1011" price="8" hue="0x0" />
+  <info type="Kilt" name="gonnellino" id="0x1537" price="11" hue="0x0" />
+  <info type="KiltBag" name="kilt bag" id="0x1152" price="100" hue="0x0" />
+  <info type="Kindling" name="accensione" id="0xDE1" price="2" hue="0x0" />
+  <info type="Kryss" name="kryss" id="0x1401" price="32" hue="0x0" />
+  <info type="LambLeg" name="zampa di agnello" id="0x160A" price="8" hue="0x0" />
+  <info type="Lantern" name="lanterna" id="0xA25" price="2" hue="0x0" />
+  <info type="LapHarp" name="arpa" id="0xEB2" price="21" hue="0x0" />
+  <info type="LargeBattleAxe" name="grande ascia da battaglia" id="0x13FB" price="33" hue="0x0" />
+  <info type="LargeBoatDeed" name="grande atto di nave" id="0x14F2" price="12927" hue="0x0" />
+  <info type="LargeDragonBoatDeed" name="grande atto di nave del drago" id="0x14F2" price="12927" hue="0x0" />
+  <info type="LargeMarbleDeed" name="dare a una casa in marmo con patio" id="0x14F0" price="192000" hue="0x0" />
+  <info type="LargePatioDeed" name="atto di una grande casa con patio" id="0x14F0" price="152800" hue="0x0" />
+  <info type="LargePlasterCivilianHouseDeed" name="deed to a large plaster civilian house" id="0x14F0" price="115000" hue="0x0" />
+  <info type="LargeSandstoneWorkshopDeed" name="deed to a large sandstone workshop" id="0x14F0" price="72000" hue="0x0" />
+  <info type="LargeTreeFellerHouseDeed" name="deed to a large tree feller house" id="0x14F0" price="68000" hue="0x0" />
+  <info type="Leather" name="pezzi di pelle" id="0x1081" price="6" hue="0x0" />
+  <info type="LeatherArms" name="maniche di pelle" id="0x13CD" price="80" hue="0x0" />
+  <info type="LeatherBustierArms" name="bustier di pelle" id="0x1C0A" price="97" hue="0x0" />
+  <info type="LeatherCap" name="berretto di pelle" id="0x1DB9" price="10" hue="0x0" />
+  <info type="LeatherChest" name="tunica in pelle" id="0x13CC" price="101" hue="0x0" />
+  <info type="LeatherGloves" name="guanti di pelle" id="0x13C6" price="60" hue="0x0" />
+  <info type="LeatherGorget" name="gorgiera in pelle" id="0x13C7" price="74" hue="0x0" />
+  <info type="LeatherLegs" name="leggings in pelle" id="0x13CB" price="80" hue="0x0" />
+  <info type="LeatherShorts" name="pantaloncini in pelle" id="0x1C00" price="86" hue="0x0" />
+  <info type="LeatherSkirt" name="gonna di pelle" id="0x1C08" price="87" hue="0x0" />
+  <info type="Lemon" name="limone" id="0x1728" price="3" hue="0x0" />
+  <info type="LesserCurePotion" name="pozione lesser cure" id="0xF07" price="15" hue="0x0" />
+  <info type="LesserExplosionPotion" name="pozione di esplosione minore" id="0xF0D" price="21" hue="0x0" />
+  <info type="LesserHealPotion" name="pozione minore" id="0xF0C" price="15" hue="0x0" />
+  <info type="LesserPoisonPotion" name="pozione lesser poison" id="0xF0A" price="15" hue="0x0" />
+  <info type="Lettuce" name="testa di lattuga" id="0xC70" price="5" hue="0x0" />
+  <info type="LettuceSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="LightCannonball" name="light cannonball" id="0xE74" price="50" hue="0x0" />
+  <info type="LightFertilizerPotion" name="" id="0xF0E" price="500" hue="0x748" />
+  <info type="LightFungicidePotion" name="" id="0xF0E" price="500" hue="0x8C5" />
+  <info type="LightPesticidePotion" name="" id="0xF0E" price="500" hue="0x847" />
+  <info type="LightSiegeLog" name="light siege log" id="0x1BDE" price="50" hue="0x0" />
+  <info type="LightYarn" name="scaffale di tele" id="0xE1E" price="18" hue="0x0" />
+  <info type="LightYarnUnraveled" name="nox crystal" id="0xE1F" price="18" hue="0x0" />
+  <info type="Lime" name="lime" id="0x172A" price="3" hue="0x0" />
+  <info type="Lockpick" name="grimaldello" id="0x14FC" price="12" hue="0x0" />
+  <info type="LogCabinDeed" name="atto di una cabina di registro a due piani" id="0x14F0" price="97800" hue="0x0" />
+  <info type="LongPants" name="pantaloni lunghi" id="0x1539" price="10" hue="0x0" />
+  <info type="Longsword" name="lunga spada" id="0x13B8" price="55" hue="0x0" />
+  <info type="Lute" name="liuto" id="0xEB3" price="21" hue="0x0" />
+  <info type="Mace" name="mazza" id="0xF5C" price="57" hue="0x0" />
+  <info type="MageStaff" name="mage staff" id="0x13F8" price="1000" hue="0x0" />
+  <info type="MagicArrowScroll" name="freccia magica" id="0x1F32" price="32" hue="0x0" />
+  <info type="MagicCrystalBallRecipe" name="magic crystal ball recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="MagicLockScroll" name="magic lock" id="0x1F3F" price="39" hue="0x0" />
+  <info type="MagicTrapScroll" name="trappola magica" id="0x1F39" price="36" hue="0x0" />
+  <info type="MagicUnTrapScroll" name="magic untrap" id="0x1F3A" price="36" hue="0x0" />
+  <info type="MagicWizardsHat" name="un magico cappello da mago" id="0x1718" price="11" hue="0x0" />
+  <info type="MailScroll" name="mail scroll" id="0x227B" price="50" hue="0x0" />
+  <info type="MajorTradeAssociation" name="libro" id="0xFEF" price="2738" hue="0x0" />
+  <info type="MalletAndChisel" name="maglio e scalpello" id="0x12B3" price="3" hue="0x0" />
+  <info type="Malt" name="malt" id="0x1AA2" price="30" hue="0x7E9" />
+  <info type="MandrakeRoot" name="radice di mandragola" id="0xF86" price="1" hue="0x0" />
+  <info type="MandrakeSeed" name="diamante" id="0xF27" price="200" hue="0x5E2" />
+  <info type="MapleTreeSeed" name="diamante" id="0xF27" price="3000" hue="0x5E2" />
+  <info type="MapmakersPen" name="penna del cartografo" id="0xFBF" price="8" hue="0x0" />
+  <info type="MarbleWorkshopDeed" name="dare ad un piccolo laboratorio di marmo" id="0x14F0" price="63000" hue="0x0" />
+  <info type="MasonryBook" name="making valuables with stonecrafting" id="0xFBE" price="1000" hue="0x0" />
+  <info type="MasonryCraftBook" name="stone crafter's handbook" id="0xEFA" price="50" hue="0x6D3" />
+  <info type="Maul" name="maglio" id="0x143B" price="21" hue="0x0" />
+  <info type="MediumBoatDeed" name="atto di nave medio" id="0x14F2" price="11552" hue="0x0" />
+  <info type="MediumDragonBoatDeed" name="atto di nave medio drago" id="0x14F2" price="11552" hue="0x0" />
+  <info type="MediumFertilizerPotion" name="" id="0xF0E" price="2000" hue="0x74B" />
+  <info type="MediumFungicidePotion" name="" id="0xF0E" price="1000" hue="0x8C7" />
+  <info type="MediumPesticidePotion" name="" id="0xF0E" price="1000" hue="0x849" />
+  <info type="MerlotGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x2CE" />
+  <info type="MetalKiteShield" name="scudo aquilone in metallo" id="0x1B74" price="123" hue="0x0" />
+  <info type="MetalShield" name="scudo di metallo" id="0x1B7B" price="121" hue="0x0" />
+  <info type="MilkBucket" name="milk bucket" id="0xFFA" price="1000" hue="0x3E9" />
+  <info type="Mint" name="peppermint" id="0x26B8" price="50" hue="0x0" />
+  <info type="MonkRobe" name="la veste di un monaco" id="0x2687" price="136" hue="0x21E" />
+  <info type="MortarPestle" name="mortaio e pestello" id="0xE9B" price="8" hue="0x0" />
+  <info type="MouldingPlane" name="piani di stampaggio" id="0x102C" price="11" hue="0x0" />
+  <info type="Muffins" name="muffin" id="0x9EB" price="3" hue="0x0" />
+  <info type="Nails" name="unghie" id="0x102E" price="3" hue="0x0" />
+  <info type="NarcoticBandage" name="legno morto" id="0xE21" price="500" hue="0x0" />
+  <info type="Necklace" name="collana" id="0x1085" price="26" hue="0x0" />
+  <info type="Nightshade" name="solano" id="0xF88" price="1" hue="0x0" />
+  <info type="NightshadeSeed" name="diamante" id="0xF27" price="200" hue="0x5E2" />
+  <info type="NightSightPotion" name="pozione di notte" id="0xF06" price="15" hue="0x0" />
+  <info type="NightSightScroll" name="night sight" id="0x1F33" price="32" hue="0x0" />
+  <info type="NorseHelm" name="timone nordico" id="0x140E" price="100" hue="0x0" />
+  <info type="NoxCrystal" name="nox crystal" id="0xF8E" price="2" hue="0x0" />
+  <info type="OakTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="OatSheath" name="oat sheath" id="0x1EBD" price="50" hue="0x0" />
+  <info type="Obsidian" name="obsidian" id="0xF89" price="5" hue="0x0" />
+  <info type="OhiiTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="OliveTheOtherReindeer" name="olive the other reindeer" id="0x3A5F" price="1000" hue="0x0" />
+  <info type="Onion" name="cipolla" id="0xC6D" price="3" hue="0x0" />
+  <info type="OnionSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="Orange" name="orange" id="0x9D0" price="2" hue="0x30" />
+  <info type="PackHorse" name="pack horse" id="0x2126" price="631" hue="0x0" />
+  <info type="PackLlama" name="pack llama" id="0x2127" price="565" hue="0x0" />
+  <info type="Panther" name="panther" id="0x25B5" price="1271" hue="0x901" />
+  <info type="Peach" name="pesca" id="0x9D2" price="3" hue="0x0" />
+  <info type="PeachTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="Pear" name="pera" id="0x994" price="3" hue="0x0" />
+  <info type="PearTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="PetrifiedWood" name="petrified wood" id="0x97A" price="2" hue="0x46C" />
+  <info type="PewterBowlOfCorn" name="ciotola di mais" id="0x15FF" price="3" hue="0x0" />
+  <info type="PewterBowlOfLettuce" name="ciotola di lattuga" id="0x1600" price="3" hue="0x0" />
+  <info type="PewterBowlOfPeas" name="ciotola di piselli" id="0x1601" price="3" hue="0x0" />
+  <info type="PewterBowlOfPotatos" name="ciotola di patate" id="0x1602" price="3" hue="0x0" />
+  <info type="Pickaxe" name="piccone" id="0xE86" price="25" hue="0x0" />
+  <info type="PigIron" name="ghisa" id="0xF8A" price="2" hue="0x0" />
+  <info type="Pineapple" name="pineapple" id="0xFC4" price="2" hue="0x46E" />
+  <info type="PinotNoirGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x2CE" />
+  <info type="Pitcher" name="brocca di vetro" id="0xFF6" price="7" hue="0x0" />
+  <info type="Pitchfork" name="forcone" id="0xE87" price="19" hue="0x0" />
+  <info type="PlainDress" name="vestito semplice" id="0x1F01" price="13" hue="0x0" />
+  <info type="PlantBowl" name="una ciotola vegetale" id="0x15FD" price="2" hue="0x0" />
+  <info type="PlasterBourgeoisVillaDeed" name="deed to a plaster bourgeois villa" id="0x14F0" price="155000" hue="0x0" />
+  <info type="PlasterCareHomeDeed" name="deed to a plaster care home" id="0x14F0" price="79000" hue="0x0" />
+  <info type="PlasterCivilianHouseDeed" name="deed to a plaster civilian house" id="0x14F0" price="86500" hue="0x0" />
+  <info type="PlasterGateHouseDeed" name="deed to a plaster gate house" id="0x14F0" price="72000" hue="0x0" />
+  <info type="PlasterHallDeed" name="deed to a plaster hall" id="0x14F0" price="105000" hue="0x0" />
+  <info type="PlasterHousewithBalconyDeed" name="deed to a plaster house with balcony" id="0x14F0" price="68000" hue="0x0" />
+  <info type="PlasterMerchantHouseDeed" name="deed to a plaster merchant's house" id="0x14F0" price="115500" hue="0x0" />
+  <info type="PlasterParsonageDeed" name="deed to a plaster parsonage" id="0x14F0" price="68000" hue="0x0" />
+  <info type="PlasterShopDeed" name="deed to a plaster shop" id="0x14F0" price="62500" hue="0x0" />
+  <info type="PlasterSmallLabDeed" name="deed to a plaster small lab" id="0x14F0" price="50500" hue="0x0" />
+  <info type="PlasterWarehouseDeed" name="deed to a plaster warehouse" id="0x14F0" price="62000" hue="0x0" />
+  <info type="PlasterWorkshopDeed" name="deed to a plaster workshop" id="0x14F0" price="72000" hue="0x0" />
+  <info type="PlateArms" name="armi di platemail" id="0x1410" price="188" hue="0x0" />
+  <info type="PlateChest" name="tunica platemail" id="0x1415" price="243" hue="0x0" />
+  <info type="PlateGloves" name="guanti platemail" id="0x1414" price="155" hue="0x0" />
+  <info type="PlateGorget" name="platemail gorget" id="0x1413" price="104" hue="0x0" />
+  <info type="PlateHelm" name="timone a piastra" id="0x1412" price="161" hue="0x0" />
+  <info type="PlateLegs" name="gambe di platemail" id="0x1411" price="218" hue="0x0" />
+  <info type="PlumTreeSeed" name="diamante" id="0xF27" price="2000" hue="0x5E2" />
+  <info type="PocketBag" name="pocket bag" id="0x3824" price="100" hue="0x0" />
+  <info type="PoisonScroll" name="veleno" id="0x1F40" price="39" hue="0x0" />
+  <info type="Pouch" name="marsupio" id="0xE79" price="6" hue="0x0" />
+  <info type="PowderOfMineralSolution" name="powder of mineral solution" id="0x1006" price="5" hue="0x973" />
+  <info type="ProtectionScroll" name="protezione" id="0x1F3B" price="36" hue="0x0" />
+  <info type="Pumices" name="pumices" id="0xF8B" price="5" hue="0x0" />
+  <info type="Pumpkin" name="zucca" id="0xC6A" price="11" hue="0x0" />
+  <info type="PumpkinSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="PurpleCrystalRecipe" name="purple crystal recipe" id="0x2831" price="1" hue="0x0" />
+  <info type="QuarterStaff" name="personale del quartiere" id="0xE89" price="19" hue="0x0" />
+  <info type="Quiver" name="quiver" id="0x3827" price="100" hue="0x0" />
+  <info type="Rabbit" name="rabbit" id="0x2125" price="106" hue="0x906" />
+  <info type="RankingsOfTrades" name="libro" id="0xFEF" price="2258" hue="0x0" />
+  <info type="Rat" name="rat" id="0x2123" price="107" hue="0x0" />
+  <info type="RawBird" name="uccello crudo" id="0x9B9" price="9" hue="0x0" />
+  <info type="RawChickenLeg" name="coscia di pollo crudo" id="0x1607" price="6" hue="0x0" />
+  <info type="RawFishSteak" name="bistecca di pesce crudo" id="0x97A" price="3" hue="0x0" />
+  <info type="RawFlukeSteak" name="raw fluke steak" id="0x97A" price="7" hue="0x0" />
+  <info type="RawHalibutSteak" name="raw halibut steak" id="0x97A" price="7" hue="0x0" />
+  <info type="RawLambLeg" name="cosciotto d'agnello crudo" id="0x1609" price="9" hue="0x0" />
+  <info type="RawMahiSteak" name="raw mahi-mahi steak" id="0x97A" price="7" hue="0x0" />
+  <info type="RawParrotFishSteak" name="raw parrot fish steak" id="0x97A" price="7" hue="0x0" />
+  <info type="RawRedSnapperSteak" name="raw red snapper steak" id="0x97A" price="7" hue="0x0" />
+  <info type="RawRibs" name="taglio di costole crude" id="0x9F1" price="16" hue="0x0" />
+  <info type="RawSalmonSteak" name="raw salmon steak" id="0x97A" price="7" hue="0x0" />
+  <info type="RawShrimp" name="raw shrimp" id="0x97A" price="7" hue="0x0" />
+  <info type="RawTroutSteak" name="raw trout steak" id="0x97A" price="7" hue="0x0" />
+  <info type="Ray" name="ray" id="0x1AA2" price="50" hue="0x7ED" />
+  <info type="ReactiveArmorScroll" name="armatura reattiva" id="0x1F2D" price="32" hue="0x0" />
+  <info type="RecallRune" name="richiama runa" id="0x1F14" price="15" hue="0x0" />
+  <info type="ReceiverCrystal" name="cristallo di comunicazione" id="0x1ED0" price="6" hue="0x0" />
+  <info type="RecyclingTool" name="recycling toolkit" id="0x1EB8" price="50" hue="0x747" />
+  <info type="RedBook" name="libro" id="0xFF1" price="15" hue="0x0" />
+  <info type="RedMushroom" name="fungo" id="0xD16" price="50" hue="0x0" />
+  <info type="RefreshPotion" name="aggiorna pozione" id="0xF0B" price="15" hue="0x0" />
+  <info type="RegardingLlamas" name="libro" id="0xFF0" price="1096" hue="0x0" />
+  <info type="ReinforcedBoots" name="reinforced boots" id="0x3822" price="50" hue="0x0" />
+  <info type="Ribs" name="taglio di costole" id="0x9F2" price="7" hue="0x0" />
+  <info type="RiceSheath" name="rice sheath" id="0x1A9D" price="50" hue="0x2FE" />
+  <info type="RieslingGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x1CC" />
+  <info type="RingmailArms" name="maniche ad anello" id="0x13EE" price="85" hue="0x0" />
+  <info type="RingmailChest" name="tunica ricamata" id="0x13EC" price="121" hue="0x0" />
+  <info type="RingmailGloves" name="guanti di posta" id="0x13EB" price="93" hue="0x0" />
+  <info type="RingmailLegs" name="leggings ad anelli" id="0x13F0" price="90" hue="0x0" />
+  <info type="RoastPig" name="maiale arrosto" id="0x9BB" price="106" hue="0x0" />
+  <info type="Robe" name="accappatoio" id="0x1F03" price="18" hue="0x0" />
+  <info type="RollingPin" name="mattarello" id="0x1043" price="2" hue="0x0" />
+  <info type="Ruby" name="rubino" id="0xF13" price="75" hue="0x0" />
+  <info type="SackcornFlour" name="a sack of cornflour" id="0x1039" price="100" hue="0x0" />
+  <info type="SackFlour" name="sacco di farina" id="0x1039" price="3" hue="0x0" />
+  <info type="Sandals" name="sandali" id="0x170D" price="5" hue="0x0" />
+  <info type="SandMiningBook" name="find glass-quality sand" id="0xFF4" price="1000" hue="0x0" />
+  <info type="SandstoneCareHomeDeed" name="deed to a sandstone care home" id="0x14F0" price="105000" hue="0x0" />
+  <info type="SandstoneCivilianHouseDeed" name="deed to a sandstone civilian house" id="0x14F0" price="115000" hue="0x0" />
+  <info type="SandstoneGateHouseDeed" name="deed to a sandstone gate house" id="0x14F0" price="68000" hue="0x0" />
+  <info type="SandstoneHousewithBalconyDeed" name="deed to a sandstone house with balcony" id="0x14F0" price="68000" hue="0x0" />
+  <info type="SandstoneLabDeed" name="deed to a sandstone lab" id="0x14F0" price="86500" hue="0x0" />
+  <info type="SandstoneMerchantHouseDeed" name="deed to a sandstone merchant's house" id="0x14F0" price="115500" hue="0x0" />
+  <info type="SandstonePatioDeed" name="dare a una casa in pietra arenaria con patio" id="0x14F0" price="90900" hue="0x0" />
+  <info type="SandstoneRefugeDeed" name="deed to a sandstone refuge" id="0x14F0" price="72000" hue="0x0" />
+  <info type="SandstoneResidenceDeed" name="deed to a sandstone residence" id="0x14F0" price="62500" hue="0x0" />
+  <info type="SandstoneTwoStoryHouseDeed" name="deed to a sandstone two story house" id="0x14F0" price="79000" hue="0x0" />
+  <info type="SandstoneVillaDeed" name="deed to a sandstone villa" id="0x14F0" price="155000" hue="0x0" />
+  <info type="SandstoneWareHouseDeed" name="deed to a sandstone warehouse" id="0x14F0" price="62000" hue="0x0" />
+  <info type="SangioveseGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x0" />
+  <info type="SantasReindeer1" name="prancer" id="0x3A55" price="100" hue="0x0" />
+  <info type="SantasReindeer2" name="vixen" id="0x3A67" price="100" hue="0x0" />
+  <info type="SantasReindeer3" name="comet" id="0x3A6F" price="100" hue="0x0" />
+  <info type="SantasSleighDeed" name="a deed for santa's sleigh" id="0x14F0" price="100" hue="0x0" />
+  <info type="Sapphire" name="zaffiro" id="0xF19" price="100" hue="0x0" />
+  <info type="Sausage" name="salsiccia" id="0x9C0" price="18" hue="0x0" />
+  <info type="SauvignonBlancGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x16B" />
+  <info type="Saw" name="sega" id="0x1034" price="15" hue="0x0" />
+  <info type="Scimitar" name="scimitarra" id="0x13B6" price="36" hue="0x0" />
+  <info type="Scissors" name="forbici" id="0xF9F" price="11" hue="0x0" />
+  <info type="Scorp" name="scorp" id="0x10E7" price="10" hue="0x0" />
+  <info type="ScribesPen" name="penna dello scriba" id="0xFBF" price="8" hue="0x0" />
+  <info type="SellableIDWandGreater" name="wand of identification" id="0xDF5" price="10000" hue="0x0" />
+  <info type="SellableIDWandLesser" name="wand of identification" id="0xDF5" price="3000" hue="0x0" />
+  <info type="SellableIDWandNormal" name="wand of identification" id="0xDF3" price="5000" hue="0x0" />
+  <info type="SerpentScale" name="serpent scale" id="0x26B6" price="5" hue="0x0" />
+  <info type="SewingKit" name="kit da cucito" id="0xF9D" price="3" hue="0x0" />
+  <info type="Sextant" name="sestante" id="0x1058" price="13" hue="0x0" />
+  <info type="SextantParts" name="parti di sestante" id="0x1059" price="5" hue="0x0" />
+  <info type="Shaft" name="albero" id="0x1BD4" price="3" hue="0x0" />
+  <info type="SheafOfHay" name="fascio di fieno" id="0xF36" price="2" hue="0x0" />
+  <info type="Sheath" name="sheath" id="0x3826" price="100" hue="0x0" />
+  <info type="ShepherdsCrook" name="truffatore del pastore" id="0xE81" price="20" hue="0x0" />
+  <info type="ShirazGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x2CE" />
+  <info type="Shirt" name="camicia" id="0x1517" price="12" hue="0x0" />
+  <info type="Shoes" name="scarpe" id="0x170F" price="8" hue="0x0" />
+  <info type="ShortPants" name="pantaloni corti" id="0x152E" price="7" hue="0x0" />
+  <info type="ShortSpear" name="lancia corta" id="0x1403" price="23" hue="0x0" />
+  <info type="ShoulderBag" name="shoulder bag" id="0x3825" price="100" hue="0x0" />
+  <info type="Shovel" name="pala" id="0xF39" price="12" hue="0x0" />
+  <info type="SiegeCannonDeed" name="deed for a siege cannon" id="0x14F0" price="5000" hue="0x488" />
+  <info type="SiegeCatapultDeed" name="deed for a siege catapult" id="0x14F0" price="2500" hue="0x488" />
+  <info type="SiegeCommandTool" name="siege command tool" id="0x1EBA" price="250" hue="0x0" />
+  <info type="SiegeRamDeed" name="deed for a siege ram" id="0x14F0" price="2000" hue="0x488" />
+  <info type="SiegeRepairTool" name="a siege repair tool" id="0x13E4" price="250" hue="0x0" />
+  <info type="SketchBook" name="sketch book" id="0xEFA" price="2000" hue="0x3D6" />
+  <info type="Skillet" name="tegame" id="0x97F" price="3" hue="0x0" />
+  <info type="SkinningKnife" name="coltello per scuoiare" id="0xEC4" price="14" hue="0x0" />
+  <info type="SkullCap" name="zucchetto" id="0x1544" price="7" hue="0x0" />
+  <info type="SmallBoatDeed" name="piccolo atto di nave" id="0x14F2" price="10177" hue="0x0" />
+  <info type="SmallBrickHouseDeed" name="atto di una piccola casa di mattoni" id="0x14F0" price="43800" hue="0x0" />
+  <info type="SmallDragonBoatDeed" name="piccolo atto di nave drago" id="0x14F2" price="10177" hue="0x0" />
+  <info type="SmallSandstoneWorkshopDeed" name="deed to a small sandstone workshop" id="0x14F0" price="50500" hue="0x0" />
+  <info type="SmallTowerDeed" name="dare ad una piccola torre di pietra" id="0x14F0" price="88500" hue="0x0" />
+  <info type="SmallTreeFellerHouseDeed" name="deed to a small tree feller house" id="0x14F0" price="38000" hue="0x0" />
+  <info type="SmallWoodenWorkshopDeed" name="a deed for a house. (id: 0x3f)" id="0x14F0" price="50500" hue="0x0" />
+  <info type="SmithHammer" name="il martello da fabbro" id="0x13E3" price="23" hue="0x0" />
+  <info type="SmokeBomb" name="smoke bomb" id="0xE29" price="50" hue="0x9BC" />
+  <info type="SmoothingPlane" name="piano di levigatura" id="0x1032" price="11" hue="0x0" />
+  <info type="Soybean" name="soybean" id="0x1EBD" price="50" hue="0x292" />
+  <info type="Spear" name="lancia" id="0xF62" price="68" hue="0x0" />
+  <info type="SpecialFishingPole" name="special fishing rod" id="0xDC0" price="15" hue="0x0" />
+  <info type="Spellbook" name="libro degli incantesimi" id="0xEFA" price="47" hue="0x0" />
+  <info type="SpidersSilk" name="la seta dei ragni" id="0xF8D" price="1" hue="0x0" />
+  <info type="SpoolOfThread" name="rocchetto di filo" id="0xFA0" price="18" hue="0x0" />
+  <info type="Springs" name="molle" id="0x105D" price="3" hue="0x0" />
+  <info type="SpringWater" name="spring water" id="0xE24" price="2" hue="0x47F" />
+  <info type="Squash" name="schiacciare" id="0xC72" price="3" hue="0x0" />
+  <info type="StarSapphire" name="zaffiro stellato" id="0xF21" price="125" hue="0x0" />
+  <info type="StoneMiningBook" name="mining for quality stone" id="0xFBE" price="1000" hue="0x0" />
+  <info type="StonePlasterHouseDeed" name="atto a una casa di pietra e intonaco" id="0x14F0" price="43800" hue="0x0" />
+  <info type="StoneWorkshopDeed" name="dare ad un piccolo laboratorio di pietra" id="0x14F0" price="60600" hue="0x0" />
+  <info type="StrawHat" name="cappello di paglia" id="0x1717" price="7" hue="0x0" />
+  <info type="StrengthPotion" name="pozione per la forza" id="0xF09" price="15" hue="0x0" />
+  <info type="StrengthScroll" name="forza" id="0x1F3C" price="36" hue="0x0" />
+  <info type="StuddedArms" name="maniche borchiate" id="0x13DC" price="87" hue="0x0" />
+  <info type="StuddedBustierArms" name="bustier tempestato" id="0x1C0C" price="120" hue="0x0" />
+  <info type="StuddedChest" name="tunica borchiata" id="0x13DB" price="128" hue="0x0" />
+  <info type="StuddedGloves" name="guanti borchiati" id="0x13D5" price="79" hue="0x0" />
+  <info type="StuddedGorget" name="gorgi borchiato" id="0x13D6" price="73" hue="0x0" />
+  <info type="StuddedLegs" name="leggings borchiati" id="0x13DA" price="103" hue="0x0" />
+  <info type="Sugar" name="sugar" id="0x1006" price="50" hue="0x482" />
+  <info type="Sugarcane" name="sugarcane" id="0x1A9D" price="500" hue="0x23F" />
+  <info type="SulfurousAsh" name="cenere sulfurea" id="0xF8C" price="1" hue="0x0" />
+  <info type="SuperiorKilt" name="superior kilt" id="0x3823" price="15" hue="0x0" />
+  <info type="TailoringBook" name="tailor's handbook" id="0xEFA" price="50" hue="0x590" />
+  <info type="TaleOfThreeTribes" name="libro" id="0xFEF" price="3044" hue="0x0" />
+  <info type="TalesOfVesperVol1" name="libro" id="0xFEF" price="4830" hue="0x0" />
+  <info type="TallStrawHat" name="alto cappello di paglia" id="0x1716" price="8" hue="0x0" />
+  <info type="Tambourine" name="tamburello" id="0xE9D" price="21" hue="0x0" />
+  <info type="TanBook" name="libro" id="0xFF0" price="15" hue="0x0" />
+  <info type="TanGinger" name="tan ginger" id="0xF85" price="50" hue="0x413" />
+  <info type="TanMushroom" name="fungo" id="0xD19" price="50" hue="0x0" />
+  <info type="TaxidermyKit" name="un kit di tassidermia" id="0x1EBA" price="100000" hue="0x0" />
+  <info type="TelekinisisScroll" name="telecinesi" id="0x1F41" price="39" hue="0x0" />
+  <info type="TeleportScroll" name="teleport" id="0x1F42" price="39" hue="0x0" />
+  <info type="ThatchedRoofCottageDeed" name="atto di un cottage dal tetto di paglia" id="0x14F0" price="43800" hue="0x0" />
+  <info type="ThighBoots" name="stivali della coscia" id="0x1711" price="15" hue="0x0" />
+  <info type="ThinLongsword" name="lunga spada" id="0x13B8" price="27" hue="0x0" />
+  <info type="TimberWolf" name="timber wolf" id="0x25D3" price="768" hue="0x0" />
+  <info type="TinkeringBook" name="tinker's handbook" id="0xEFA" price="50" hue="0x6A7" />
+  <info type="TinkerTools" name="kit di strumenti" id="0x1EB8" price="7" hue="0x0" />
+  <info type="Tongs" name="pinza" id="0xFBB" price="13" hue="0x0" />
+  <info type="Torch" name="torcia" id="0xF6B" price="8" hue="0x0" />
+  <info type="Tourmaline" name="tormalina" id="0xF2D" price="75" hue="0x0" />
+  <info type="TowerDeed" name="atto di una torre" id="0x14F0" price="649800" hue="0x0" />
+  <info type="TreatiseOnAlchemy" name="libro" id="0xFEF" price="1422" hue="0x0" />
+  <info type="TreeFellerHouseDeed" name="deed to a tree feller house" id="0x14F0" price="72000" hue="0x0" />
+  <info type="TreeFellerRefugeDeed" name="deed to a tree feller refuge" id="0x14F0" price="115000" hue="0x0" />
+  <info type="TreeFellerStockHouseDeed" name="deed to a tree feller stockhouse" id="0x14F0" price="62000" hue="0x0" />
+  <info type="TreeFellerVillaDeed" name="deed to a tree feller villa" id="0x14F0" price="155000" hue="0x0" />
+  <info type="TreeFellerVillaModelTwoDeed" name="deed to a tree feller villa (two)" id="0x14F0" price="105000" hue="0x0" />
+  <info type="TreeFellerWorkshopDeed" name="deed to a tree feller workshop" id="0x14F0" price="72000" hue="0x0" />
+  <info type="TricorneHat" name="cappello tricorne" id="0x171B" price="8" hue="0x0" />
+  <info type="Tunic" name="tunica" id="0x1FA1" price="18" hue="0x0" />
+  <info type="Turnip" name="rapa" id="0xD3A" price="6" hue="0x0" />
+  <info type="TurnipSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="TwoHandedAxe" name="ascia a due mani" id="0x1443" price="32" hue="0x0" />
+  <info type="TwoStoryTreeFellerHouseDeed" name="deed to a two story tree feller house" id="0x14F0" price="79000" hue="0x0" />
+  <info type="TwoStoryWoodPlasterHouseDeed" name="atto di una casa in legno e intonaco a due piani" id="0x14F0" price="192400" hue="0x0" />
+  <info type="UncutCloth" name="stoffa" id="0x1767" price="2" hue="0x0" />
+  <info type="UnlockScroll" name="sbloccare" id="0x1F43" price="39" hue="0x0" />
+  <info type="VesselDeed" name="vessel deed" id="0x14F2" price="500000" hue="0x0" />
+  <info type="VikingSword" name="spada vichinga" id="0x13B9" price="55" hue="0x0" />
+  <info type="VillaDeed" name="dare ad una villa a due piani" id="0x14F0" price="136500" hue="0x0" />
+  <info type="ViognierGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x16B" />
+  <info type="VolcaninAsh" name="volcanin ash" id="0xF7F" price="5" hue="0x0" />
+  <info type="WallOfStoneScroll" name="muro di pietra" id="0x1F44" price="39" hue="0x0" />
+  <info type="WalnutTreeSeed" name="diamante" id="0xF27" price="1000" hue="0x5E2" />
+  <info type="WarAxe" name="ascia di guerra" id="0x13B0" price="29" hue="0x0" />
+  <info type="WarFork" name="forchetta di guerra" id="0x1405" price="32" hue="0x0" />
+  <info type="WarHammer" name="martello da guerra" id="0x1439" price="25" hue="0x0" />
+  <info type="WarMace" name="mazza di guerra" id="0x1407" price="31" hue="0x0" />
+  <info type="WateringCan" name="" id="0x2004" price="100" hue="0x0" />
+  <info type="Watermelon" name="anguria" id="0xC5C" price="7" hue="0x0" />
+  <info type="WaterPitcher" name="special water pitcher" id="0x1F9D" price="500" hue="0x0" />
+  <info type="WaxCraftingBook" name="wax crafter's handbook" id="0xEFA" price="50" hue="0x4DA" />
+  <info type="WaxCraftingPot" name="" id="0x142A" price="1000" hue="0x0" />
+  <info type="WeakenScroll" name="indebolire" id="0x1F34" price="32" hue="0x0" />
+  <info type="Weistband" name="weistband" id="0x3365" price="100" hue="0x0" />
+  <info type="WheatSeed" name="diamante" id="0xF27" price="30" hue="0x5E2" />
+  <info type="WideBrimHat" name="cappello a tesa larga" id="0x1714" price="8" hue="0x0" />
+  <info type="WillowTreeSeed" name="diamante" id="0xF27" price="1000" hue="0x5E2" />
+  <info type="WizardsHat" name="cappello da mago" id="0x1718" price="11" hue="0x0" />
+  <info type="WoodenBowlOfCarrots" name="ciotola di carote" id="0x15F9" price="3" hue="0x0" />
+  <info type="WoodenBowlOfCorn" name="ciotola di mais" id="0x15FA" price="3" hue="0x0" />
+  <info type="WoodenBowlOfLettuce" name="ciotola di lattuga" id="0x15FB" price="3" hue="0x0" />
+  <info type="WoodenBowlOfPeas" name="ciotola di piselli" id="0x15FC" price="3" hue="0x0" />
+  <info type="WoodenBowlOfStew" name="ciotola di stufato" id="0x1604" price="3" hue="0x0" />
+  <info type="WoodenBowlOfTomatoSoup" name="zuppa di pomodoro" id="0x1606" price="3" hue="0x0" />
+  <info type="WoodenBox" name="scatola di legno" id="0x9AA" price="14" hue="0x0" />
+  <info type="WoodenHousewithBalconyDeed" name="deed to a wooden house with balcony" id="0x14F0" price="68000" hue="0x0" />
+  <info type="WoodenKiteShield" name="scudo aquilone strappare" id="0x1B79" price="70" hue="0x0" />
+  <info type="WoodenLabDeed" name="a deed for a house. (id: 0x46)" id="0x14F0" price="86500" hue="0x0" />
+  <info type="WoodenShield" name="scudo di legno" id="0x1B7A" price="30" hue="0x0" />
+  <info type="WoodenStockHouseDeed" name="deed to a wooden stockhouse" id="0x14F0" price="115500" hue="0x0" />
+  <info type="WoodenWareHouseDeed" name="deed to a wooden warehouse" id="0x14F0" price="62500" hue="0x0" />
+  <info type="WoodHouseDeed" name="atto di una casa in legno" id="0x14F0" price="43800" hue="0x0" />
+  <info type="WoodPlasterHouseDeed" name="atto di una casa di legno e gesso" id="0x14F0" price="43800" hue="0x0" />
+  <info type="Wool" name="mucchio di lana" id="0xDF8" price="62" hue="0x0" />
+  <info type="WyrmHeart" name="wyrm heart" id="0xF91" price="5" hue="0x0" />
+  <info type="YellowGourd" name="zucca" id="0xC64" price="3" hue="0x0" />
+  <info type="ZinfandelGrapes" name="grappolo d'uva" id="0x9D1" price="2" hue="0x0" />
+</infos>

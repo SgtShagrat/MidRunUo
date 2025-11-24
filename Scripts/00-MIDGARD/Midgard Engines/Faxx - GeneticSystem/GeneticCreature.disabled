@@ -1,0 +1,472 @@
+/***************************************************************************
+FILE:	GeneticCreature.cs
+AUTHOR: Fabrizio Castellano
+EMAIL: fabrizio.castellano (at) gmail.com
+DATE: 21/12/2008
+
+CONTENT: 
+	class GeneticCreature
+	
+DEPENDENCIES:
+	AnimalDNA class
+	.NET System namespace (Activator class)
+	Standard RunUO 2.0 BaseCreature class
+	
+INSTALLATION: Just add to scripts 
+
+USE: for every creature script for which DNA handling is required:
+	1) Substitute
+		public class MyCreature : BaseCreature
+	with
+		public class MyCreature : GeneticCreature
+	
+	2) Define a custom DNA class as
+		public class MyCustomDNA : AnimalDNA
+			
+	3) add DNAType override as
+		public override Type DNAType{ get{ return typeof(MyCustomDNA);}}
+		
+	4) DON'T set Str,Dex, Int, Hits, Hue, Body in MyCreature constructor
+	
+DESCRIPTION:
+	GeneticCreature represents a creature with his DNA.
+	Physical characteristics depend on the genetic code.
+	DNA can be computed from parents' DNAs.
+	
+SEE ALSO:
+	BaseDNA.cs
+	AnimalDNA.cs
+***************************************************************************/
+using System;
+namespace Server.Mobiles
+{
+	// this puts GenericCreature on top of BaseCreature so that this
+	// package can be installed without affecting BaseCreature
+	public class GeneticCreature : BaseCreature
+	{
+#region Genetics
+
+		/// <summary>
+		/// return true to activate Genetics/Aging/Pregnancy
+		/// WARNING: activation will change serialization!!!!
+		/// </summary>
+		public virtual bool IsGeneticCreature{ get{ return false; } }
+		
+		/// <summary>
+		/// The DNA type
+		/// </summary>
+		public virtual Type DNAType{ get{ return typeof(AnimalDNA);}}
+		
+		/// <summary>
+		/// internal DNA data
+		/// </summary>
+		private AnimalDNA m_DNA;
+		
+		/// <summary>
+		/// Accessor for m_DNA
+		/// </summary>
+		public AnimalDNA DNA
+		{ 
+			get{ return m_DNA;}
+			set
+			{ 	if(value == null) return;
+				m_DNA = value;
+				MorphToDNA();
+			}
+		} 
+		
+		/// <summary>
+		/// Genetic expression, change creature's characteristics according to DNA
+		/// </summary>
+		public void MorphToDNA()
+		{
+			SetStr( m_DNA.Str );
+			SetDex( m_DNA.Dex );
+			SetInt( m_DNA.Int );
+			DamageMin = m_DNA.DamageMin;
+			DamageMax = m_DNA.DamageMax;
+			VirtualArmor = m_DNA.VirtualArmor;
+			if(m_DNA.Color != 0) Hue = m_DNA.Color; // this allows to define DNAs that don't change the body
+			if(m_DNA.Body != 0) Body = m_DNA.Body;	// and hue
+			ApplyLeveling();
+		}
+		
+		// Same contructor as BaseCreature so no need to modify constructors
+		// prototypes in derived classes
+		public GeneticCreature(AIType ai,
+				FightMode mode,
+				int iRangePerception,
+				int iRangeFight,
+				double dActiveSpeed, 
+				double dPassiveSpeed )
+		: base( ai, mode, iRangePerception, iRangeFight,dActiveSpeed, dPassiveSpeed )
+		{
+			m_BirthDate = DateTime.Now;
+			DNA = Activator.CreateInstance(DNAType) as AnimalDNA; // generate a new DNA
+			Experience = 0; // reset experience to force stat leveling
+			CheckAgeTimer();
+		}
+		
+		/// <summary>
+		/// Helper function to hybridize parents' DNA
+		/// </summary>
+		public void SetParents(GeneticCreature father, GeneticCreature mother)
+		{
+			if(father.DNA.GetType() != mother.DNA.GetType() || father.DNA.GetType() != this.DNA.GetType()) return;
+			object[] parms = new object[]{father.DNA, mother.DNA};
+			DNA = Activator.CreateInstance(DNAType, parms) as AnimalDNA;
+		}
+		
+		// Constructors in derived classes use SetStr etc... to initilize stats
+		// with this redefinitions the data is written in the DNA
+		// use the overloaded version SetStr(int) to directly set the value 
+		new public void SetStr( int min, int max ) { m_DNA.Str = Utility.RandomMinMax( min, max ); MorphToDNA();}
+		new public void SetDex( int min, int max ) { m_DNA.Dex = Utility.RandomMinMax( min, max ); MorphToDNA();}
+		new public void SetInt( int min, int max ) { m_DNA.Int = Utility.RandomMinMax( min, max ); MorphToDNA();}
+		new public void SetDamage( int min, int max ) { m_DNA.DamageMin = min; m_DNA.DamageMax = max; MorphToDNA();}
+		new public void SetVirtualArmor( int min, int max ) { m_DNA.VirtualArmor = Utility.RandomMinMax( min, max ); MorphToDNA();}
+#endregion
+
+#region Aging
+		/// <summary>
+		/// How many real worlds seconds make up a UO minute.
+		/// This setting cacn be different from Clock.SecondsPerUoMinute to allow
+		/// independent tuning of creatures' growth speed
+		/// </summary>
+		private static double m_SecondsPerUoMinute = 1.0/120.0;
+		private static double m_SecondsPerUoDay = m_SecondsPerUoMinute*24*60;
+		
+		/// <summary>
+		/// date of birth.
+		/// This can be different from CreationDate so that we can manually set the age of creatures
+		/// <summary>
+		private DateTime m_BirthDate;
+		
+		/// <summary>
+		/// The creature's Age in UO days
+		/// </summary>
+		[CommandProperty(AccessLevel.GameMaster)]
+		public double Age 
+		{ 
+			get { return ((DateTime.Now - m_BirthDate).TotalSeconds/m_SecondsPerUoDay); } 
+			set 
+			{ 
+				if(value < 0) return;
+				TimeSpan age = TimeSpan.FromSeconds(value*m_SecondsPerUoDay);
+				m_BirthDate = DateTime.Now - age;
+			}
+		}
+		
+		/// <summary>
+		/// Aging time constant "tau".
+		/// This vale sets the speed at which stats grow with age
+		/// </summary>
+		public virtual double AgingConstant { get { return 120; } } 
+		
+		/// <summary>
+		/// Spawned animals are already adult
+		/// </summary>
+		public override void OnBeforeSpawn( Point3D location, Map m )
+		{
+			base.OnBeforeSpawn( location, m );
+			Age = 10*AgingConstant;
+			Level = m_OSILevel;
+		}
+		
+		/// <summary> 
+		/// Aging function:
+		/// goes from 0 to 100 when age goes from 0 to infinity
+		/// after AgingConstant UO days --> 63%
+		/// after 2*AgingConstant UO days --> 84%
+		/// after 3*AgingConstant UO days --> 95%
+		/// after 4*AgingConstant UO days --> 98%
+		/// </summary>
+		public virtual int AgeMultiplier { get{ return Convert.ToInt32(100*(1.0 - Math.Exp(-Age/AgingConstant))); } }
+		
+		// Hits, Stamina and Mana are linked to Str, Dex, Int via a different
+		// ratio for every creature (for humans 100%)
+		public virtual int StrToHits { get { return 100; } }
+		public virtual int DexToStam { get { return 100; } }
+		public virtual int IntToMana { get { return 100; } }
+		[CommandProperty( AccessLevel.GameMaster )]
+		public override int HitsMax { get { return (Str*StrToHits)/100; } }
+		[CommandProperty( AccessLevel.GameMaster )]
+		public override int StamMax { get { return (Dex*StrToHits)/100; } }
+		[CommandProperty( AccessLevel.GameMaster )]
+		public override int ManaMax { get { return (Int*StrToHits)/100; } }
+		
+		/// <summary>
+		/// Event called every m_SecondsPerUoDay by the age timer
+		/// Provides stat evolution and handles delivery of pregnant females
+		/// </summary>
+		public virtual void OnAgeTimerTick() 
+		{ 
+			Emote("age: " + Math.Floor(Age));
+			Experience += DailyExperienceGain;
+			RawStr = (m_DNA.Str*AgeMultiplier)/100;
+			RawDex = (m_DNA.Dex*AgeMultiplier)/100;
+			RawInt = (m_DNA.Int*AgeMultiplier)/100;
+			Deliver(); // try to deliver a baby is present (all checks inside)
+			if(Age >= AgingConstant) ChangeAIToDefault();
+			CheckAgeTimer();
+		}
+		
+		/// <summary>
+		/// Makes sure the aging timer is active if needed and inactive if not
+		/// </summary>
+		public void CheckAgeTimer()
+		{
+			if(m_AgeTimer == null)
+			{
+				if(Age < 10*AgingConstant || IsPregnant) // timer must be on during youth and pregnancy
+				{ 
+					m_AgeTimer = new AgeTimer(this, TimeSpan.FromSeconds(m_SecondsPerUoDay));
+					m_AgeTimer.Start();
+				}
+			}
+			else 	if(Age > 10*AgingConstant && !IsPregnant) // timer is running, stop it if it's not needed anymore
+				{ 
+					m_AgeTimer.Stop();
+					m_AgeTimer = null;
+				}
+		}
+		
+		private AgeTimer m_AgeTimer;
+		private class AgeTimer : Timer
+		{
+			private GeneticCreature m_Owner;
+			public AgeTimer( GeneticCreature m , TimeSpan delay) : base( delay, delay ) { m_Owner = m; }
+			protected override void OnTick() { m_Owner.OnAgeTimerTick(); }
+		}
+#endregion
+
+#region Pregnancy
+
+		/// <summary>
+		/// The fetus (internalized)
+		/// </summary>
+		private GeneticCreature m_Fetus; // the fetus
+		
+		/// <summary>
+		/// The delivery time
+		/// </summary>
+		private DateTime m_DeliveryTime; // the delivery time
+		
+		/// <summary>
+		/// The age (in UO days) at which females can go pregnant
+		/// </summary>
+		public virtual int PregnancyAge{ get{ return 120; } } // minimum pregnancy age, in UO days
+		
+		/// <summary>
+		/// Time needed for fetus delivery
+		/// </summary>
+		public virtual int PregnancyTime{ get{ return 12; } } // pregnancy time, in UO days
+		
+		[CommandProperty(AccessLevel.GameMaster)]
+		public bool IsPregnant{ get{ return m_Fetus != null; } }
+		
+		[CommandProperty(AccessLevel.GameMaster)]
+		public bool CanBePregnant{ get{ return Female && Age > PregnancyAge && !IsPregnant;} }
+		
+		[CommandProperty(AccessLevel.GameMaster)]
+		public DateTime DeliveryTime{ get{ return m_DeliveryTime;}}
+		
+		/// <summary>
+		/// Try to give birth to the fetus
+		/// </summary>
+		public virtual bool Deliver() 
+		{ 
+			if(m_Fetus == null || DateTime.Now < DeliveryTime) return false;
+			Emote(">_<");
+			m_Fetus.MoveToWorld(Location, Map);
+			m_Fetus = null;
+			return true;
+		}
+		
+		/// <summary>
+		/// Causes the creature to be pregnant if possible
+		/// </summary>
+		public virtual bool GetPregnant(BaseCreature bc)
+		{
+			GeneticCreature father = bc as GeneticCreature;
+			if(!CanBePregnant || father == null || father.Female || father.GetType() != GetType()) return false;
+			m_Fetus = (GeneticCreature)Activator.CreateInstance(GetType());
+			m_Fetus.Female = Utility.RandomBool();
+			m_Fetus.AI = AIType.AI_Animal;
+			m_Fetus.Internalize();
+			m_DeliveryTime = DateTime.Now + TimeSpan.FromSeconds(PregnancyTime*m_SecondsPerUoDay);
+			Emote(":-)");
+			father.Emote(":P");
+			CheckAgeTimer();
+			return true;
+		}
+		
+		/// <summary>
+		/// Damaging can cause fetus death
+		/// </summary>
+		public override void OnDamage(int amount, Mobile from, bool willKill)
+		{
+			base.OnDamage(amount, from, willKill);
+			if(Utility.Random(100) < amount)
+			{
+				m_Fetus.Delete();
+				m_Fetus = null;
+				Emote(":_(");
+			}
+		}
+		
+		/// <summary>
+		/// Damaging can cause fetus death 
+		/// </summary>
+		public override void OnDelete()
+		{
+			base.OnDelete();
+			if(m_Fetus != null)
+			{
+				m_Fetus.Delete();
+				m_Fetus = null;
+			}
+		}
+#endregion
+
+#region Leveling
+		/// <summary>
+		/// Level at which performancec is equal to OSI
+		/// </summary>
+		private static int m_OSILevel = 30; 
+		
+		/// <summary>
+		/// XP between levels
+		/// It affects the speed at which levels are gained when doing actions
+		/// that provide a fixed amount of exp (e.g. daily exp gain)
+		/// </summary>
+		private static int m_LevelSpacing = 100;
+		
+		/// <summary>
+		/// exp points
+		/// </summary>
+		private int m_Experience = -1;
+		
+		[CommandProperty(AccessLevel.GameMaster)]
+		public int Experience
+		{ 
+			get{ return m_Experience;} 
+			set
+			{ 
+				if(value < 1 || value == m_Experience) return;
+				int old = m_Experience;
+				int oldLevel = Level;
+				m_Experience = value;
+				if(Level != oldLevel) OnLevelChanged(oldLevel);
+			} 
+		}
+		
+		/// <summary>
+		/// Event called when level changes
+		/// </summary>
+		public virtual void OnLevelChanged(int old) { ApplyLeveling(); }
+		
+		/// <summary>
+		/// Event called when level changes
+		/// </summary>
+		public virtual void ApplyLeveling() 
+		{ 
+			VirtualArmor = (m_DNA.VirtualArmor*LevelMultiplier)/100;
+		}
+		
+		/// <summary>
+		/// Creature's Level
+		/// </summary>
+		[CommandProperty(AccessLevel.GameMaster)]
+		public virtual int Level 
+		{ 
+			get { return 1 + Experience/m_LevelSpacing; } 
+			set 
+			{ 
+				if(value < 1) return; 
+				int old = Level;
+				Experience = (value - 1)*m_LevelSpacing + m_LevelSpacing/2; 
+				if(Level != old) OnLevelChanged(old);
+			}
+		}
+
+		/// <summary>
+		/// Value (%) used to scale performance according to level
+		/// When Level == m_OSILevel multiplier is 100
+		/// </summary>
+		[CommandProperty(AccessLevel.GameMaster)]
+		public virtual int LevelMultiplier{ get{ return (100*Level)/m_OSILevel; }}
+		
+		/// <summary>
+		/// Experience gained every day without doing anything
+		/// by default is m_OSILevel/Level which means that without training we can only reach OSI Level.
+		/// </summary>
+		public virtual int DailyExperienceGain{ get{ return m_OSILevel/(1+Level);} }
+		
+		/// <summary>
+		/// Experience gained when succeding against an opponent
+		/// </summary>
+		public virtual void SuccessAgainst(GeneticCreature opponent)
+		{
+			Experience += (5*opponent.Level)/Level;
+		}
+		
+		/// <summary>
+		/// Experience gained on failure
+		/// </summary>
+		public virtual void FailureAgainst(GeneticCreature opponent)
+		{
+			Experience += DailyExperienceGain; 
+		}
+#endregion
+
+#region Serialization
+
+		public GeneticCreature( Serial serial ) : base( serial ) { }
+
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			
+			writer.Write( (int) 0 ); // version
+			
+			writer.Write(m_BirthDate);
+			m_DNA.Serialize(writer);
+			if(m_Fetus != null)
+			{
+				writer.Write(true);
+				writer.Write(m_Fetus);
+				writer.Write(m_DeliveryTime);
+			}
+			else writer.Write(false);
+			
+			writer.Write(m_Experience);
+		}
+
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+			
+			switch(version)
+			{
+				case 0:
+					m_BirthDate = reader.ReadDateTime();
+					DNA = Activator.CreateInstance(DNAType, new object[]{reader}) as AnimalDNA;
+					if(reader.ReadBool())
+					{
+						m_Fetus = (GeneticCreature)reader.ReadMobile();
+						m_DeliveryTime = reader.ReadDateTime();
+					}
+					else m_Fetus = null;
+					
+					m_Experience = reader.ReadInt();
+					CheckAgeTimer();
+					break;
+			}
+		}
+#endregion
+	}
+}

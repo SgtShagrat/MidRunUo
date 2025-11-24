@@ -1,0 +1,247 @@
+/***************************************************************************
+ *                                  HarvestHelper.cs
+ *                            		-------------------
+ *  begin                	: Dicembre, 2007
+ *  version					: 2.0 **VERSIONE PER RUNUO 2.0**
+ *  copyright            	: Midgard Uo Shard - Matteo Visintin
+ *  email                	: tocasia@alice.it
+ *
+ ***************************************************************************/
+
+#define DebugGetVeinAt
+#define DebugMutateType
+#define DebugGetHarvestVeinFromTileId
+
+namespace Midgard
+{
+    public class HarvestHelper
+    {
+        public static readonly bool TalismansEnabled = true;
+
+        public static bool GiveLumberBonus( HarvestSystem system, Mobile m, Item item, bool placeAtFeet )
+        {
+            if( !TalismansEnabled )
+                return false;
+
+            if( m.Skills.Lumberjacking.Value >= 100 )
+            {
+                if( Utility.RandomDouble() < 0.15 )
+                {
+                    Item sitem;
+                    int message;
+                    double chance = Utility.RandomDouble();
+
+                    if( chance < 0.0025 )
+                    {
+                        sitem = new BrilliantAmber();
+                        message = 1072551; // You found a brilliant amber!
+                    }
+                    else if( chance < 0.05 )
+                    {
+                        sitem = new ParasiticPlant();
+                        message = 1072549; // You found a parasitic plant!
+                    }
+                    else if( chance < 0.35 )
+                    {
+                        if( Utility.RandomBool() )
+                        {
+                            sitem = new Switch();
+                            message = 1072547; // You found a switch!
+                        }
+                        else
+                        {
+                            sitem = new LuminescentFungi();
+                            message = 1072550; // You found a luminescent fungi!
+                        }
+                    }
+                    else
+                    {
+                        sitem = new BarkFragment();
+                        message = 1072548; // You found a bark fragment!
+                    }
+
+                    if( !m.PlaceInBackpack( sitem ) && placeAtFeet )
+                    {
+                        ArrayList atFeet = new ArrayList();
+
+                        foreach( Item obj in m.GetItemsInRange( 0 ) )
+                            atFeet.Add( obj );
+
+                        for( int i = 0; i < atFeet.Count; ++i )
+                        {
+                            Item check = (Item)atFeet[ i ];
+
+                            if( check.StackWith( m, sitem, false ) )
+                                return system.Give( m, item, placeAtFeet );
+                        }
+
+                        sitem.MoveToWorld( m.Location, m.Map );
+                    }
+                    m.SendLocalizedMessage( message );
+                }
+            }
+
+            return system.Give( m, item, placeAtFeet );
+        }
+
+
+        public static readonly bool RewardsEnabled = true;
+
+        public static bool GiveMiningBonus( HarvestSystem system, Mobile m, Item item, bool placeAtFeet )
+        {
+            if( !RewardsEnabled )
+                return false;
+
+            if( m.Skills.Mining.Value >= 90 && RewardsEnabled )
+            {
+                if( Utility.RandomDouble() < 0.05 || m.AccessLevel == AccessLevel.Developer )
+                {
+                    m.LocalOverheadMessage( MessageType.Regular, 0x3B2, 1064376 ); // * You have found something Special *
+                    m.PlaySound( 0x244 );
+
+                    Item sitem = null;
+                    int message = 0;
+                    double chance = Utility.RandomDouble();
+
+#if DebugMiningRewards
+					if( m.AccessLevel == AccessLevel.Developer )
+					{
+						int[] m_test = new int[]{ 5, 15, 40, 80 };
+						chance = (Utility.RandomList( m_test )) / 10.0;
+						m.SendMessage( "DebugMiningRewards. Chance {0}", chance.ToString( "F3" ));
+					}
+#endif
+                    #region generazione dell'oggetto random
+                    // -----------------------------------------
+                    // Le percentuali di uscita dei premi sono le seguenti:
+                    // 		AncientSmithyHammer				1,67%
+                    //		TreasureMap						1,67%
+                    //		RunicHammer						1,67%
+                    //		RandomArmorOrShieldOrJewelry	15%
+                    // 		Random Magical Gem				10% , 5permille come su OSI
+                    // 		RandomGem						30%
+                    // 		RandomMiningCommonReward		40%
+                    // -----------------------------------------
+
+                    if( chance < 0.05 )			// intervallo del 5% sul totale
+                    {
+                        switch( Utility.RandomMinMax( 1, 3 ) )
+                        {
+                            case 1:
+                                sitem = new AncientSmithyHammer( Utility.RandomMinMax( 1, 5 ) );
+                                message = 1064377; // You found an Ancient Smith Hammer!
+                                break;
+                            case 2:
+                                sitem = new TreasureMap( Utility.RandomMinMax( 3, 5 ), Map.Felucca );
+                                message = 1064378; // You found a Treasure Map!
+                                break;
+                            case 3:
+                                sitem = new RunicHammer( (CraftResource)Utility.RandomMinMax( 2, 7 ), Utility.Random( 2 ) + 1 );
+                                message = 1064379; // You found a Runic Hammer!
+                                break;
+                            default:
+                                sitem = new TreasureMap( Utility.RandomMinMax( 2, 5 ), Map.Felucca );
+                                message = 1064378; // You found a Treasure Map!
+                                break;
+                        }
+                    }
+                    else if( chance < 0.2 ) 	// intervallo del 10% sul totale
+                    {
+                        sitem = Loot.RandomArmorOrShieldOrJewelry();
+
+                        if( Core.AOS )
+                        {
+                            if( sitem is BaseWeapon )
+                                BaseRunicTool.ApplyAttributesTo( (BaseWeapon)sitem, false, m.Luck, 3, 5, 90 );
+                            else if( sitem is BaseArmor )
+                                BaseRunicTool.ApplyAttributesTo( (BaseArmor)sitem, false, m.Luck, 3, 5, 90 );
+                            else if( sitem is BaseJewel )
+                                BaseRunicTool.ApplyAttributesTo( (BaseJewel)sitem, false, m.Luck, 3, 5, 90 );
+                        }
+                        else
+                        {
+                            if( sitem is BaseWeapon )
+                                Misc.PreAoSLootHelper.ApplyAttributesTo( (BaseWeapon)sitem, 5, 90 );
+                            else if( sitem is BaseArmor )
+                                Misc.PreAoSLootHelper.ApplyAttributesTo( (BaseArmor)sitem, 5, 90 );
+                            else if( sitem is BaseJewel )
+                                Misc.PreAoSLootHelper.ApplyAttributesTo( (BaseJewel)sitem, 5, 90 );
+                        }
+
+                        message = 1064380; // You found a Valuable Thing!
+                    }
+                    else if( chance < 0.3 ) 	// intervallo del 10% sul totale
+                    {
+                        if( PerfectGemsEnabled )
+                        {
+                            switch( Utility.Random( 6 ) )
+                            {
+                                case 0:
+                                    sitem = new PerfectEmerald();
+                                    message = 1072566; // You have found a perfect emerald!
+                                    break;
+                                case 1:
+                                    sitem = new DarkSapphire();
+                                    message = 1072567; // You have found a dark sapphire!
+                                    break;
+                                case 2:
+                                    sitem = new Turquoise();
+                                    message = 1072568; // You have found a turquoise!
+                                    break;
+                                case 3:
+                                    sitem = new EcruCitrine();
+                                    message = 1072570; // You have found an Ecru Citrine!
+                                    break;
+                                case 4:
+                                    sitem = new FireRuby();
+                                    message = 1072564; // You have found a fire ruby!
+                                    break;
+                                case 5:
+                                    sitem = new BlueDiamond();
+                                    message = 1072562; // You have found a flawless diamond!
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            sitem = Loot.RandomGem();
+                            message = 1064381; // You found a precious Gem!
+                        }
+                    }
+                    else if( chance < 0.7 ) 	// intervallo del 30% sul totale
+                    {
+                        sitem = Loot.RandomGem();
+                        message = 1064381; // You found a precious Gem!
+                    }
+                    else						// intervallo del 45% sul totale 
+                    {
+                        sitem = RandomMiningCommonReward();
+                        message = 1064382; // You found something special!
+                    }
+                    #endregion
+
+                    if( item != null && !m.PlaceInBackpack( sitem ) && placeAtFeet )
+                    {
+                        ArrayList atFeet = new ArrayList();
+
+                        foreach( Item obj in m.GetItemsInRange( 0 ) )
+                            atFeet.Add( obj );
+
+                        for( int i = 0; i < atFeet.Count; ++i )
+                        {
+                            Item check = (Item)atFeet[ i ];
+
+                            if( check.StackWith( m, sitem, false ) )
+                                return system.Give( m, item, placeAtFeet );
+                        }
+                        if( sitem != null )
+                            sitem.MoveToWorld( m.Location, m.Map );
+                    }
+                    m.SendLocalizedMessage( message );
+                }
+            }
+
+            return system.Give( m, item, placeAtFeet );
+        }
+    }
+}

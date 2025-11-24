@@ -1,0 +1,61 @@
+using System;
+
+using Midgard.Engines.Races;
+
+using Server.Items;
+
+namespace Server.Items
+{
+	[FlipableAttribute( 0x13dc, 0x13d4 )]
+    [RaceAllowanceAttribute( typeof( MountainDwarf ) )]
+	public class StuddedArms : BaseArmor
+	{
+		public override int BasePhysicalResistance{ get{ return 2; } }
+		public override int BaseFireResistance{ get{ return 4; } }
+		public override int BaseColdResistance{ get{ return 3; } }
+		public override int BasePoisonResistance{ get{ return 3; } }
+		public override int BaseEnergyResistance{ get{ return 4; } }
+
+		public override int InitMinHits{ get{ return 36; } } // mod by Dies Irae : pre-aos stuff
+		public override int InitMaxHits{ get{ return 44; } } // mod by Dies Irae : pre-aos stuff
+        
+        public override string OldInitHits{ get{ return "1d9+35"; } } // mod by Dies Irae : pre-aos stuff
+
+		public override int AosStrReq{ get{ return 25; } }
+		public override int OldStrReq{ get{ return 25; } }
+
+		public override int ArmorBase{ get{ return 16; } } // mod by Dies Irae : pre-aos stuff
+
+		public override ArmorMaterialType MaterialType{ get{ return ArmorMaterialType.Studded; } }
+		public override CraftResource DefaultResource{ get{ return CraftResource.RegularLeather; } }
+
+		public override ArmorMeditationAllowance DefMedAllowance{ get{ return ArmorMeditationAllowance.Half; } }
+
+        public override int BlockCircle{ get{ return 5; } } // mod by Dies Irae : pre-aos stuff
+
+		[Constructable]
+		public StuddedArms() : base( 0x13DC )
+		{
+			Weight = 4.0;
+		}
+
+		public StuddedArms( Serial serial ) : base( serial )
+		{
+		}
+		
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+			writer.Write( (int) 0 );
+		}
+		
+		public override void Deserialize(GenericReader reader)
+		{
+			base.Deserialize( reader );
+			int version = reader.ReadInt();
+
+			if ( Weight == 1.0 )
+				Weight = 4.0;
+		}
+	}
+}

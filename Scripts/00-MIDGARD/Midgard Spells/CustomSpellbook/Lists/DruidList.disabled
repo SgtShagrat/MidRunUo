@@ -1,0 +1,35 @@
+using System;
+using Server;
+using System.Collections;
+
+namespace Server.Spells.FSB
+{
+    public class DruidList
+    {
+		public static void Initialize()
+		{
+			if (FSBSpellList.SpellList == null)
+				FSBSpellList.SpellList = new ArrayList();
+
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Leaf Whirlwind", "A gust of wind blows picking up magic leaves that memorize where they have come from, marking a rune for the caster.", 551, 2271, 10, 1.0, "SW,PW,DA", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Hollow Reed", "Increases both the Strength and the Intelligence of the Druid.", 552, 2255, 30, 30, "GI,SW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Pack of Beasts", "Summons a pack of beasts to fight for the Druid.  Spell length increases with skill.", 553, 20491, 45, 40, "BM,MR,NS", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Spring of Life", "Creates a magical spring that heals the Druid and their party.", 554, 2268, 40, 40, "BP,BM,PW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Grasping Roots", "Summons roots from the ground to entangle a single target.", 555, 2293, 40, 40, "SW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Blend With Forest", "The Druid blends seamlessly with the background, becoming invisible to their foes.", 556, 2249, 60, 75, "SW,BM,SS", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Swarm of Insects", "Summons a swarm of insects that bite and sting the Druid's enemies.", 557, 2272, 70, 85, "BM,NS", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Volcanic Eruption", "A blast of molten lava bursts from the ground, hitting every enemy nearby.", 558, 2296, 85, 98, "GA,NS,DA", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Summon Familiar", "Summons a choice of different familiars that can aid the druid.", 559, 2295, 50, 80, "MR,SW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Stone Circle", "Forms an impassable circle of stones, ideal for trapping enemies.", 560, 2263, 45, 60, "BP,BM,PW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Enchanted Grove", "Creates a grove of trees to grow around the Druid, restoring vitality.", 561, 2280, 60, 95, "BP,GI,SW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Lure Stone", "Creates a magical stone that calls all nearby animals to it.", 562, 2294, 30, 15, "MR,PW,SW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Nature's Passage", "The Druid is turned into flower petals and carried on the wind to their destination.", 563, 2297, 10, 15, "BP,SW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Mushroom Gateway", "A magical circle of mushrooms opens, allowing the Druid to step through it to another location.", 564, 2291, 40, 70, "BP,BM,MR", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Restorative Soil", "Saturates a patch of land with power, causing life giving mud to seep through.", 565, 2298, 55, 89, "BP,MR,SW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Shield of Earth", "A quick-growning wall of foliage springs up at the bidding of the Druid.", 566, 2254, 15, 20, "GA,GI,SW", SchoolFlag.Druid));
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Bark Skin", "Bark covers the Druid's body, making him more resistant to physical, energy and poison.", 567, 2291, 10, 2, "GA,PW,MR", SchoolFlag.Druid)); //need to change icon, mana and skill
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Delayed Poison", "Delivers a sting to an enemy, which poisons that enemy after a few moments.", 568, 2298, 10, 2, "BM,MR", SchoolFlag.Druid)); //need to change icon, mana and skill
+			FSBSpellList.SpellList.Add(new FSBSpellInfo("Good Berry", "Creates a life replenishing berry.", 569, 2254, 10, 2, "GI,SW", SchoolFlag.Druid)); //need to change icon, mana and skill
+		}
+	}
+}

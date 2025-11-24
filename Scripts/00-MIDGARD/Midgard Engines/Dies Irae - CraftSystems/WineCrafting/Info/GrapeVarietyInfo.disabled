@@ -1,0 +1,31 @@
+using System;
+
+namespace Midgard.Engines.WineCrafting
+{
+    public class GrapeVarietyInfo
+    {
+        private int m_Hue;
+        private int m_Number;
+        private string m_Name;
+        private GrapeVariety m_Variety;
+        private Type[] m_VarietyTypes;
+
+        public int Hue { get { return m_Hue; } }
+        public int Number { get { return m_Number; } }
+        public string Name { get { return m_Name; } }
+        public GrapeVariety Resource { get { return m_Variety; } }
+        public Type[] VarietyTypes { get { return m_VarietyTypes; } }
+
+        public GrapeVarietyInfo( int hue, int number, string name, GrapeVariety variety, params Type[] varietyTypes )
+        {
+            m_Hue = hue;
+            m_Number = number;
+            m_Name = name;
+            m_Variety = variety;
+            m_VarietyTypes = varietyTypes;
+
+            for( int i = 0; i < varietyTypes.Length; ++i )
+                WinemakingResourceInfo.RegisterType( varietyTypes[ i ], variety );
+        }
+    }
+}

@@ -1,0 +1,109 @@
+/***************************************************************************
+ *                                  StoneEnchantHelper.cs
+ *                            		---------------------
+ *  begin                	: Ottobre, 2007
+ *  version					: 2.0 **VERSIONE PER RUNUO 2.0**
+ *  copyright            	: Midgard Uo Shard - Matteo Visintin
+ *  email                	: tocasia@alice.it
+ *
+ ***************************************************************************/
+
+using System;
+using System.Reflection;
+
+using Server;
+
+using Midgard.Items;
+
+using Server.Items;
+
+namespace Midgard.Engines.StoneEnchantSystem
+{
+    public class StoneEnchantHelper
+    {
+        public static StoneTypes RandomStoneType()
+        {
+            return (StoneTypes)Utility.RandomMinMax( 1, Enum.GetNames( typeof( StoneTypes ) ).Length - 1 );
+        }
+
+        public static readonly double DeltaChanceToDestroyOnFailedIdentification = 0.8;
+
+        public static Item RandomEnchantStone()
+        {
+            return new EnchantStone( RandomStoneType() );
+        }
+
+        public static int GetHueFromStoneType( StoneTypes stoneType )
+        {
+            StoneDefinition def = StoneDefinition.GetFromIndex( (int)stoneType - 1 );
+            return ( def == null ) ? 0 : def.Hue;
+        }
+
+        public static string GetPrefixFromStoneType( StoneTypes stoneType )
+        {
+            StoneDefinition def = StoneDefinition.GetFromIndex( (int)stoneType - 1 );
+            return ( def == null ) ? "" : def.Prefix;
+        }
+
+        public static readonly double DeltaChanceToDestroyOnFailedEnchant = 0.8;
+
+        public static bool IsEnchanted( Item item )
+        {
+            return IsEnchanted( null, item, false );
+        }
+
+        public static bool IsEnchanted( Mobile from, Item item, bool message )
+        {
+            StoneEnchantItem state = StoneEnchantItem.Find( item );
+
+            if( state != null && message )
+                from.SendMessage( "This item has already been enchanted with {0} power.", state.Definition != null ? state.Definition.Prefix : "magical" );
+
+            return state != null;
+        }
+
+        public static bool CanBeEnchanted( Item item )
+        {
+            if( !( item is IStoneEnchantItem ) )
+                return false;
+
+            if( item.LootType == LootType.Blessed || item.LootType == LootType.Newbied )
+                return false;
+
+            if( item is BaseWeapon && ( (BaseWeapon)item ).MagicalAttribute != WeaponMagicalAttribute.None )
+                return false;
+
+            if( item is BaseArmor && ( (BaseArmor)item ).MagicalAttribute != ArmorMagicalAttribute.None )
+                return false;
+
+            if( item is BaseClothing && ( (BaseClothing)item ).MagicalAttribute != ClothingMagicalAttribute.None )
+                return false;
+
+            if( item is BaseJewel && ( (BaseJewel)item ).MagicalAttribute != JewelMagicalAttribute.None )
+                return false;
+
+            /*	
+             * POL script
+             * 
+             * if (targ.newbie || GetObjProperty(targ,"usecount") || GetObjProperty(targ,"charges") || 
+             * GetObjProperty(targ,"IDed") || GetObjProperty(targ,"statustype") ||
+             * GetObjProperty(targ, "MagicalEffect_Level_Poison"))
+		     *      SendSysMessage(who,"This item cannot be enchanted."); */
+
+            return !IsArtifact( item ) && !( item is ITreasureOfMidgard );
+        }
+
+        public static bool IsArtifact( Item item )
+        {
+            if( item == null )
+                return false;
+
+            PropertyInfo prop = null;
+
+            try { prop = item.GetType().GetProperty( "ArtifactRarity" ); }
+            catch { }
+
+            return prop != null && (int)( prop.GetValue( item, null ) ) > 0;
+        }
+    }
+}

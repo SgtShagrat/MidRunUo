@@ -1,0 +1,61 @@
+Hi all.
+
+This is my first public subscription.
+I've tryed to make a copy of OSI Dawn's Music Box.
+
+All infoes are taken from UOGuide.
+
+[CENTER][IMG]http://www.uoguide.com/images/7/71/Dawns_music_box_icon.jpg[/IMG][/CENTER]
+
+[FONT="Arial"]Story[/FONT]
+[I]Once a great man, Lord Blackthorn's body & soul became twisted by the power of Exodus. Seeking total control over Sosaria, he led a fearsome army, cutting down all who opposed him. Sosaria's salvation lay in a simple peasant named Dawn who valiantly opposed the corrupted Lord and led the people of Sosaria to victory. This music box was given to Dawn in gratitude of her achievements.[/I]
+
+[FONT="Arial"]Features:[/FONT]
+[LIST]
+[*]Can be turned with an Interior Decorate tool;
+[*]Each box comes with 4 random common tracks;
+[*]You must have music enabled in the Option Menu to hear the songs;
+[*]There are 40 common, 12 uncommon, and 3 rare tracks;
+[*]Tracks keep the order they are placed into the music box and can not be changed;
+[/LIST]
+
+Other Features:
+[LIST]
+[*]Songs are found via MusicBoxGears.
+They come in 3 TrackRarity types (Common, Uncommon, Rare) like OSI.
+[CENTER][IMG]http://img527.imageshack.us/img527/9230/gearsqk7.jpg[/IMG][/CENTER]
+Rarity songs are checked from UoGuide.
+Gears have right label (for each rarity type) and show song label under name.
+Each gear can be used to add its song to a Dawn's music box.
+[*]MusicBox comes with 4 common tracks random choosen from tracks available.
+It displays correctly how many tracks (grouped by rarity) are in the Box.
+[CENTER][IMG]http://img509.imageshack.us/img509/4205/musicboxqt5.jpg[/IMG][/CENTER]
+It has to be locked down to be used.
+Double clicking it, if the clicker is Owner of the house where it is locked down, a menu appears.
+[CENTER][IMG]http://img509.imageshack.us/img509/6682/menuys3.jpg[/IMG][/CENTER]
+If a song is already playing it will display "stop song" entry.
+[CENTER][IMG]http://img182.imageshack.us/img182/6519/menuplayingay5.jpg[/IMG][/CENTER]
+Music box retains all gears correctly in same order they are put into.
+[*]When a songs starts the box animate.
+[/LIST]
+
+I've included in the pack modified Golem, Betrayer and Juggernaut that should spawn common or uncommon track if not paragon and rare tracks if paragon.
+
+In this project I would like to make a replica of OSI Dawn's music box.
+I will appreciate every suggestion to make this scripts "more" OSI like.
+
+Some questions are:
+[LIST=1]
+[*]What are the percentages of gears spawn in monster?
+[*]What messages appears on Music Box use? Are mine correct?
+[*]What about Music Box behaviour? is it correct? It does stop nearby music boxes from playing?
+[*]Is the code clear and debugged enought?
+[/LIST]
+
+Notes for installations:
+Files in Distro folder must be merged or replaced.
+Files in DawnsMusicBox can be placed where you desire.
+
+Good music for all.
+
+^__^

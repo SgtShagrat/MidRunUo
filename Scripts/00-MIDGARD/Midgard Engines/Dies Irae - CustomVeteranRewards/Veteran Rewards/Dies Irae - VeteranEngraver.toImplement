@@ -1,0 +1,1069 @@
+/***************************************************************************
+ *                                      EngravingTools.cs
+ *                            		------------------------
+ *  begin                	: Agosto, 2007
+ *  version					: 2.0 		**versione per runUO 2.0**
+ *  copyright            	: Midgard Uo Shard - Matteo Visintin
+ *  email                	: tocasia@alice.it
+ *
+ ***************************************************************************/
+
+/***************************************************************************
+ * 
+ * 	Info:
+ *  
+ ***************************************************************************/
+
+using System;
+using System.Collections.Generic;
+using Server.ContextMenus;
+
+using Server.Engines.Craft;
+using Server.Engines.VeteranRewards;
+using Server.Network;
+using Server.Prompts;
+using Server.Targeting;
+
+namespace Server.Items
+{
+	public abstract class BaseEngravingTool : Item, IRewardItem
+	{
+		#region costanti
+		public static readonly int OSIMaxTextLength = 40;
+		public static readonly int OSIMaxCharges = 10;
+		public static readonly int MaxRepairs = 100;
+		#endregion
+		
+		#region proprietà
+		public abstract int EngraverTypeLabelNumber{ get; }
+		public abstract int EngraverTypeCapLabelNumber{ get; }
+		public abstract int GemTypeLabelNumber{ get; }
+		public abstract int GemTypeCapLabelNumber{ get; }
+		public abstract Type RechargeItemType{ get; }
+
+		public virtual bool AllowWeapons{ get{ return false; } }
+		public virtual bool AllowArmors{ get{ return false; } }
+		public virtual bool AllowSpellbooks{ get{ return false; } }
+		public virtual bool AllowLeatherContainers{ get{ return false; } }
+		public virtual bool AllowMetalContainers{ get{ return false; } }
+		public virtual bool AllowWoodContainers{ get{ return false; } }
+		public virtual bool AllowFoods{ get{ return false; } }
+		public virtual bool AllowJewels{ get{ return false; } }
+		public virtual bool AllowClothing{ get{ return false; } }
+		#endregion
+		
+		#region campi
+		private bool m_IsRewardItem;
+		private bool m_IsInDebugMode;
+		private int m_CurCharges;
+		private int m_MaxCharges;
+		private int m_NumRepairs;
+		#endregion
+		
+		#region proprietà
+		[CommandProperty( AccessLevel.GameMaster )]
+		public bool IsRewardItem
+		{
+			get { return m_IsRewardItem; }
+			set { m_IsRewardItem = value; }
+		}
+		
+		[CommandProperty( AccessLevel.GameMaster, AccessLevel.Developer )]
+		public bool IsInDebugMode
+		{
+			get { return m_IsInDebugMode; }
+			set { m_IsInDebugMode = value; }
+		}	
+		
+		[CommandProperty(AccessLevel.GameMaster)]
+		public int CurCharges
+		{
+			get { return m_CurCharges; }
+		    set
+		    {
+		    	int oldValue = m_CurCharges;
+		    	if( oldValue != value )
+		    	{
+					if( value < 0 )
+						m_CurCharges = 0;
+					else if( value > MaxCharges ) 
+						m_CurCharges = MaxCharges;
+					else 
+						m_CurCharges = value;
+					
+					OnCurChargesChanged( oldValue );
+		    	}
+		    }
+		}
+		
+		[CommandProperty( AccessLevel.GameMaster, AccessLevel.Developer )]
+		public int MaxCharges
+		{
+			get { return m_MaxCharges; }
+		    set
+		    {
+		    	int oldValue = m_MaxCharges;
+		    	if( oldValue != value )
+		    	{
+					if( value < 0 )
+						m_MaxCharges = 0;
+					else if( value > OSIMaxCharges ) 
+						m_MaxCharges = OSIMaxCharges;
+					else 
+						m_MaxCharges = value;
+					
+					OnMaxChargesChanged( oldValue );
+		    	}
+		    }
+		}
+		
+		[CommandProperty( AccessLevel.GameMaster, AccessLevel.Developer )]
+		public int NumRepairs
+		{
+			get { return m_NumRepairs; }
+			set { m_NumRepairs = value; }
+		}
+		#endregion
+		
+		#region costruttori
+		public BaseEngravingTool( int itemID ) : base( itemID )
+		{
+			Weight = 1.0;
+			Hue = Utility.RandomNondyedHue();
+			
+			LootType = LootType.Blessed;
+			
+			m_MaxCharges = OSIMaxCharges; 
+			m_CurCharges = m_MaxCharges;
+			m_NumRepairs = 0;
+		}
+		
+		public BaseEngravingTool( Serial serial ) : base( serial )
+		{
+		}
+		#endregion
+		
+		#region metodi
+		public virtual bool CheckAccess( Mobile from, bool message )
+		{
+			if( from == null || from.Deleted )
+				return false;
+			
+			if( from.AccessLevel > AccessLevel.Counselor )
+			{
+				if( message )
+					from.SendLocalizedMessage( 1065631 ); // Your godly power will always permit to use this tool.
+				return true;
+			}
+			
+			if( m_IsRewardItem && !Engines.VeteranRewards.RewardSystem.CheckIsUsableBy( from, this, null ) )
+				return false;
+			
+			if( !IsChildOf( from.Backpack ) )
+			{
+				if( message )
+					from.SendLocalizedMessage( 1065632 ); // Engraving tool must be in your backpack to be used.
+				return false;
+			}
+			
+			return true;
+		}
+		
+		public virtual void CompleteEngravingProcess( bool success, bool removeEngraving, Mobile from )
+		{
+			if( removeEngraving )
+				from.SendLocalizedMessage( 1065674 ); // You remove the engraving from the object.
+			else
+			{
+				CurCharges--;
+				if( success )
+					from.SendLocalizedMessage( 1065666 ); // You engrave the item with it's new description.
+				else
+					from.SendLocalizedMessage( 1065635 ); // The engraving process failed.
+			}
+		}
+		
+		public virtual void OnCurChargesChanged( int oldValue )
+		{
+			InvalidateProperties();
+		}
+		
+		public virtual void OnMaxChargesChanged( int oldValue )
+		{
+			InvalidateProperties();
+		}
+		
+		public override void AddNameProperty( ObjectPropertyList list )
+		{
+			list.Add( 1065609, string.Format( "#{0}", EngraverTypeCapLabelNumber ) ); // ~1_TYPE~ Engraving Tool
+		}
+
+		public override void GetContextMenuEntries( Mobile from, List<ContextMenuEntry> list )
+		{
+			base.GetContextMenuEntries( from, list );
+			
+			if( from.Alive )
+			{
+				if( CurCharges > 0 )
+				{
+					list.Add( new UseToolEntry( this, from, CheckAccess( from, false ) ) );
+					if( CurCharges < MaxCharges )
+						list.Add( new RepairEngravingToolEntry( this, from, CheckAccess( from, false ) ) );
+				}
+				else
+				{
+					list.Add( new ReplaceTipEntry( this, from, CheckAccess( from, false ) ) );
+				}
+			}
+		}
+		
+		public override void GetProperties( ObjectPropertyList list )
+		{
+			base.GetProperties( list );
+			
+			if( m_IsRewardItem )
+				list.Add( 1065528 ); // Midgard Veteran Reward
+			
+			list.Add( 1065653, string.Format( "#{0}", 1065654 + m_CurCharges ) ); // Tip status: ~1_STATUS~
+			if( m_IsInDebugMode )
+			{
+				list.Add( 1065677, string.Format( "{0}\t{1}", m_CurCharges, m_MaxCharges ) ); // ~1_CHAR~ charges left of ~2_MAXCHAR~
+				list.Add( 1065687, string.Format( "{0}\t{1}", m_NumRepairs, MaxRepairs ) ); // ~1_REP~ num repairs left of ~2_MAXREP~
+			}
+		}
+		
+		public override void OnDoubleClick( Mobile from )
+		{
+			if( !CheckAccess( from, true ) )
+				return;
+			
+			if( m_CurCharges < 1 )
+			{
+				// The tip of this ~1_ENGRAVER~ engraving tool is cracked. It must be replaced to make the tool usable again.
+				from.SendLocalizedMessage( 1065637, string.Format( "#{0}", EngraverTypeLabelNumber ) );
+			}
+			else
+			{
+				// Target a ~1_ENGRAVER~ in your backpack you would like to engrave.
+				from.SendLocalizedMessage( 1065638, string.Format( "#{0}", EngraverTypeLabelNumber ) );
+				from.Target = new EngraveTarget( this );
+			}
+		}
+		#endregion
+		
+		#region serial-deserial
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+			
+			writer.Write( (int) 0 ); // version
+			
+			writer.Write( (bool) m_IsInDebugMode );
+			writer.Write( (bool) m_IsRewardItem );
+			
+			writer.Write( (int) m_NumRepairs );
+			writer.Write( (int) m_CurCharges );
+			writer.Write( (int) m_MaxCharges );
+		}
+		
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+			
+			int version = reader.ReadInt();
+			
+			switch ( version )
+			{
+				case 0:
+				{
+					m_IsInDebugMode = reader.ReadBool();
+					m_IsRewardItem = reader.ReadBool();
+					
+					m_NumRepairs = reader.ReadInt();
+					m_CurCharges = reader.ReadInt();
+					m_MaxCharges = reader.ReadInt();
+					break;
+				}
+			}
+		}
+		#endregion
+		
+		#region RepairEngravingToolEntry
+		private class RepairEngravingToolEntry : ContextMenuEntry
+		{
+			#region campi
+			private BaseEngravingTool m_EngravingTool;
+			private Mobile m_Mobile;
+			private bool m_Enabled;
+			#endregion
+			
+			#region costruttori
+			public RepairEngravingToolEntry( BaseEngravingTool engravingTool, Mobile from, bool enabled ) : base( 1060 )
+			{
+				m_EngravingTool = engravingTool;
+				m_Mobile = from;
+				
+				if( !enabled )
+				{
+					Flags |= CMEFlags.Disabled;
+					m_Enabled = false;
+				}
+				else
+					m_Enabled = true;
+			}
+			#endregion
+			
+			#region metodi
+			public override void OnClick()
+			{
+				if ( m_EngravingTool == null || m_EngravingTool.Deleted )
+					return;
+				
+				if( !m_Enabled )
+					return;
+				
+				Mobile from = Owner.From;
+
+				if( !from.CheckAlive() )
+					return;
+				else if( !m_EngravingTool.CheckAccess( from, true ) )
+					return;
+				else if( m_EngravingTool.NumRepairs > BaseEngravingTool.MaxRepairs )
+				{
+					// This engraving tool has been repaired too many times and will not be repaired any more.
+					from.SendLocalizedMessage( 1065683 );
+				}
+				else if( from.Skills[SkillName.Tinkering].Base < 0.1 )
+				{
+					// Since you have no tinkering skill, you will need to find a skilled tinkerer to repair this for you.
+					from.SendLocalizedMessage( 1065640 );
+				}
+				else if( from.Skills[SkillName.Tinkering].Base < 75.0 )
+				{
+					// Your tinkering skill is too low to fix this yourself.  A skilled tinkerer can help you repair this.
+					from.SendLocalizedMessage( 1065641 );
+				}
+				else if( m_EngravingTool.CurCharges < 1 )
+				{
+					// You need a ~1_TYPE~ to repair the tip of the ~2_ENGRAVER~ engraver.  A successful replacement of the tip will give the engraver  abount ~3_MAXCH~ uses.
+					from.SendLocalizedMessage( 1065642, string.Format( "#{0}", m_EngravingTool.GemTypeLabelNumber ) );
+				}
+				else
+				{
+					int toWeaken = 0;
+					double skillLevelBase = from.Skills[SkillName.Tinkering].Base;
+					double skillLevelValue = from.Skills[SkillName.Tinkering].Value;
+
+					if( skillLevelBase >= 90.0 )
+						toWeaken = 1;
+					else
+						toWeaken = 2;
+					
+					DefTinkering.CraftSystem.PlayCraftEffect( from );
+					
+					if( CheckWeaken( from, SkillName.Tinkering, m_EngravingTool.CurCharges, m_EngravingTool.MaxCharges ) )
+					{ 
+						m_EngravingTool.MaxCharges -= toWeaken;
+						m_EngravingTool.CurCharges = Math.Max( 0, m_EngravingTool.CurCharges - toWeaken );
+						if( this.m_EngravingTool.CurCharges < 1 )
+							from.SendLocalizedMessage( 1065643, string.Format( "#{0}\t#{1}", m_EngravingTool.GemTypeLabelNumber, m_EngravingTool.EngraverTypeLabelNumber) ); // You cracked the ~1_TYPE~ tip attempting to fix this ~2_ENGRAVER~ engraver.
+						else
+							from.SendLocalizedMessage( 1065644, string.Format("#{0}\t#{1}", m_EngravingTool.GemTypeLabelNumber, m_EngravingTool.EngraverTypeLabelNumber) ); // You failed to repair and damaged the ~1_TYPE~ tip of this ~2_ENGRAVER~ engraving tool.
+					}
+					else if( CheckRepairDifficulty( from, SkillName.Tinkering, m_EngravingTool.CurCharges, m_EngravingTool.MaxCharges ) )
+					{
+						from.SendLocalizedMessage( 1065645 ); // You repaired the tip of this engraving tool.
+						m_EngravingTool.CurCharges = m_EngravingTool.MaxCharges;
+						m_EngravingTool.NumRepairs++;
+					}
+					else
+					{
+						from.SendLocalizedMessage( 1065646 ); // You failed to repair the tip of this engraving tool.
+					}
+				}
+			}
+			
+			private int GetRepairDifficulty( int curCharges, int maxCharges )
+			{
+				return (((maxCharges - curCharges) * 1250) / Math.Max( maxCharges, 1 )) - 250;
+			}
+
+			private bool CheckRepairDifficulty( Mobile from, SkillName skill, int curCharges, int maxCharges )
+			{
+				double difficulty = GetRepairDifficulty( curCharges, maxCharges ) * 0.1;
+				if( m_EngravingTool.IsInDebugMode )
+					from.SendLocalizedMessage( 1065678, difficulty.ToString( "F2" ) ); // The repair difficulty was: ~1_VAL~
+				return from.CheckSkill( skill, difficulty - 25.0, difficulty + 25.0 );
+			}
+			
+			private int GetWeakenChance( Mobile from, SkillName skill, int curCharges, int maxCharges )
+			{
+				return (40 + (maxCharges - curCharges)) - (int)(from.Skills[skill].Value / 10);
+			}
+
+			private bool CheckWeaken( Mobile from, SkillName skill, int curHits, int maxHits )
+			{
+				double chance = GetWeakenChance( from, skill, curHits, maxHits );
+				if( m_EngravingTool.IsInDebugMode )
+					from.SendLocalizedMessage( 1065679, chance.ToString( "F2" ) ); // The weaken chance was: ~1_VAL~
+				return ( chance > Utility.Random( 100 ) );
+			}
+			#endregion
+		}
+		#endregion
+		
+		#region ReplaceTipEntry
+		private class ReplaceTipEntry : ContextMenuEntry
+		{
+			#region campi
+			private BaseEngravingTool m_EngravingTool;
+			private Mobile m_Mobile;
+			private bool m_Enabled;
+			#endregion
+			
+			#region costruttori
+			public ReplaceTipEntry( BaseEngravingTool engravingTool, Mobile from, bool enabled ) : base( 1061 )
+			{
+				m_EngravingTool = engravingTool;
+				m_Mobile = from;
+				
+				if( !enabled )
+				{
+					Flags |= CMEFlags.Disabled;
+					m_Enabled = false;
+				}
+				else
+					m_Enabled = true;
+			}
+			#endregion
+			
+			#region metodi
+			public override void OnClick()
+			{
+				if ( m_EngravingTool == null || m_EngravingTool.Deleted )
+					return;
+				
+				if( !m_Enabled )
+					return;
+				
+				Mobile from = Owner.From;
+
+				if( !from.CheckAlive() )
+					return;
+				else if( !m_EngravingTool.CheckAccess( from, true ) )
+					return;
+				else if( from.Skills[SkillName.Tinkering].Value < 100.0 )
+					from.SendLocalizedMessage( 1065648 ); // Only a Grand Master Tinker can try to replace the tip of this engraving tool.
+				else if( m_EngravingTool.NumRepairs > BaseEngravingTool.MaxRepairs )
+				{
+					// This engraving tool has been repaired too many times and you'll not be able to replace it's tip.
+					from.SendLocalizedMessage( 1065684 );
+				}
+				else
+				{
+					double skillLevel = from.Skills[SkillName.Tinkering].Value;
+
+					DefTinkering.CraftSystem.PlayCraftEffect( from );
+					
+					Container pack = from.Backpack;
+					
+					if( pack != null )
+					{
+						int gem = pack.ConsumeUpTo( m_EngravingTool.RechargeItemType, 1 );
+	
+						if ( gem > 0 )
+						{
+							if( CheckRepairDifficulty( from, SkillName.Tinkering, m_EngravingTool.CurCharges, m_EngravingTool.MaxCharges ) )
+							{
+								// You replaced successfully the ~1_TYPE~ tip of this engraving tool.
+								from.SendLocalizedMessage( 1065649, string.Format("#{0}", m_EngravingTool.GemTypeLabelNumber) );
+								m_EngravingTool.CurCharges = m_EngravingTool.MaxCharges;
+								m_EngravingTool.NumRepairs++;
+							}
+							else
+							{
+								// You failed to replace the tip of this ~1_ENGRAVER~ engraving tool. 
+								// The ~2_TYPE~ to mount was cracked.
+								from.SendLocalizedMessage( 1065650, string.Format("#{0}\t#{1}", m_EngravingTool.EngraverTypeLabelNumber, m_EngravingTool.GemTypeLabelNumber) );
+							}
+						}
+						else
+						{
+							 // You need a ~1_TYPE~ to repair the tip of the ~2_ENGRAVER~ engraver.
+							 // A successful replacement of the tip will give the engraver  abount ~3_MAXCH~ uses.
+							from.SendLocalizedMessage( 1065651, string.Format("#{0}\t#{1}\t{2}", m_EngravingTool.GemTypeLabelNumber, m_EngravingTool.EngraverTypeLabelNumber, m_EngravingTool.MaxCharges.ToString()) );
+						}
+					}
+					else
+					{
+						// You need a ~1_TYPE~ to repair the tip of the ~2_ENGRAVER~ engraver.
+						// A successful replacement of the tip will give the engraver  abount ~3_MAXCH~ uses.
+						from.SendLocalizedMessage( 1065651, string.Format("#{0}\t#{1}\t{2}", m_EngravingTool.GemTypeLabelNumber, m_EngravingTool.EngraverTypeLabelNumber, m_EngravingTool.MaxCharges.ToString()) );
+					}
+				}
+			}
+			
+			private int GetRepairDifficulty( int curCharges, int maxCharges )
+			{
+				return (((maxCharges - curCharges) * 1250) / Math.Max( maxCharges, 1 )) - 250;
+			}
+
+			private bool CheckRepairDifficulty( Mobile from, SkillName skill, int curCharges, int maxCharges )
+			{
+				double difficulty = GetRepairDifficulty( curCharges, maxCharges ) * 0.1;
+				if( m_EngravingTool.IsInDebugMode )
+					from.SendLocalizedMessage( 1065678, difficulty.ToString( "F2" ) ); // The repair difficulty was: ~1_VAL~
+				return from.CheckSkill( skill, difficulty - 25.0, difficulty + 25.0 );
+			}
+			#endregion
+		}
+		#endregion
+		
+		#region UseToolEntry
+		private class UseToolEntry : ContextMenuEntry
+		{
+			#region campi
+			private BaseEngravingTool m_EngravingTool;
+			private Mobile m_Mobile;
+			private bool m_Enabled;
+			#endregion
+			
+			#region costruttori
+			public UseToolEntry( BaseEngravingTool engravingTool, Mobile from, bool enabled ) : base( 1059 ) // Use this engraving tool
+			{
+				m_EngravingTool = engravingTool;
+				m_Mobile = from;
+				
+				if( !enabled )
+				{
+					Flags |= CMEFlags.Disabled;
+					m_Enabled = false;
+				}
+				else
+					m_Enabled = true;
+			}
+			#endregion
+			
+			#region metodi
+			public override void OnClick()
+			{
+				if ( m_EngravingTool == null || m_EngravingTool.Deleted )
+					return;
+				
+				if( !m_Enabled )
+					return;
+				
+				Mobile from = Owner.From;
+
+				if( !m_EngravingTool.CheckAccess( from, true ) )
+					return;
+				
+				if( m_EngravingTool.CurCharges < 1 )
+				{
+					// The tip of this ~1_ENGRAVER~ engraving tool is cracked. It must be replaced to make the tool usable again.
+					from.SendLocalizedMessage( 1065637, string.Format( "#{0}", m_EngravingTool.EngraverTypeLabelNumber ) ); 
+				}
+				else
+				{
+					// Target a ~1_ENGRAVER~ in your backpack you would like to engrave.
+					from.SendLocalizedMessage( 1065638, string.Format( "#{0}", m_EngravingTool.EngraverTypeLabelNumber ) ); 
+					from.Target = new EngraveTarget( m_EngravingTool );
+				}
+			}
+			#endregion
+		}
+		#endregion
+		
+		#region EngraveTarget
+		private class EngraveTarget : Target
+		{
+			#region campi
+			private BaseEngravingTool m_EngravingTool;
+			#endregion
+			
+			#region costruttori
+			public EngraveTarget( BaseEngravingTool engravingTool ) : base( 1, false, TargetFlags.None )
+			{
+				m_EngravingTool = engravingTool;
+			}
+			#endregion
+			
+			#region metodi
+			protected override void OnTarget( Mobile from, object targeted )
+			{
+				if( targeted is Item )
+				{
+					Item item = (Item)targeted;
+					if( item.IsChildOf( from.Backpack ) )
+					{
+						int message = 0;
+						
+						if( item is Spellbook && m_EngravingTool.AllowSpellbooks )
+						{
+							Spellbook sb = (Spellbook)item;
+							if( sb.Crafter == null || (sb.Crafter != null && sb.Crafter != from ) )
+							   	message = 1065688; // You can only engrave items you have crafted.
+						}
+						else if( item is BaseContainer && (m_EngravingTool.AllowLeatherContainers || m_EngravingTool.AllowLeatherContainers || m_EngravingTool.AllowWoodContainers ) )
+						{
+							BaseContainer bc = (BaseContainer)item;
+							if( bc.Crafter == null || (bc.Crafter != null && bc.Crafter != from ) )
+							   message = 1065688; // You can only engrave items you have crafted.
+						}
+						else if( item is BaseWeapon && m_EngravingTool.AllowWeapons )
+						{
+							BaseWeapon bw = (BaseWeapon)item;
+							if( bw.Crafter == null || (bw.Crafter != null && bw.Crafter != from ) )
+							   message = 1065688; // You can only engrave items you have crafted.
+						}
+						else if( item is BaseArmor && m_EngravingTool.AllowArmors )
+						{
+							BaseArmor ba = (BaseArmor)item;
+							if( ba.Crafter == null || (ba.Crafter != null && ba.Crafter != from ) )
+							   	message = 1065688; // You can only engrave items you have crafted.
+						}
+						else if( item is BaseClothing && m_EngravingTool.AllowClothing )
+						{
+							BaseClothing bc = (BaseClothing)item;
+							if( bc.Crafter == null || (bc.Crafter != null && bc.Crafter != from ) )
+							   message = 1065688; // You can only engrave items you have crafted.
+						}
+						else
+						{
+							message = 1065667; // You cannot engrave that item.
+						}
+						
+						if( message > 0 )
+						{
+							from.SendLocalizedMessage( message );
+						}
+						else
+						{
+							// Please enter the text to add to the selected object.  
+							// Leave the text area blank to remove the text from the object without using up the tool
+							from.SendLocalizedMessage( 1065671 );  
+							from.Prompt = new EngravePrompt( m_EngravingTool, item );
+						}
+					}
+					else
+					{
+						from.SendLocalizedMessage( 1065676 ); // Item you would to engrave have to be in your backpack.
+					}
+				}
+				else
+				{
+					from.SendLocalizedMessage( 1065667 ); // You cannot engrave that item.
+				}
+			}
+			#endregion
+		}
+		#endregion
+		
+		#region EngravePrompt
+		private class EngravePrompt : Prompt
+		{
+			#region campi
+			private Item m_EngravingToolTarget;
+			private BaseEngravingTool m_EngravingTool;
+			#endregion
+			
+			#region costruttori
+			public EngravePrompt( BaseEngravingTool engravingTool, Item engravingToolTarget )
+			{
+				m_EngravingTool = engravingTool;
+				m_EngravingToolTarget = engravingToolTarget;
+			}
+			#endregion
+		
+			#region metodi
+			public override void OnCancel( Mobile from )
+			{
+				if( this != null && from != null && !from.Deleted )
+					Engrave( from, null );
+	        }
+			
+			public override void OnResponse( Mobile from, string text )
+			{
+				if( this != null && from != null && !from.Deleted )
+					Engrave( from, text );
+			}
+			
+			public void Engrave( Mobile from, string text )
+			{
+				bool removeEngraving = string.IsNullOrEmpty( text );
+				
+				if( m_EngravingTool == null || m_EngravingTool.Deleted || m_EngravingToolTarget == null || m_EngravingToolTarget.Deleted )
+					return;
+				
+				if( m_EngravingTool.IsChildOf( from.Backpack ) )
+				{
+					if( m_EngravingToolTarget.IsChildOf( from.Backpack ) )
+					{
+						string toEngrave = removeEngraving ? string.Empty : text.Trim();
+						if( string.IsNullOrEmpty( toEngrave ) )
+							return;
+						
+						if( toEngrave.Length > BaseEngravingTool.OSIMaxTextLength )
+						{
+							// The description you entered is too long and cannot be applied. Only ~1_MAXCHAR~ characters are allowed.
+							from.SendLocalizedMessage( 1065682, BaseEngravingTool.OSIMaxTextLength.ToString() );
+							return;
+						}
+						
+						if( m_EngravingTool.IsInDebugMode )
+							from.SendLocalizedMessage( 1065685, m_EngravingToolTarget.GetType().Name ); // Type targeted: ~1_VAL~
+				
+						if( m_EngravingToolTarget is Spellbook && m_EngravingTool.AllowSpellbooks )
+						{
+							((Spellbook)m_EngravingToolTarget).EngravedText = removeEngraving ? null : toEngrave;
+							m_EngravingTool.CompleteEngravingProcess( true, removeEngraving, from );
+						}
+						else if( m_EngravingToolTarget is BaseArmor && m_EngravingTool.AllowArmors )
+						{
+							((BaseArmor)m_EngravingToolTarget).EngravedText = removeEngraving ? null : toEngrave;
+							m_EngravingTool.CompleteEngravingProcess( true, removeEngraving, from );
+						}
+						else if( m_EngravingToolTarget is BaseWeapon && m_EngravingTool.AllowWeapons )
+						{
+							((BaseWeapon)m_EngravingToolTarget).EngravedText = removeEngraving ? null : toEngrave;
+							m_EngravingTool.CompleteEngravingProcess( true, removeEngraving, from );
+						}
+						else if( m_EngravingToolTarget is BaseClothing && m_EngravingTool.AllowClothing )
+						{
+							((BaseClothing)m_EngravingToolTarget).EngravedText = removeEngraving ? null : toEngrave;
+							m_EngravingTool.CompleteEngravingProcess( true, removeEngraving, from );
+						}
+						else if( m_EngravingToolTarget is BaseContainer )
+						{
+							BaseContainer container = (BaseContainer)m_EngravingToolTarget;
+							CraftResource resource = container.Resource;
+							CraftResourceType type = CraftResources.GetType( resource );
+							
+							if( m_EngravingTool.IsInDebugMode )
+								from.SendMessage( 1065686, type.ToString() ); // Resource Type targeted: ~1_VAL~
+							
+							if( ( type == CraftResourceType.Metal && m_EngravingTool.AllowMetalContainers ) ||
+							   	( type == CraftResourceType.Leather && m_EngravingTool.AllowLeatherContainers ) ||
+							   	( type == CraftResourceType.Wood && m_EngravingTool.AllowWoodContainers ) )
+							{
+								container.EngravedText = removeEngraving ? null : toEngrave;
+								m_EngravingTool.CompleteEngravingProcess( true, removeEngraving, from );
+							}
+							else
+							{
+								from.SendLocalizedMessage( 1065673 ); // The selected item cannot be engraved by this engraving tool.
+							}			
+						}
+						else
+						{
+							from.SendLocalizedMessage( 1065667 ); // You cannot engrave that item.
+						}
+					}
+					else
+					{
+						from.SendLocalizedMessage( 1065605 ); // Item you would to engrave have to be in your backpack.		
+					}
+				}
+				else
+				{
+					from.SendLocalizedMessage( 1065607 ); // Engraving tool must be in your backpack to be used.
+				}
+			}
+			#endregion
+		}
+		#endregion
+	}
+
+	[FlipableAttribute(0x2D61, 0x2D62)]
+	public class SpellBookEngravingTool : BaseEngravingTool
+	{
+		#region proprietà
+		public override Type RechargeItemType{ get{ return typeof(DarkSapphire); } }
+		public override bool AllowSpellbooks{ get{ return true; } }
+		
+		public override int EngraverTypeLabelNumber{ get{ return 1065602; } } // spellbook
+		public override int EngraverTypeCapLabelNumber{ get{ return 1065610; } } // Spellbook
+
+		public override int GemTypeLabelNumber{ get{ return 1065624; } } // dark sapphire
+		public override int GemTypeCapLabelNumber{ get{ return 1065617; } } // Dark Sapphire
+		#endregion
+		
+		#region costruttori
+		[Constructable]
+		public SpellBookEngravingTool() : base( Utility.RandomList( new int[]{ 0x2D61, 0x2D62 } ) )
+		{
+		}
+		
+		public SpellBookEngravingTool( Serial serial ) : base( serial )
+		{
+		}
+		#endregion
+		
+		#region serial-deserial
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			writer.Write( (int) 0 ); // version
+		}
+
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+		}
+		#endregion
+	}
+	
+	[FlipableAttribute(0x102E, 0x102F)]
+	public class LeatherContainerEngravingTool : BaseEngravingTool
+	{
+		#region proprietà
+		public override Type RechargeItemType{ get{ return typeof(EcruCitrine); } }
+		public override bool AllowLeatherContainers{ get{ return true; } }
+		
+		public override int EngraverTypeLabelNumber{ get{ return 1065603; } } // leather container
+		public override int EngraverTypeCapLabelNumber{ get{ return 1065611; } } // Leather Container
+
+		public override int GemTypeLabelNumber{ get{ return 1065625; } } // ecru citrine
+		public override int GemTypeCapLabelNumber{ get{ return 1065618; } } // Ecru Citrine
+		#endregion
+		
+		#region costruttori
+		[Constructable]
+		public LeatherContainerEngravingTool() : base( Utility.RandomList( new int[]{ 0x102E, 0x102F } ) )
+		{
+		}
+		
+		public LeatherContainerEngravingTool( Serial serial ) : base( serial )
+		{
+		}
+		#endregion
+		
+		#region serial-deserial
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			writer.Write( (int) 0 ); // version
+		}
+
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+		}
+		#endregion
+	}
+	
+	[FlipableAttribute(0x1026, 0x1027)]
+	public class WoodContainerEngravingTool : BaseEngravingTool
+	{
+		#region proprietà
+		public override Type RechargeItemType{ get{ return typeof(PerfectEmerald); } }
+		public override bool AllowWoodContainers{ get{ return true; } }
+		
+		public override int EngraverTypeLabelNumber{ get{ return 1065604; } } // wooden container
+		public override int EngraverTypeCapLabelNumber{ get{ return 1065612; } } // Wooden Container
+
+		public override int GemTypeLabelNumber{ get{ return 1065626; } } // perfect emerald
+		public override int GemTypeCapLabelNumber{ get{ return 1065619; } } // Perfect Emerald
+		#endregion
+		
+		#region costruttori
+		[Constructable]
+		public WoodContainerEngravingTool() : base( Utility.RandomList( new int[]{ 0x1026, 0x1027 } ) )
+		{
+		}
+		
+		public WoodContainerEngravingTool( Serial serial ) : base( serial )
+		{
+		}
+		#endregion
+		
+		#region serial-deserial
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			writer.Write( (int) 0 ); // version
+		}
+
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+		}
+		#endregion
+	}
+	
+	[FlipableAttribute(0x1EB8, 0x1EB9)]
+	public class MetalContainerEngravingTool : BaseEngravingTool
+	{
+		#region proprietà
+		public override Type RechargeItemType{ get{ return typeof(FireRuby); } }
+		public override bool AllowMetalContainers{ get{ return true; } }
+		
+		public override int EngraverTypeLabelNumber{ get{ return 1065605; } } // metal container
+		public override int EngraverTypeCapLabelNumber{ get{ return 1065613; } } // Metal Container
+
+		public override int GemTypeLabelNumber{ get{ return 1065627; } } // fire ruby
+		public override int GemTypeCapLabelNumber{ get{ return 1065620; } } // Fire Ruby
+		#endregion
+		
+		#region costruttori
+		[Constructable]
+		public MetalContainerEngravingTool() : base( Utility.RandomList( new int[]{ 0x1EB8, 0x1EB9} ) )
+		{
+		}
+		
+		public MetalContainerEngravingTool( Serial serial ) : base( serial )
+		{
+		}
+		#endregion
+		
+		#region serial-deserial
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			writer.Write( (int) 0 ); // version
+		}
+
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+		}
+		#endregion
+	}
+
+	[FlipableAttribute(0x14FB, 0x14FC)]
+	public class WeaponEngravingTool : BaseEngravingTool
+	{
+		#region proprietà
+		public override Type RechargeItemType{ get{ return typeof(BlueDiamond); } }
+		public override bool AllowWeapons{ get{ return true; } }
+		
+		public override int EngraverTypeLabelNumber{ get{ return 1065606; } } // weapon
+		public override int EngraverTypeCapLabelNumber{ get{ return 1065614; } } // Weapon
+
+		public override int GemTypeLabelNumber{ get{ return 1065628; } } // blue diamond
+		public override int GemTypeCapLabelNumber{ get{ return 1065621; } } // Blue Diamond
+		#endregion
+		
+		#region costruttori
+		[Constructable]
+		public WeaponEngravingTool() : base( Utility.RandomList( new int[]{ 0x14FB, 0x14FC } ) )
+		{
+		}
+		
+		public WeaponEngravingTool( Serial serial ) : base( serial )
+		{
+		}
+		#endregion
+		
+		#region serial-deserial
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			writer.Write( (int) 0 ); // version
+		}
+
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+		}
+		#endregion
+	}
+	
+	[FlipableAttribute(0x1EBA, 0x1EBB)]
+	public class ArmorEngravingTool : BaseEngravingTool
+	{
+		#region proprietà
+		public override Type RechargeItemType{ get{ return typeof(Turquoise); } }
+		public override bool AllowArmors{ get{ return true; } }
+		
+		public override int EngraverTypeLabelNumber{ get{ return 1065607; } } // armor
+		public override int EngraverTypeCapLabelNumber{ get{ return 1065615; } } // Armor
+
+		public override int GemTypeLabelNumber{ get{ return 1065629; } } // turquoise
+		public override int GemTypeCapLabelNumber{ get{ return 1065622; } } // Turquoise
+		#endregion
+		
+		#region costruttori
+		[Constructable]
+		public ArmorEngravingTool() : base( Utility.RandomList( new int[]{ 0x1EBA, 0x1EBB } ) )
+		{
+		}
+		
+		public ArmorEngravingTool( Serial serial ) : base( serial )
+		{
+		}
+		#endregion
+		
+		#region serial-deserial
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			writer.Write( (int) 0 ); // version
+		}
+
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+		}
+		#endregion
+	}
+	
+	public class ClothingEngravingTool : BaseEngravingTool
+	{
+		#region proprietà
+		public override Type RechargeItemType{ get{ return typeof(EcruCitrine); } }
+		public override bool AllowClothing{ get{ return true; } }
+		
+		public override int EngraverTypeLabelNumber{ get{ return 1065680; } } // clothing
+		public override int EngraverTypeCapLabelNumber{ get{ return 1065681; } } // Clothing
+
+		public override int GemTypeLabelNumber{ get{ return 1065625; } } // ecru citrine
+		public override int GemTypeCapLabelNumber{ get{ return 1065618; } } // Ecru Citrine
+		#endregion
+		
+		#region costruttori
+		[Constructable]
+		public ClothingEngravingTool() : base( 0xF9D )
+		{
+		}
+		
+		public ClothingEngravingTool( Serial serial ) : base( serial )
+		{
+		}
+		#endregion
+		
+		#region serial-deserial
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			writer.Write( (int) 0 ); // version
+		}
+
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+		}
+		#endregion
+	}
+}

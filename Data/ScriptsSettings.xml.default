@@ -1,0 +1,34 @@
+﻿<Scripts>
+    <Settings>
+        <ServerName type="string">Midgard</ServerName>
+
+        <Address type="string">midgardshard.ddns.net</Address>
+
+        <MidgardSocketPort type="int">5003</MidgardSocketPort>
+
+        <TestCenterEnabled type="bool">false</TestCenterEnabled>
+
+        <Expansion type="enum" enumtype="Server.Expansion">None</Expansion>
+
+        <ToTEnabled type="bool">false</ToTEnabled>
+        <ToTDemultiplier type="double">0.3</ToTDemultiplier>
+        <ToTMinFameNoGain type="int">3000</ToTMinFameNoGain>
+
+        <Factions type="bool">false</Factions>
+        <FactionStatLossEnabled type="bool">false</FactionStatLossEnabled>
+        <FactionStatLossPercentage type="double">0.33</FactionStatLossPercentage>
+        <FactionStatLossDuration type="timespan">00:20:00</FactionStatLossDuration>
+
+        <TownSystemStatLossEnabled type="bool">false</TownSystemStatLossEnabled>
+        <TownSystemStatLossPercentage type="double">0.50</TownSystemStatLossPercentage>
+        <TownSystemStatLossDuration type="timespan">2.00:00:00</TownSystemStatLossDuration>
+        <TownSystemJailEnabled type="bool">false</TownSystemJailEnabled>
+
+        <InstanceLootEnabled type="bool">true</InstanceLootEnabled>
+
+        <VeteranRewards type="bool">false</VeteranRewards>
+        <SkillCapRewards type="bool">false</SkillCapRewards>
+        <RewardInterval type="timespan">120.00:00:00</RewardInterval>
+
+    </Settings>
+</Scripts>
