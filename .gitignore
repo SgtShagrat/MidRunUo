@@ -3,9 +3,6 @@
 # File di configurazione locale (possono contenere password)
 *.cfg
 *.config
-!Scripts/
-Data/
-Config/*
 
 # File di log
 Logs/
@@ -96,33 +93,18 @@ PacketPlayerVideos/
 *.html
 
 # File di dati specifici RunUO
-Data/Accounts/
-Data/AssemblyCache/
-Data/Badlands/
-Data/BinaryData/
-Data/Mail/
-Data/MultiData/
-Data/Persistence/
-Data/Profiles/
-Data/Regions/
-Data/Saves/
-Data/ShrinkTable/
-Data/ThirdParty/
-Data/XMLSpawner/
+Data/Bestiary
+Data/Binary
+Data/Guide
+Data/Localization
+Data/Location
+Data/MapRenderizer
+Data/Mondain's Legacy
+Data/**/*.xml
+*.default
+*.old
+*.orig
 
-# Eccezioni - mantieni le strutture delle cartelle vuote
-!Data/Accounts/.gitkeep
-!Data/Badlands/.gitkeep
-!Data/BinaryData/.gitkeep
-!Data/Mail/.gitkeep
-!Data/MultiData/.gitkeep
-!Data/Persistence/.gitkeep
-!Data/Profiles/.gitkeep
-!Data/Regions/.gitkeep
-!Data/Saves/.gitkeep
-!Data/ShrinkTable/.gitkeep
-!Data/ThirdParty/.gitkeep
-!Data/XMLSpawner/.gitkeep
 
 # File di documentazione generati
 docs/
