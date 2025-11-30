@@ -93,18 +93,7 @@ PacketPlayerVideos/
 *.html
 
 # File di dati specifici RunUO
-Data/Bestiary
-Data/Binary
-Data/Guide
-Data/Localization
-Data/Location
-Data/MapRenderizer
-Data/Mondain's Legacy
-Data/**/*.xml
-*.default
-*.old
-*.orig
-
+Data/
 
 # File di documentazione generati
 docs/
