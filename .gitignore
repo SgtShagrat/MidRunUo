@@ -95,7 +95,7 @@ PacketPlayerVideos/
 
 # File di dati specifici RunUO
 Data/
-!\Data\OldCraftDefinitions
+!/Data/OldCraftDefinitions
 
 # File di documentazione generati
 docs/
