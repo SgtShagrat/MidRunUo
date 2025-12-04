@@ -19,6 +19,7 @@ Daily Save Backups/
 *.backup
 *.save
 *.bak
+*.old
 
 # File compilati e eseguibili
 *.exe
@@ -94,6 +95,7 @@ PacketPlayerVideos/
 
 # File di dati specifici RunUO
 Data/
+!\Data\OldCraftDefinitions
 
 # File di documentazione generati
 docs/
