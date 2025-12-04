@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<craftDefinition>
+	<parent name="Cooking" title="What would you like to make?" selectresource="true">
+		<parent name="Ingredients" itemID="0x1039" title="What do you want to make?">
+			<child name="sack of flour" typename="SackFlour" />
+			<child name="dough" typename="Dough" />
+			<child name="sweet dough" typename="SweetDough" hue="0x33" />
+			<child name="batter" typename="Batter" hue="0x227" />
+			<child name="butter" typename="Butter" hue="0x161" />
+			<child name="cream" typename="Cream" />
+			<child name="cooking oil" typename="CookingOil" hue="0x2D6" />
+			<child name="vinegar" typename="Vinegar" />
+			<child name="cake mix" typename="CakeMix" />
+			<child name="cookie mix" typename="CookieMix" />
+		</parent>
+		<parent name="Preparations" itemID="0x26B4" hue="0x21B" title="What do you want to make?">
+			<child name="ground beef" typename="GroundBeef" hue="0x21B" />
+			<child name="ground pork" typename="GroundPork" hue="0x221" />
+			<child name="sliced turkey" typename="SlicedTurkey" hue="0x457" />
+			<child name="pasta noodles" typename="PastaNoodles" hue="0x100" />
+			<child name="peanut butter" typename="PeanutButter" hue="0x413" />
+			<child name="tortilla" typename="Tortilla" hue="0x22C" />
+			<child name="unbaked quiche" typename="UnbakedQuiche" />
+			<child name="unbaked meat pie" typename="UnbakedMeatPie" />
+			<child name="uncooked sausage pizza" typename="UncookedSausagePizza" />
+			<child name="uncooked cheese pizza" typename="UncookedCheesePizza" />
+			<child name="unbaked fruit pie" typename="UnbakedFruitPie" />
+			<child name="unbaked peach cobbler" typename="UnbakedPeachCobbler" />
+			<child name="unbaked apple pie" typename="UnbakedApplePie" />
+			<child name="unbaked pumpkin pie" typename="UnbakedPumpkinPie" />
+			<child name="savage kin paint" typename="TribalPaint" hue="0x835" />
+			<child name="dried onions" typename="DriedOnions" />
+			<child name="dried herbs" typename="DriedHerbs" />
+			<child name="basket of herbs" typename="BasketOfHerbs" />
+			<child name="parrot wafer" typename="ParrotWafer" hue="0x38" />
+		</parent>
+		<parent name="Sauces" itemID="0xEFC" hue="0x278" title="What do you want to make?">
+			<child name="barbecue sauce" typename="BarbecueSauce" hue="0x278" />
+			<child name="cheese sauce" typename="CheeseSauce" />
+			<child name="enchilada sauce" typename="EnchiladaSauce" hue="0x1B5" />
+			<child name="gravy" typename="Gravy" hue="0x3F4" />
+			<child name="hot sauce" typename="HotSauce" hue="0x25" />
+			<child name="soy sauce" typename="SoySauce" hue="0x39E" />
+			<child name="teriyaki" typename="Teriyaki" hue="0x362" />
+			<child name="tomato sauce" typename="TomatoSauce" hue="0x26" />
+		</parent>
+		<parent name="Mixes" itemID="0x103F" title="What do you want to make?">
+			<child name="cake mix" typename="CakeMix" />
+			<child name="cookie mix" typename="CookieMix" />
+			<child name="asian vegetable mix" typename="AsianVegMix" />
+			<child name="chocolate mix" typename="ChocolateMix" hue="0x414" />
+			<child name="mixed vegetables" typename="MixedVegetables" />
+			<child name="pie mix" typename="PieMix" hue="0x45A" />
+			<child name="waffle mix" typename="WaffleMix" hue="0x227" />
+		</parent>
+		<parent name="Baking" itemID="0x15FA" title="What do you want to make?">
+			<child name="bowl of corn flakes" typename="BowlCornFlakes" />
+			<child name="bowl of rice krisps" typename="BowlRiceKrisps" />
+			<child name="fruit basket" typename="FruitBasket" />
+		</parent>
+		<parent name="Enchanted" itemID="0x1BD1" hue="0x48D" title="What do you want to make?">
+			<child name="food decoration tool" typename="FoodEngraver" hue="0x48D" />
+			<child name="fruit bowl" typename="FruitBowl" />
+		</parent>
+	</parent>
+</craftDefinition>

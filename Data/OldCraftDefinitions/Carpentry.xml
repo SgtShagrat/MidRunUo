@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<craftDefinition>
+	<parent name="Carpentry" title="What would you like to make?" selectresource="true">
+		<parent name="Deco Items" itemID="0x2C7E" title="What do you want to make?">
+			<child name="barrel with weapons model 1" typename="WeaponBarrel1" />
+			<child name="barrel with weapons model 2" typename="WeaponBarrel2" />
+			<child name="barrel with weapons model 3" typename="WeaponBarrel3" />
+			<child name="barrel with weapons model 4" typename="WeaponBarrel4" />
+		</parent>
+		<parent name="Other" itemID="0x1EB1" title="What do you want to make?">
+			<child name="barrel staves" typename="BarrelStaves" />
+			<child name="barrel lid" typename="BarrelLid" />
+			<child name="short music stand (left)" typename="ShortMusicStand" />
+			<child name="tall music stand (left)" typename="TallMusicStand" />
+			<child name="easel (south)" typename="Easle" />
+			<child name="wooden container engraving tool" typename="WoodenContainerEngraver" hue="0x48D" />
+			<child name="recall rune" typename="RecallRune" />
+		</parent>
+		<parent name="Furniture" itemID="0xB5E" title="What do you want to make?">
+			<child name="foot stool" typename="FootStool" />
+			<child name="stool" typename="Stool" />
+			<child name="straw chair" typename="BambooChair" />
+			<child name="wooden chair" typename="WoodenChair" />
+			<child name="Vesper-style chair" typename="FancyWoodenChairCushion" />
+			<child name="Trinsic-style chair" typename="WoodenChairCushion" />
+			<child name="wooden bench" typename="WoodenBench" />
+			<child name="wooden throne" typename="WoodenThrone" />
+			<child name="Magincia-style throne" typename="Throne" />
+			<child name="small table" typename="Nightstand" />
+			<child name="writing table" typename="WritingTable" />
+			<child name="large table" typename="YewWoodTable" />
+			<child name="Yew-wood table" typename="LargeTable" />
+			<child name="ornate table (south)" typename="OrnateElvenTableSouthDeed" />
+			<child name="ornate table (east)" typename="OrnateElvenTableEastDeed" />
+			<child name="hardwood table (south)" typename="FancyElvenTableSouthDeed" />
+			<child name="hardwood table (east)" typename="FancyElvenTableEastDeed" />
+			<child name="elven podium" typename="ElvenPodium" />
+			<child name="ornate elven chair" typename="OrnateElvenChair" />
+			<child name="cozy elven chair" typename="BigElvenChair" />
+			<child name="elven reading chair" typename="ElvenReadingChair" />
+			<child name="large counter" typename="LargeCounter" />
+		</parent>
+		<parent name="Containers" itemID="0x9AA" title="What do you want to make?">
+			<child name="wooden box" typename="WoodenBox" />
+			<child name="trapable wooden box" typename="TrapableExplosionWoodenBox" />
+			<child name="small crate" typename="SmallCrate" />
+			<child name="medium crate" typename="MediumCrate" />
+			<child name="large crate" typename="LargeCrate" />
+			<child name="wooden chest" typename="WoodenChest" />
+			<child name="wooden shelf" typename="CraftableBookcase" />
+			<child name="armoire (red)" typename="FancyArmoire" />
+			<child name="armoire" typename="Armoire" />
+			<child name="ornate elven chest (south)" typename="OrnateElvenChestSouthDeed" />
+			<child name="ornate elven chest (east)" typename="OrnateElvenChestEastDeed" />
+			<child name="elven wash basin (south)" typename="ElvenWashBasinSouthDeed" />
+			<child name="elven wash basin (east)" typename="ElvenWashBasinEastDeed" />
+			<child name="elven dresser (south)" typename="ElvenDresserSouthDeed" />
+			<child name="elven dresser (east)" typename="ElvenDresserEastDeed" />
+			<child name="elven armoire (fancy)" typename="FancyElvenArmoire" />
+			<child name="elven armoire (simple)" typename="SimpleElvenArmoire" />
+			<child name="rarewood chest" typename="RarewoodChest" />
+			<child name="decorative box" typename="DecorativeBox" />
+			<child name="picnic basket" typename="PicnicBasket" />
+			<child name="basket" typename="Basket" />
+			<child name="trash barrel" typename="CraftableTrashBarrel" hue="0x3B2" />
+			<child name="keg" typename="Keg" />
+		</parent>
+		<parent name="Weapons and Armor" itemID="0xE81" title="What do you want to make?">
+			<child name="shepherd's crook" typename="ShepherdsCrook" />
+			<child name="quarter staff" typename="QuarterStaff" />
+			<child name="gnarled staff" typename="GnarledStaff" />
+			<child name="wooden shield" typename="WoodenShield" />
+			<child name="fishing pole" typename="FishingPole" />
+			<child name="light staff" typename="LightStaff" />
+			<child name="darken staff" typename="DarkenStaff" />
+			<child name="mage staff" typename="MageStaff" />
+      <child name="black staff" typename="BlackStaff" />
+		</parent>
+		<parent name="Instruments" itemID="0xEB2" title="What do you want to make?">
+			<child name="lap harp" typename="LapHarp" />
+			<child name="standing harp" typename="Harp" />
+			<child name="drum" typename="Drums" />
+			<child name="lute" typename="Lute" />
+			<child name="tambourine" typename="Tambourine" />
+			<child name="tambourine (tassel)" typename="TambourineTassel" />
+		</parent>
+		<parent name="Misc. Add-Ons" itemID="0x14F0" title="What do you want to make?">
+			<child name="dartboard (south)" typename="DartBoardSouthDeed" />
+			<child name="dartboard (east)" typename="DartBoardEastDeed" />
+			<child name="parrot perch" typename="ParrotPerchAddonDeed" />
+			<child name="tall elven bed (south)" typename="TallElvenBedSouthDeed" />
+			<child name="tall elven bed (east)" typename="TallElvenBedEastDeed" />
+			<child name="elven bed (south)" typename="ElvenBedSouthDeed" />
+			<child name="elven bed (east)" typename="ElvenBedEastDeed" />
+			<child name="elven loveseat (south)" typename="ElvenLoveseatSouthDeed" />
+			<child name="elven loveseat (east)" typename="ElvenLoveseatEastDeed" />
+			<child name="elven alchemy table (south)" typename="AlchemistTableSouthDeed" />
+			<child name="elven alchemy table (east)" typename="AlchemistTableEastDeed" />
+			<child name="small bed (south)" typename="SmallBedSouthDeed" />
+			<child name="small bed (east)" typename="SmallBedEastDeed" />
+			<child name="large bed (south)" typename="LargeBedSouthDeed" />
+			<child name="large bed (east)" typename="LargeBedEastDeed" />
+			<child name="ballot box" typename="BallotBoxDeed" />
+			<child name="pentagram" typename="PentagramDeed" />
+			<child name="abbatoir" typename="AbbatoirDeed" />
+			<child name="bulletin board (east)" typename="PlayerBBEast" />
+			<child name="bulletin board (south)" typename="PlayerBBSouth" />
+			<child name="carpentery table ( east )" typename="CarpenteryTableEastDeed" />
+			<child name="carpentery table ( south )" typename="CarpenteryTableSouthDeed" />
+			<child name="granite box" typename="GraniteBox" hue="0x3DF" />
+			<child name="seed box" typename="SeedBox" hue="0x84F" />
+			<child name="scarecrow" typename="CraftableScareCrow" />
+		</parent>
+		<parent name="Tailoring and Cooking" itemID="0xEC6" title="What do you want to make?">
+			<child name="dressform (front)" typename="Dressform" />
+			<child name="elven spinning wheel (east)" typename="ElvenSpinningwheelEastDeed" />
+			<child name="elven spinning wheel (south)" typename="ElvenSpinningwheelSouthDeed" />
+			<child name="elven oven (south)" typename="ElvenStoveSouthDeed" />
+			<child name="elven oven (east)" typename="ElvenStoveEastDeed" />
+			<child name="spinning wheel (east)" typename="SpinningwheelEastDeed" />
+			<child name="spinning wheel (south)" typename="SpinningwheelSouthDeed" />
+			<child name="loom (east)" typename="LoomEastDeed" />
+			<child name="loom (south)" typename="LoomSouthDeed" />
+			<child name="carpet loom ( south )" typename="CarpetLoomSouthDeed" />
+			<child name="carpet loom ( east )" typename="CarpetLoomEastDeed" />
+			<child name="stone oven (east)" typename="StoneOvenEastDeed" />
+			<child name="stone oven (south)" typename="StoneOvenSouthDeed" />
+			<child name="flour mill (east)" typename="FlourMillEastDeed" />
+			<child name="flour mill (south)" typename="FlourMillSouthDeed" />
+			<child name="water trough (east)" typename="WaterTroughEastDeed" />
+			<child name="water trough (south)" typename="WaterTroughSouthDeed" />
+		</parent>
+		<parent name="Blacksmithy" itemID="0x14F0" title="What do you want to make?">
+			<child name="elven forge" typename="ElvenForgeDeed" />
+			<child name="small forge" typename="SmallForgeDeed" />
+			<child name="large forge (east)" typename="LargeForgeEastDeed" />
+			<child name="large forge (south)" typename="LargeForgeSouthDeed" />
+			<child name="anvil (east)" typename="AnvilEastDeed" />
+			<child name="anvil (south)" typename="AnvilSouthDeed" />
+			<child name="smelting forge" typename="AdvancedForge" />
+			<child name="fancy anvil" typename="FancyAnvil" />
+			<child name="marble anvil" typename="MarbleAnvil" />
+			<child name="fancy marbe forge" typename="FancyMarbleForge" />
+			<child name="marbe forge" typename="MarbleForge" />
+			<child name="marbe with water" typename="MarbleWithWater" />
+			<child name="fancy large forge" typename="FancyLargeForgeAddonDeed" />
+		</parent>
+		<parent name="Training" itemID="0x14F0" title="What do you want to make?">
+			<child name="training dummy (east)" typename="TrainingDummyEastDeed" />
+			<child name="training dummy (south)" typename="TrainingDummySouthDeed" />
+			<child name="pickpocket dip (east)" typename="PickpocketDipEastDeed" />
+			<child name="pickpocket dip (south)" typename="PickpocketDipSouthDeed" />
+		</parent>
+	</parent>
+</craftDefinition>

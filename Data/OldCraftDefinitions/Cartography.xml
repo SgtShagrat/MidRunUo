@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<craftDefinition>
+	<parent name="Cartography" title="What would you like to make?" selectresource="true">
+		<parent name="Maps" itemID="0x14EC" title="What do you want to make?">
+			<child name="local map" typename="LocalMap" />
+			<child name="city map" typename="CityMap" />
+			<child name="sea chart" typename="SeaChart" />
+			<child name="world map" typename="WorldMap" />
+		</parent>
+	</parent>
+</craftDefinition>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<craftDefinition>
+	<parent name="Tailoring" title="What would you like to make?" selectresource="true">
+		<parent name="Hats" itemID="0x1544" title="What do you want to make?">
+			<child name="skullcap" typename="SkullCap" />
+			<child name="bandana" typename="Bandana" />
+			<child name="floppy hat" typename="FloppyHat" />
+			<child name="cap" typename="Cap" />
+			<child name="wide-brim hat" typename="WideBrimHat" />
+			<child name="straw hat" typename="StrawHat" />
+			<child name="tall straw hat" typename="TallStrawHat" />
+			<child name="wizard's hat" typename="WizardsHat" />
+			<child name="bonnet" typename="Bonnet" />
+			<child name="feathered hat" typename="FeatheredHat" />
+			<child name="tricorne hat" typename="TricorneHat" />
+			<child name="jester hat" typename="JesterHat" />
+			<child name="flower garland" typename="FlowerGarland" />
+			<child name="deer mask" typename="DeerMask" />
+			<child name="bear mask" typename="BearMask" />
+			<child name="bandana with pearls" typename="BandanaWithPearls" />
+			<child name="pirate's hat" typename="PiratesHat" />
+		</parent>
+		<parent name="Shirts" itemID="0x1F7B" title="What do you want to make?">
+			<child name="doublet" typename="Doublet" />
+			<child name="shirt" typename="Shirt" />
+			<child name="fancy shirt" typename="FancyShirt" />
+			<child name="tunic" typename="Tunic" />
+			<child name="surcoat" typename="Surcoat" />
+			<child name="plain dress" typename="PlainDress" />
+			<child name="fancy dress" typename="FancyDress" />
+			<child name="cloak" typename="Cloak" />
+			<child name="robe" typename="Robe" />
+			<child name="jester suit" typename="JesterSuit" />
+			<child name="decorated fancy dress" typename="DecoratedFancyDress" />
+			<child name="servant shirt" typename="ServantShirt" />
+			<child name="gilet" typename="Gilet" />
+			<child name="adventurer tunic" typename="AdventurerTunic" />
+			<child name="evening gown" typename="EveningGown" />
+			<child name="lace dress" typename="LaceDress" />
+			<child name="sexy dress" typename="SexyDress" />
+			<child name="blouse" typename="Blouse" />
+			<child name="noble shirt" typename="NobleShirt" />
+			<child name="pirate's jacket" typename="PiratesJacket" />
+			<child name="fur cape" typename="FurCape" />
+			<child name="elven shirt" typename="ElvenShirt" />
+			<child name="elven shirt" typename="ElvenDarkShirt" />
+			<child name="elven robe" typename="MaleElvenRobe" />
+			<child name="female elven robe" typename="FemaleElvenRobe" />
+		</parent>
+		<parent name="Pants" itemID="0x152E" title="What do you want to make?">
+			<child name="short pants" typename="ShortPants" />
+			<child name="long pants" typename="LongPants" />
+			<child name="kilt" typename="Kilt" />
+			<child name="skirt" typename="Skirt" />
+			<child name="elven pants" typename="ElvenPants" />
+			<child name="superior kilt" typename="SuperiorKilt" />
+			<child name="two colored pants" typename="TwoColouredPants" />
+		</parent>
+		<parent name="Miscellaneous" itemID="0x3B7F" title="What do you want to make?">
+			<child name="muzzle" typename="Muzzle" />
+			<child name="body sash" typename="BodySash" />
+			<child name="half apron" typename="HalfApron" />
+			<child name="full apron" typename="FullApron" />
+			<child name="fishnet stockings" typename="FishnetStockings" />
+			<child name="leather container engraving tool" typename="LeatherContainerEngraver" hue="0x48D" />
+			<child name="oil cloth" typename="OilCloth" hue="0x7D1" />
+			<child name="rope" typename="Rope" />
+			<child name="pet leash" typename="PetLeash" />
+			<child name="bag" typename="Bag" />
+			<child name="pouch" typename="Pouch" />
+			<child name="backpack" typename="Backpack" />
+			<child name="small bagball" typename="SmallBagBall" />
+			<child name="large bagball" typename="LargeBagBall" />
+			<child name="elven boots" typename="ElvenBoots" />
+		</parent>
+		<parent name="Footwear" itemID="0x2307" title="What do you want to make?">
+			<child name="fur boots" typename="FurBoots" />
+			<child name="sandals" typename="Sandals" />
+			<child name="shoes" typename="Shoes" />
+			<child name="boots" typename="Boots" />
+			<child name="thigh boots" typename="ThighBoots" />
+			<child name="reinforced boots" typename="ReinforcedBoots" />
+			<child name="sharped shoes" typename="SharpedShoes" />
+		</parent>
+		<parent name="Leather Armor" itemID="0x13C7" title="What do you want to make?">
+			<child name="leather gorget" typename="LeatherGorget" />
+			<child name="leather cap" typename="LeatherCap" />
+			<child name="leather gloves" typename="LeatherGloves" />
+			<child name="leather sleeves" typename="LeatherArms" />
+			<child name="leather leggings" typename="LeatherLegs" />
+			<child name="leather tunic" typename="LeatherChest" />
+			<child name="leaf tunic" typename="LeafChest" />
+			<child name="leaf arms" typename="LeafArms" />
+			<child name="leaf gloves" typename="LeafGloves" />
+			<child name="leaf leggings" typename="LeafLegs" />
+			<child name="leaf gorget" typename="LeafGorget" />
+			<child name="leaf tonlet" typename="LeafTonlet" />
+			<child name="short leather chest" typename="ShortLeatherChest" />
+			<child name="short leather skirt" typename="ShortLeatherSkirt" />
+			<child name="long leather chest" typename="LongLeatherChest" />
+			<child name="long leather skirt" typename="LongLeatherSkirt" />
+			<child name="scout gorget" typename="ScoutGorget" hue="0x712" />
+			<child name="scout cap" typename="ScoutHelm" hue="0x712" />
+			<child name="scout gloves" typename="ScoutGloves" hue="0x712" />
+			<child name="scout sleeves" typename="ScoutSleeves" hue="0x712" />
+			<child name="scout legs" typename="ScoutLegs" hue="0x712" />
+			<child name="scout chest" typename="ScoutChest" hue="0x712" />
+		</parent>
+		<parent name="Studded Armor" itemID="0x13D6" title="What do you want to make?">
+			<child name="studded gorget" typename="StuddedGorget" />
+			<child name="studded gloves" typename="StuddedGloves" />
+			<child name="studded sleeves" typename="StuddedArms" />
+			<child name="studded leggings" typename="StuddedLegs" />
+			<child name="studded tunic" typename="StuddedChest" />
+		</parent>
+		<parent name="Female Armor" itemID="0x1C00" title="What do you want to make?">
+			<child name="leather shorts" typename="LeatherShorts" />
+			<child name="leather skirt" typename="LeatherSkirt" />
+			<child name="leather bustier" typename="LeatherBustierArms" />
+			<child name="studded bustier" typename="StuddedBustierArms" />
+			<child name="female leather armor" typename="FemaleLeatherChest" />
+			<child name="studded armor" typename="FemaleStuddedChest" />
+		</parent>
+		<parent name="Bone Armor" itemID="0x1451" title="What do you want to make?">
+			<child name="bone helmet" typename="BoneHelm" />
+			<child name="bone gloves" typename="BoneGloves" />
+			<child name="bone arms" typename="BoneArms" />
+			<child name="bone leggings" typename="BoneLegs" />
+			<child name="bone armor" typename="BoneChest" />
+		</parent>
+		<parent name="Carpets" itemID="0x14F0" title="What do you want to make?">
+			<child name="small arabesque (square)" typename="SquareArabesqueCarpetSmallDeed" />
+			<child name="large arabesque (south)" typename="LargeArabesqueCarpetSouthDeed" />
+			<child name="large arabesque (east)" typename="LargeArabesqueCarpetEastDeed" />
+			<child name="blue arabesque (square)" typename="SquareBlueArabesqueCarpetDeed" />
+			<child name="large blue arabesque (south)" typename="LargeBlueArabesqueCarpetSouthDeed" />
+			<child name="large blue arabesque (east)" typename="LargeBlueArabesqueCarpetEastDeed" />
+			<child name="blue (square)" typename="SquareBlueCarpetLargeDeed" />
+			<child name="large blue (south)" typename="LargeBlueCarpetSouthDeed" />
+			<child name="large blue (east)" typename="LargeBlueCarpetEastDeed" />
+			<child name="square decorated (medium)" typename="SquareDecoratedCarpetMediumDeed" />
+			<child name="large decorated (south)" typename="LargeDecoratedCarpetSouthDeed" />
+			<child name="large decorated (east)" typename="LargeDecoratedCarpetEastDeed" />
+			<child name="red (south)" typename="RedCarpetSouthDeed" />
+			<child name="red (east)" typename="RedCarpetEastDeed" />
+			<child name="decorated red (south)" typename="RedDecoratedCarpetSouthDeed" />
+			<child name="decorated red (east)" typename="RedDecoratedCarpetEastDeed" />
+			<child name="decorated red (south)" typename="SmallSquareBlueDecoratedCarpetAddonDeed" />
+			<child name="decorated red (east)" typename="MediumSquareBlueDecoratedCarpetAddonDeed" />
+			<child name="decorated red (east)" typename="LargeSquareBlueDecoratedCarpetAddonDeed" />
+		</parent>
+		<parent name="Pillows" itemID="0x13A4" title="What do you want to make?">
+			<child name="pillow 1" typename="Pillow1" />
+			<child name="pillow 2" typename="Pillow2" />
+			<child name="pillow 3" typename="Pillow3" />
+			<child name="pillow 4" typename="Pillow4" />
+			<child name="pillow 5" typename="Pillow5" />
+			<child name="pillow 6" typename="Pillow6" />
+			<child name="pillow 7" typename="Pillow7" />
+			<child name="pillow 8" typename="Pillow8" />
+			<child name="pillow 9" typename="Pillow12" />
+			<child name="pillow 10" typename="Pillow13" />
+			<child name="pillow 11" typename="Pillow14" />
+		</parent>
+		<parent name="Banners" itemID="0x14F0" title="What do you want to make?">
+			<child name="large banner model 1 (west)" typename="LargeBanner1WestAddonDeed" />
+			<child name="large banner model 1 (south)" typename="LargeBanner1SouthAddonDeed" />
+			<child name="large banner model 2 (west)" typename="LargeBanner2WestAddonDeed" />
+			<child name="large banner model 2 (south)" typename="LargeBanner2SouthAddonDeed" />
+			<child name="large banner model 3 (west)" typename="LargeBanner3WestAddonDeed" />
+			<child name="large banner model 3 (south)" typename="LargeBanner3SouthAddonDeed" />
+			<child name="large banner model 4 (west)" typename="LargeBanner4WestAddonDeed" />
+			<child name="large banner model 4 (south)" typename="LargeBanner4SouthAddonDeed" />
+			<child name="small banner model 1 (west)" typename="SmallBanner1WestAddonDeed" />
+			<child name="small banner model 1 (south)" typename="SmallBanner1SouthAddonDeed" />
+			<child name="small banner model 2 (west)" typename="SmallBanner2WestAddonDeed" />
+			<child name="small banner model 2 (south)" typename="SmallBanner2SouthAddonDeed" />
+		</parent>
+	</parent>
+</craftDefinition>

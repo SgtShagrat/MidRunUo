@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<craftDefinition>
+	<parent name="Masonry" title="What would you like to make?" selectresource="true">
+		<parent name="Decorations" itemID="0xB46" title="What do you want to make?">
+			<child name="vase" typename="Vase" />
+			<child name="large vase" typename="LargeVase" />
+		</parent>
+		<parent name="Furniture" itemID="0x1218" title="What do you want to make?">
+			<child name="stone chair" typename="StoneChair" />
+			<child name="medium stone table (east)" typename="MediumStoneTableEastDeed" />
+			<child name="medium stone table (south)" typename="MediumStoneTableSouthDeed" />
+			<child name="large stone table (east)" typename="LargeStoneTableEastDeed" />
+			<child name="large stone table (south)" typename="LargeStoneTableSouthDeed" />
+		</parent>
+		<parent name="Statues" itemID="0x139A" title="What do you want to make?">
+			<child name="small statue (south)" typename="StatueSouth" />
+			<child name="small statue (north)" typename="StatueNorth" />
+			<child name="small statue (east)" typename="StatueEast" />
+			<child name="pegasus statuette" typename="StatuePegasus" />
+		</parent>
+		<parent name="Gravestones" itemID="0xED7" title="What do you want to make?">
+			<child name="gravestone 1" typename="GraveStone1" />
+			<child name="gravestone 2" typename="GraveStone2" />
+			<child name="gravestone 3" typename="GraveStone3" />
+			<child name="gravestone 4" typename="GraveStone4" />
+			<child name="gravestone 5" typename="GraveStone5" />
+			<child name="gravestone 6" typename="GraveStone6" />
+			<child name="gravestone 7" typename="GraveStone7" />
+			<child name="gravestone 8" typename="GraveStone8" />
+			<child name="gravestone 9" typename="GraveStone9" />
+			<child name="gravestone 10" typename="GraveStone10" />
+			<child name="gravestone 11" typename="GraveStone12" />
+			<child name="gravestone 12" typename="GraveStone14" />
+			<child name="gravestone 13" typename="GraveStone15" />
+			<child name="gravestone 14" typename="GraveStone16" />
+			<child name="gravestone 15" typename="GraveStone17" />
+			<child name="gravestone 16" typename="GraveStone18" />
+			<child name="gravestone 17" typename="GraveStone19" />
+			<child name="gravestone 18" typename="GraveStone20" />
+			<child name="gravestone 19" typename="GraveStone21" />
+			<child name="gravestone 20" typename="GraveStone22" />
+			<child name="gravestone 21" typename="GraveStone23" />
+			<child name="gravestone 22" typename="GraveStone24" />
+		</parent>
+		<parent name="Misc. Add-Ons" itemID="0x14F0" title="What do you want to make?">
+			<child name="stone anvil (south)" typename="StoneAnvilSouthDeed" />
+			<child name="stone anvil (east)" typename="StoneAnvilEastDeed" />
+		</parent>
+	</parent>
+</craftDefinition>
